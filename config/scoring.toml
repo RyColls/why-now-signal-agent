@@ -1,0 +1,16 @@
+# Scoring rules. AI finds and reads the evidence; this file and
+# src/whynow/scoring.py decide the rank. Change a number here and rerun.
+
+[weights]
+hiring_maintenance = 30    # hiring a maintenance manager, reliability engineer or maintenance systems admin
+expansion = 25             # new plant, expansion or production line announced
+new_ops_leader = 20        # new VP of Operations or Plant Manager
+pain_in_job_post = 15      # job post mentions spreadsheets, paper work orders or an aging system
+funding_or_pe = 10         # funding round or private equity acquisition
+
+[decay]
+half_after_days = 180      # older than this counts half
+zero_after_days = 365      # older than this counts zero
+
+[rules]
+require_verified = true    # only signals whose source was re-opened and confirmed count

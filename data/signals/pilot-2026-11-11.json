@@ -1,0 +1,30 @@
+{
+  "run_date": "2026-11-11",
+  "collected_by": "Claude, in an interactive session using web search. No API key was used.",
+  "method": "Six accounts drawn at random from the universe (seed 7). One web search per researched account, so this is a shallow pilot and not a recall measurement. Company careers pages were not checked.",
+  "accounts": {
+    "A087": "Mason Industries Inc: searched, no current signal kept",
+    "A121": "Interflex Acquisition Company LLC: searched, no current signal kept",
+    "A023": "Gregory Packaging Inc: searched, nothing found",
+    "A003": "Ancient Crunch: searched, only retail distribution news, which is not one of the five signals",
+    "A012": "Danone US, LLC: not researched; appears to be a unit of a much larger group, fit not yet checked",
+    "A196": "Waddington North America: not researched; appears to be a unit of a much larger group, fit not yet checked"
+  },
+  "signals": [],
+  "rejected": [
+    {
+      "account_id": "A087",
+      "type": "expansion",
+      "source_url": "https://messengerpapers.com/2026/05/mason-tech-breaks-ground-in-hauppauge/",
+      "published": "2026-05-13",
+      "reason": "Wrong company. The article is about Mason Technologies, a technology integrator in the same town, not Mason Industries. Caught by opening the source."
+    },
+    {
+      "account_id": "A121",
+      "type": "expansion",
+      "source_url": "https://www.commerce.nc.gov/news/press-releases/packaging-company-expand-wilkes-county",
+      "published": "2014-01-06",
+      "reason": "Stale. The search results date this expansion to January 2014, far past the 365-day cutoff. The date comes from search results; the page itself was not opened."
+    }
+  ]
+}
