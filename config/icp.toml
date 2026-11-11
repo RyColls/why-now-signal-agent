@@ -1,0 +1,22 @@
+# Ideal customer profile for the fictional sample client.
+# Everything the universe builder decides is driven by this file, so a reader
+# can argue with a number here instead of reading code.
+
+[size]
+min_employees = 200      # company-wide, summed across reporting establishments
+max_employees = 2000
+min_plants = 1           # establishments with a manufacturing NAICS code (31-33)
+max_plants = 6
+min_plant_headcount_share = 0.5   # at least half the reported headcount works in a plant
+
+[selection]
+universe_size = 200
+seed = 20261111          # fixed so the same input file gives the same 200
+
+# NAICS prefixes per target industry. The longest matching prefix wins, so a
+# plastic-bottle plant (32616) lands in packaging rather than plastics.
+[industries]
+food_beverage = ["311", "3121"]
+plastics = ["3261"]
+metal_fabrication = ["332"]
+packaging = ["3222", "32611", "32616", "33243", "327213"]

@@ -1,0 +1,9 @@
+# Raw source downloads are large and re-fetchable; see docs/universe.md.
+data/raw/
+
+# Keys and local state never go in the repo.
+.env
+*.sqlite
+__pycache__/
+.pytest_cache/
+.venv/

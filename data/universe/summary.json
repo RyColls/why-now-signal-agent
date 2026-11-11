@@ -1,0 +1,22 @@
+{
+  "run_date": "2026-11-11",
+  "source_file": "ITA_300A_Summary_Data_2025_through_08-31-2026.csv",
+  "source": "OSHA Injury Tracking Application, Form 300A summary data",
+  "establishments_after_cleaning": 365391,
+  "companies_seen": 112546,
+  "candidates_fitting_icp": 2252,
+  "candidates_by_industry": {
+    "food_beverage": 1015,
+    "metal_fabrication": 717,
+    "plastics": 316,
+    "packaging": 204
+  },
+  "universe_size": 200,
+  "universe_by_industry": {
+    "food_beverage": 50,
+    "metal_fabrication": 50,
+    "packaging": 50,
+    "plastics": 50
+  },
+  "seed": 20261111
+}
