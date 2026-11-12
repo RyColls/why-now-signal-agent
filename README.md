@@ -9,6 +9,18 @@ software to mid-sized US manufacturers. The prospect companies are real and
 come from public sources. No meetings, pipeline or revenue are claimed
 anywhere in this project.
 
+## Walk-through
+
+An 8-step interactive page shows the pipeline on the 60 researched accounts:
+a floor map of stations changes at each step (fit check, signals found,
+verification, scoring), then each call opens as a brief with its source link.
+Step 7 lets you vote briefs up or down and watch the signal weights and the
+ranking change. Step 8 shows what worked and the failures.
+
+Open [docs/index.html](docs/index.html) in a browser, or use the GitHub Pages
+link once Pages is enabled for this repo. Rebuild it after a new run with
+`python site/build.py` (reads `data/`, writes `docs/index.html`).
+
 ## Design
 
 AI reads, rules decide. A model reads public sources, extracts buying signals

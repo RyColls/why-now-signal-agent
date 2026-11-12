@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Now walk-through</title>
+<meta name="description" content="A short walk-through of a proof-of-concept agent that finds which manufacturers to call this week and why. Fictional sample client, real public data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e5ece1; --panel:#f6f9f3; --ink:#16261d; --muted:#4f6457; --line:#b4c4b7;
+  --lit:#e8590c; --lit-soft:#fbd9c5; --teal:#0d7473; --rust:#9a3412;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body)}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{background:var(--ink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline;justify-content:space-between;padding-top:16px;padding-bottom:14px}
+.brand{font:800 30px/1 var(--display);letter-spacing:.01em}
+.brand span{color:var(--lit)}
+.note{font-size:14px;color:#c4d3c8;max-width:70ch}
+
+/* stepper */
+.steps{background:var(--panel);border-bottom:1px solid var(--line)}
+.steps ol{display:flex;gap:4px;margin:0;padding:8px 20px;list-style:none;overflow-x:auto;max-width:1180px;margin-inline:auto}
+.steps button{font:500 14px var(--body);white-space:nowrap;border:0;background:transparent;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
+.steps button b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--bg);margin-right:6px;font-size:12px}
+.steps button[aria-current=step]{background:var(--ink);color:#fff}
+.steps button[aria-current=step] b{background:var(--lit);color:#fff}
+.steps button.done b{background:var(--teal);color:#fff}
+
+main{padding:28px 0 44px}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:34px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.story{min-height:470px}
+.story h1{margin:0 0 10px;font:800 clamp(34px,4.5vw,50px)/1.02 var(--display)}
+.story p{margin:0 0 12px;max-width:56ch}
+.facts{list-style:none;margin:14px 0;padding:0;display:grid;gap:8px}
+.facts li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px}
+.facts .n{font:800 34px/1 var(--display);min-width:92px}
+.nav{display:flex;gap:10px;align-items:center;margin-top:22px;flex-wrap:wrap}
+.btn{font:600 16px var(--body);padding:10px 20px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--lit-soft)}
+.btn.go{background:var(--ink);color:#fff}
+.btn.go:hover{background:var(--lit)}
+.btn[disabled]{opacity:.35;cursor:default}
+.count{color:var(--muted);font-size:14px}
+
+/* floor */
+.right{position:sticky;top:12px}
+@media (max-width:900px){.right{position:static}}
+.floor{background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:6px 18px 14px}
+.line{display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line)}
+.line:last-child{border-bottom:0}
+.lname{font:800 19px/1.05 var(--display)}
+.lname small{display:block;font:400 13px var(--body);color:var(--muted)}
+.stations{display:flex;flex-wrap:wrap;gap:6px}
+.st{width:28px;height:28px;border-radius:50%;border:2px solid var(--muted);background:#fff;padding:0;cursor:pointer;position:relative;transition:background-color .35s,border-color .35s,box-shadow .35s}
+.st[aria-pressed=true]{outline:3px solid var(--teal);outline-offset:2px}
+.st[data-s=fit]{background:var(--teal);border-color:var(--teal)}
+.st[data-s=unclear]{border-style:dashed;border-color:var(--ink)}
+.st[data-s=out]{background:repeating-linear-gradient(135deg,#c3cfc6 0 3px,#e9efe7 3px 6px);border-color:#93a597}
+.st[data-s=cand]::after,.st[data-s=ver]::after,.st[data-s=rej]::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--ink)}
+.st[data-s=ver]{border-color:var(--lit)}
+.st[data-s=ver]::after{background:var(--lit)}
+.st[data-s=rej]::after{background:none;inset:2px;border:0;content:"\00d7";color:var(--muted);font:600 18px/20px var(--body);text-align:center}
+.st[data-s=call]{background:var(--lit);border-color:var(--lit);box-shadow:0 0 0 4px var(--lit-soft)}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;margin:10px 2px 0;font-size:14px;color:var(--muted)}
+.key span{display:inline-flex;align-items:center;gap:7px}
+.key i{display:inline-block;width:16px;height:16px;border-radius:50%;border:2px solid var(--muted);background:#fff;position:relative;flex:none}
+.key i[data-s=fit]{background:var(--teal);border-color:var(--teal)}
+.key i[data-s=unclear]{border-style:dashed;border-color:var(--ink)}
+.key i[data-s=out]{background:repeating-linear-gradient(135deg,#c3cfc6 0 2px,#e9efe7 2px 4px);border-color:#93a597}
+.key i[data-s=cand]::after,.key i[data-s=ver]::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--ink)}
+.key i[data-s=ver]{border-color:var(--lit)}.key i[data-s=ver]::after{background:var(--lit)}
+.key i[data-s=rej]::after{content:"\00d7";position:absolute;inset:-5px 0 0;color:var(--muted);font:600 14px/16px var(--body);text-align:center}
+.key i[data-s=call]{background:var(--lit);border-color:var(--lit)}
+
+/* account card */
+.card{margin-top:14px;background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:16px 18px}
+.card:empty{display:none}
+.card h2{margin:0;font:800 26px/1.1 var(--display)}
+.meta{margin:2px 0 8px;color:var(--muted);font-size:14px}
+.ev{border-left:4px solid var(--lit);background:#fff;padding:8px 12px;margin:10px 0;border-radius:0 8px 8px 0}
+.ev q{display:block;margin:3px 0;font-size:15px}
+.ev small{color:var(--muted)}
+.say{margin:8px 0 0}
+.say dt{font-weight:600;margin-top:8px}
+.say dd{margin:1px 0 0}
+.warn{font-size:14px;color:var(--rust);margin:10px 0 0}
+.drop{font-size:14px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)}
+.drop ul{margin:4px 0 0;padding-left:18px}
+.small{font-size:14px;color:var(--muted)}
+
+/* queue and weights inside the story */
+.queue{display:grid;gap:8px;margin:12px 0}
+.tag{display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center;text-align:left;font:inherit;color:inherit;background:var(--panel);border:2px solid var(--ink);border-radius:12px;padding:8px 12px;cursor:pointer}
+.tag:hover{background:#fff}
+.tag[aria-pressed=true]{background:var(--lit-soft);border-color:var(--lit)}
+.tag .n{font:800 28px/1 var(--display)}
+.tag .nm{font-weight:600;line-height:1.2}
+.tag .nm small{display:block;font-weight:400;color:var(--muted)}
+.tag .pts{font:800 22px/1 var(--display)}
+.w{display:grid;grid-template-columns:minmax(110px,170px) 1fr 70px;gap:10px;align-items:center;margin:7px 0;font-size:15px}
+.bar{height:12px;background:#fff;border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;left:0;top:0;bottom:0}
+.bar .b0{background:#b8c7bb}
+.bar .b1{background:var(--lit);opacity:.85;transition:width .3s}
+.w output{text-align:right;font-weight:600}
+.vote{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.vote .btn{padding:6px 16px;font-size:15px}
+.vote .btn[aria-pressed=true]{background:var(--ink);color:#fff}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}
+.box{background:var(--panel);border:2px solid var(--ink);border-radius:12px;padding:12px 14px}
+.box h3{margin:0 0 6px;font:800 20px/1.1 var(--display)}
+.box p{margin:0;font-size:15px}
+ol.fail{margin:8px 0;padding-left:20px}
+ol.fail li{margin-bottom:8px;font-size:15px}
+footer{background:var(--ink);color:#c4d3c8;padding:18px 0;font-size:14px}
+footer a{color:#fff}
+@media (prefers-reduced-motion:reduce){.st,.bar .b1{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Why <span>now</span></div>
+    <div class="note">A proof of concept. The client, Gantrywell, is fictional. The manufacturers and their signals are real, linked to public sources, and dated <span id="runDate"></span>.</div>
+  </div>
+</header>
+<nav class="steps" aria-label="Walk-through steps"><ol id="stepper"></ol></nav>
+
+<main class="wrap">
+  <div class="grid">
+    <div class="story" id="story" aria-live="polite"></div>
+    <div class="right">
+      <div class="floor" id="floor" role="group" aria-label="Floor map of 60 researched accounts"></div>
+      <div class="key" id="key"></div>
+      <div class="card" id="card"></div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap">Static page built from one run of the pipeline. People appear by role only and every signal links to its source. No meetings, pipeline or revenue are claimed. <a href="https://github.com/RyColls/why-now-signal-agent">Code and data on GitHub</a>.</div></footer>
+
+<script>
+/*DATA*/
+const TYPE = {hiring_maintenance:"Hiring a maintenance lead", expansion:"New plant or expansion", new_ops_leader:"New operations leader", pain_in_job_post:"Pain in a job post", funding_or_pe:"Funding or acquisition"};
+const LINE = {food_beverage:["Food and beverage"], metal_fabrication:["Metal fabrication"], packaging:["Packaging"], plastics:["Plastics"]};
+const base = DATA.weights, factors = {}; Object.keys(base).forEach(k => factors[k] = 1);
+const votes = {};
+let step = 1, selected = null;
+const LAST = 8;
+const TITLES = ["Start","Fit","Signals","Check","Score","Calls","Feedback","Results"];
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const W = k => base[k] * factors[k];
+const score = a => a.status === "not a fit" ? 0 : a.signals.reduce((t, s) => t + W(s.type) * s.factor, 0);
+const minAge = a => Math.min(...a.signals.map(s => s.age), 9e9);
+const byScore = (x, y) => score(y) - score(x) || minAge(x) - minAge(y) || x.name.localeCompare(y.name);
+const isOut = a => a.status === "not a fit";
+const isCall = a => !isOut(a) && score(a) > 0;
+const fmt = n => String(Math.round(n * 10) / 10);
+const place = a => a.city + ", " + a.state;
+const A = DATA.accounts;
+const nOut = A.filter(isOut).length, nFit = A.filter(a => a.fit === "fit").length, nUnc = A.filter(a => a.fit === "unclear").length;
+const allCands = A.flatMap(a => a.cands);
+const nCand = allCands.length, nCount = allCands.filter(c => c.counts).length, nClosed = allCands.filter(c => c.closed).length;
+document.getElementById("runDate").textContent = DATA.runDate;
+
+/* what each step shows on the floor */
+function stationState(a){
+  const hasCand = a.cands.length > 0, anyOk = a.cands.some(c => c.counts);
+  switch (step){
+    case 1: return "plain";
+    case 2: return isOut(a) ? "out" : a.fit === "fit" ? "fit" : a.fit === "unclear" ? "unclear" : "plain";
+    case 3: return isOut(a) ? "out" : hasCand ? "cand" : "plain";
+    case 4: return isOut(a) ? "out" : anyOk ? "ver" : hasCand ? "rej" : "plain";
+    default: return isOut(a) ? "out" : isCall(a) ? "call" : "plain";
+  }
+}
+const KEYS = {
+  1:[["plain","A researched account"]],
+  2:[["fit","Looks like a fit"],["unclear","Fit not confirmed"],["out","Part of a larger group"]],
+  3:[["cand","A possible signal was found"],["out","Removed"]],
+  4:[["ver","Signal confirmed on its page"],["rej","Found, but did not hold up"],["out","Removed"]],
+  5:[["call","Call this week"],["plain","No reason to call yet"],["out","Removed"]]
+};
+
+function renderFloor(){
+  const by = {}; A.forEach(a => (by[a.industry] = by[a.industry] || []).push(a));
+  const rank = {call:0, ver:0, cand:1, fit:1, unclear:2, rej:3, plain:4, out:5};
+  document.getElementById("floor").innerHTML = Object.keys(LINE).map(k => {
+    const list = (by[k] || []).slice().sort((x, y) => rank[stationState(x)] - rank[stationState(y)] || byScore(x, y));
+    return `<div class="line"><div class="lname">${LINE[k][0]}<small>${list.length} accounts</small></div><div class="stations">` +
+      list.map(a => `<button class="st" data-s="${stationState(a)}" data-id="${a.id}" aria-pressed="${selected === a.id}" aria-label="${esc(a.name)}" title="${esc(a.name)}"></button>`).join("") + `</div></div>`;
+  }).join("");
+  const keys = KEYS[Math.min(step, 5)];
+  document.getElementById("key").innerHTML = keys.map(([s, t]) => `<span><i data-s="${s}"></i>${t}</span>`).join("");
+}
+
+function renderCard(){
+  const el = document.getElementById("card");
+  const a = A.find(x => x.id === selected);
+  if (!a) { el.innerHTML = ""; return; }
+  let h = `<h2>${esc(a.name)}</h2><p class="meta">${esc(place(a))}. ${a.emp} employees across ${a.plants} plant${a.plants > 1 ? "s" : ""} on OSHA's record.</p>`;
+  if (step >= 2) h += `<p class="small" style="margin:0 0 6px"><b>${{fit:"Looks like a fit.",unclear:"Fit not confirmed.",not_fit:"Part of a larger group."}[a.fit] || ""}</b> ${esc(a.fitReason)}${a.parent ? " Parent: " + esc(a.parent) + "." : ""}</p>`;
+  if (step >= 5 && isCall(a)) {
+    h += a.signals.map(s => `<div class="ev"><b>${esc(TYPE[s.type])}</b>, published ${esc(s.published)} (${s.age} days ago). Worth ${fmt(W(s.type) * s.factor)} points${s.factor < 1 ? ", halved because it is over 180 days old" : ""}.
+      <q>${esc(s.sentence)}</q><small><a href="${esc(s.url)}" target="_blank" rel="noopener">Open the source</a></small></div>`).join("");
+    if (a.brief) {
+      h += `<dl class="say"><dt>Likely pain</dt><dd>${esc(a.brief["Likely pain"])}</dd><dt>Opening angle</dt><dd>${esc(a.brief["Opening angle"])}</dd><dt>Who to contact</dt><dd>${esc(a.brief["Contact"])}</dd></dl>`;
+      if (a.brief["Caveat"]) h += `<p class="warn"><b>Caveat.</b> ${esc(a.brief["Caveat"])}</p>`;
+    }
+    if (step === 7) {
+      const v = votes[a.id];
+      h += `<div class="vote"><span class="small">Would a rep call on this?</span>
+        <button class="btn" data-vote="up" aria-pressed="${v === "up"}">Useful</button>
+        <button class="btn" data-vote="down" aria-pressed="${v === "down"}">Not useful</button></div>`;
+    }
+  } else if (step >= 5) {
+    h += isOut(a) ? `<p>Taken off the list: it looks like a unit of a much larger group than the client sells to.</p>`
+                  : `<p>No signal was found that is current, about this company, and confirmed on its page. That is a result, not a gap to fill with a guess.</p>`;
+  }
+  if (step >= 3 && a.cands.length) {
+    const rows = step >= 4 ? a.cands.filter(c => c.why) : a.cands;
+    if (rows.length) h += `<div class="drop"><b>${step >= 4 ? "Found but not counted" : "Possible signals found"}</b><ul>` +
+      rows.map(c => `<li>${esc(TYPE[c.type])}, ${esc(c.published)}${step >= 4 && c.why ? ": " + esc(c.why) : ""} <a href="${esc(c.url)}" target="_blank" rel="noopener">Source</a></li>`).join("") + `</ul></div>`;
+  }
+  el.innerHTML = h;
+}
+
+function queue(){ return A.filter(isCall).sort(byScore); }
+function queueHtml(){
+  return `<div class="queue">` + queue().map((a, i) => `<button class="tag" data-id="${a.id}" aria-pressed="${selected === a.id}"><span class="n">${i + 1}</span><span class="nm">${esc(a.name)}<small>${esc(place(a))}. ${a.signals.map(s => esc(TYPE[s.type])).join(", ")}</small></span><span class="pts" title="Score">${fmt(score(a))}</span></button>`).join("") + `</div>`;
+}
+function weightsHtml(){
+  const keys = Object.keys(base), max = Math.max(...keys.map(k => base[k] * 2));
+  return keys.map(k => `<div class="w"><span>${TYPE[k]}</span><div class="bar" aria-hidden="true"><span class="b0" style="width:${base[k] / max * 100}%"></span><span class="b1" style="width:${W(k) / max * 100}%;mix-blend-mode:multiply"></span></div><output>${fmt(base[k])} to ${fmt(W(k))}</output></div>`).join("");
+}
+
+const exampleOut = A.find(a => isOut(a) && a.parent) || A.find(isOut);
+const STORY = {
+  1: () => `<h1>Start with a list of real factories</h1>
+    <p>A sales team that calls from an old purchased list gets few replies. This agent starts from public records instead, so every company on it exists and can be checked.</p>
+    <ul class="facts">
+      <li><span class="n">365,391</span><span>workplaces in OSHA's 2025 injury-reporting file</span></li>
+      <li><span class="n">2,252</span><span>companies that match the profile: US manufacturers, 200 to 2,000 employees, 1 to 6 plants</span></li>
+      <li><span class="n">60</span><span>drawn at random for this run, shown on the map. The full list is 200.</span></li>
+    </ul>`,
+  2: () => `<h1>Remove what is not a fit</h1>
+    <p>OSHA's file shows who filed, not who owns them, so some "mid-sized" companies are really plants of giants. Each account is checked on the web.</p>
+    <ul class="facts">
+      <li><span class="n">${nFit}</span><span>look like independent mid-sized makers</span></li>
+      <li><span class="n">${nUnc}</span><span>could not be confirmed either way</span></li>
+      <li><span class="n">${nOut}</span><span>belong to much larger groups and are removed${exampleOut ? `, such as ${esc(exampleOut.name)}` : ""}</span></li>
+    </ul><p class="small">Select any station to read its fit check.</p>`,
+  3: () => `<h1>Look for a reason to call</h1>
+    <p>For each account the agent searches for five public signals that a maintenance-software buyer may be forming. It keeps only ones with a source link, a printed date and a quoted sentence.</p>
+    <ul class="facts">${Object.keys(base).map(k => `<li><span class="n">${base[k]}</span><span>${TYPE[k]}</span></li>`).join("")}</ul>
+    <p class="small">The numbers are starting weights. ${nCand} possible signals turned up across the map.</p>`,
+  4: () => `<h1>Check every source again</h1>
+    <p>A second reviewer, who never saw the first one's reasoning, re-opens each page. It must be the same company, with the sentence and the date on the page.</p>
+    <ul class="facts">
+      <li><span class="n">${nCand}</span><span>possible signals found</span></li>
+      <li><span class="n">10</span><span>passed the reviewer's strict checks on their own</span></li>
+      <li><span class="n">${nCount}</span><span>counted after I reviewed each disagreement. The reasons are on each station.</span></li>
+    </ul><p class="small">${nClosed} of the ${nCount} were job posts that had already closed, which scoring ignores.</p>`,
+  5: () => `<h1>Score with rules anyone can read</h1>
+    <p>Code, not the model, adds up the points: each signal type counts once, at its weight. A signal over 180 days old counts half, and over a year counts nothing. An account with no current signal is labelled "no reason to call yet".</p>
+    <ul class="facts">
+      <li><span class="n">${queue().length}</span><span>accounts have a current, confirmed signal</span></li>
+      <li><span class="n">${A.filter(a => !isOut(a) && !isCall(a)).length}</span><span>have no reason to call yet</span></li>
+      <li><span class="n">${nOut}</span><span>were removed as parts of larger groups</span></li>
+    </ul><p class="small">Select a lit station to read the evidence.</p>`,
+  6: () => `<h1>This week's calls</h1>
+    <p>Each account is one screen: the signal, its date and source link, the likely pain, an opening line, and the role to contact. Pain is a hypothesis, so the wording says "may" and "likely".</p>
+    ${queueHtml()}<p class="small">Select an account to open its brief.</p>`,
+  7: () => `<h1>Teach it from rep feedback</h1>
+    <p>Open a brief and mark it useful or not useful. Each vote moves the weight of that brief's signals by 15 percent, and the order below changes. This shows the mechanism. Nothing here comes from real reps.</p>
+    ${queueHtml()}${weightsHtml()}<p class="small">Gray is the starting weight and orange is the weight after your votes.</p>`,
+  8: () => `<h1>How well it worked</h1>
+    <p>Measured on these 60 accounts, a small sample, so read the counts, not the percentages. The cost was about $0.07 per account at list prices.</p>
+    <div class="two"><div class="box"><h3>What held up</h3><p>${nCount} of ${nCand} found signals counted after review, but only 10 passed the reviewer's strict checks alone.</p></div>
+    <div class="box"><h3>What did not</h3><p>Only ${queue().length} of 60 accounts have a current signal, and 3 of those ${queue().length} have a fit that is not confirmed.</p></div></div>
+    <p><b>Where it went wrong</b></p><ol class="fail">
+      <li>Right company, wrong plant: seven signals came from a different site than the one on file. Fix: resolve the parent company first.</li>
+      <li>Not an announcement: a state building filing and a parent-level investment were taken for company news. Fix: require the company's own statement.</li>
+      <li>Closed job posts: ${nClosed} of the hiring signals had already closed. Fix: scoring now ignores them.</li></ol>
+    <p class="small">Three checks still need a person: hand-labelled fit, a hand-researched recall sample, and a blind ranking test. <a href="https://github.com/RyColls/why-now-signal-agent/blob/main/docs/results.md">Full results</a>.</p>`
+};
+
+function renderStepper(){
+  document.getElementById("stepper").innerHTML = TITLES.map((t, i) =>
+    `<li><button data-step="${i + 1}" class="${i + 1 < step ? "done" : ""}" ${i + 1 === step ? 'aria-current="step"' : ""}><b>${i + 1}</b>${t}</button></li>`).join("");
+}
+function renderStory(){
+  document.getElementById("story").innerHTML = STORY[step]() +
+    `<div class="nav"><button class="btn" data-go="-1" ${step === 1 ? "disabled" : ""}>Back</button>
+     <button class="btn go" data-go="1" ${step === LAST ? "disabled" : ""}>${step === LAST ? "End of walk-through" : "Next: " + TITLES[step]}</button>
+     <span class="count">Step ${step} of ${LAST}</span></div>`;
+}
+function render(){ renderStepper(); renderStory(); renderFloor(); renderCard(); }
+function go(n, focusStory){
+  step = Math.min(LAST, Math.max(1, n));
+  if (step < 5 && selected) { const a = A.find(x => x.id === selected); if (a && step < 2) selected = null; }
+  history.replaceState(null, "", "#step-" + step);
+  render();
+  if (focusStory) document.getElementById("story").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion:reduce)").matches ? "auto" : "smooth", block:"start"});
+}
+
+document.addEventListener("click", e => {
+  const g = e.target.closest("[data-go]"); if (g) return go(step + Number(g.dataset.go), true);
+  const s = e.target.closest("[data-step]"); if (s) return go(Number(s.dataset.step), false);
+  const p = e.target.closest("[data-id]");
+  if (p) { selected = p.dataset.id; render(); if (matchMedia("(max-width:900px)").matches) document.getElementById("card").scrollIntoView({behavior:"smooth", block:"nearest"}); return; }
+  const v = e.target.closest("[data-vote]");
+  if (v && selected) {
+    const a = A.find(x => x.id === selected), prev = votes[selected], next = v.dataset.vote === prev ? null : v.dataset.vote, k = {up:1.15, down:0.85};
+    a.signals.forEach(sg => {
+      if (prev) factors[sg.type] /= k[prev];
+      if (next) factors[sg.type] *= k[next];
+      factors[sg.type] = Math.min(2, Math.max(0.5, factors[sg.type]));
+    });
+    if (next) votes[selected] = next; else delete votes[selected];
+    render();
+  }
+});
+document.addEventListener("keydown", e => {
+  if (e.target.closest("input,textarea")) return;
+  if (e.key === "ArrowRight") go(step + 1, false);
+  if (e.key === "ArrowLeft") go(step - 1, false);
+});
+const m = location.hash.match(/step-(\d)/);
+go(m ? Number(m[1]) : 1, false);
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Now walk-through</title>
+<meta name="description" content="A short walk-through of a proof-of-concept agent that finds which manufacturers to call this week and why. Fictional sample client, real public data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e5ece1; --panel:#f6f9f3; --ink:#16261d; --muted:#4f6457; --line:#b4c4b7;
+  --lit:#e8590c; --lit-soft:#fbd9c5; --teal:#0d7473; --rust:#9a3412;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body)}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{background:var(--ink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;align-items:baseline;justify-content:space-between;padding-top:16px;padding-bottom:14px}
+.brand{font:800 30px/1 var(--display);letter-spacing:.01em}
+.brand span{color:var(--lit)}
+.note{font-size:14px;color:#c4d3c8;max-width:70ch}
+
+/* stepper */
+.steps{background:var(--panel);border-bottom:1px solid var(--line)}
+.steps ol{display:flex;gap:4px;margin:0;padding:8px 20px;list-style:none;overflow-x:auto;max-width:1180px;margin-inline:auto}
+.steps button{font:500 14px var(--body);white-space:nowrap;border:0;background:transparent;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
+.steps button b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--bg);margin-right:6px;font-size:12px}
+.steps button[aria-current=step]{background:var(--ink);color:#fff}
+.steps button[aria-current=step] b{background:var(--lit);color:#fff}
+.steps button.done b{background:var(--teal);color:#fff}
+
+main{padding:28px 0 44px}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:34px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.story{min-height:470px}
+.story h1{margin:0 0 10px;font:800 clamp(34px,4.5vw,50px)/1.02 var(--display)}
+.story p{margin:0 0 12px;max-width:56ch}
+.facts{list-style:none;margin:14px 0;padding:0;display:grid;gap:8px}
+.facts li{display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px}
+.facts .n{font:800 34px/1 var(--display);min-width:92px}
+.nav{display:flex;gap:10px;align-items:center;margin-top:22px;flex-wrap:wrap}
+.btn{font:600 16px var(--body);padding:10px 20px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.btn:hover{background:var(--lit-soft)}
+.btn.go{background:var(--ink);color:#fff}
+.btn.go:hover{background:var(--lit)}
+.btn[disabled]{opacity:.35;cursor:default}
+.count{color:var(--muted);font-size:14px}
+
+/* floor */
+.right{position:sticky;top:12px}
+@media (max-width:900px){.right{position:static}}
+.floor{background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:6px 18px 14px}
+.line{display:grid;grid-template-columns:118px minmax(0,1fr);gap:10px;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line)}
+.line:last-child{border-bottom:0}
+.lname{font:800 19px/1.05 var(--display)}
+.lname small{display:block;font:400 13px var(--body);color:var(--muted)}
+.stations{display:flex;flex-wrap:wrap;gap:6px}
+.st{width:28px;height:28px;border-radius:50%;border:2px solid var(--muted);background:#fff;padding:0;cursor:pointer;position:relative;transition:background-color .35s,border-color .35s,box-shadow .35s}
+.st[aria-pressed=true]{outline:3px solid var(--teal);outline-offset:2px}
+.st[data-s=fit]{background:var(--teal);border-color:var(--teal)}
+.st[data-s=unclear]{border-style:dashed;border-color:var(--ink)}
+.st[data-s=out]{background:repeating-linear-gradient(135deg,#c3cfc6 0 3px,#e9efe7 3px 6px);border-color:#93a597}
+.st[data-s=cand]::after,.st[data-s=ver]::after,.st[data-s=rej]::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--ink)}
+.st[data-s=ver]{border-color:var(--lit)}
+.st[data-s=ver]::after{background:var(--lit)}
+.st[data-s=rej]::after{background:none;inset:2px;border:0;content:"\00d7";color:var(--muted);font:600 18px/20px var(--body);text-align:center}
+.st[data-s=call]{background:var(--lit);border-color:var(--lit);box-shadow:0 0 0 4px var(--lit-soft)}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;margin:10px 2px 0;font-size:14px;color:var(--muted)}
+.key span{display:inline-flex;align-items:center;gap:7px}
+.key i{display:inline-block;width:16px;height:16px;border-radius:50%;border:2px solid var(--muted);background:#fff;position:relative;flex:none}
+.key i[data-s=fit]{background:var(--teal);border-color:var(--teal)}
+.key i[data-s=unclear]{border-style:dashed;border-color:var(--ink)}
+.key i[data-s=out]{background:repeating-linear-gradient(135deg,#c3cfc6 0 2px,#e9efe7 2px 4px);border-color:#93a597}
+.key i[data-s=cand]::after,.key i[data-s=ver]::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--ink)}
+.key i[data-s=ver]{border-color:var(--lit)}.key i[data-s=ver]::after{background:var(--lit)}
+.key i[data-s=rej]::after{content:"\00d7";position:absolute;inset:-5px 0 0;color:var(--muted);font:600 14px/16px var(--body);text-align:center}
+.key i[data-s=call]{background:var(--lit);border-color:var(--lit)}
+
+/* account card */
+.card{margin-top:14px;background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:16px 18px}
+.card:empty{display:none}
+.card h2{margin:0;font:800 26px/1.1 var(--display)}
+.meta{margin:2px 0 8px;color:var(--muted);font-size:14px}
+.ev{border-left:4px solid var(--lit);background:#fff;padding:8px 12px;margin:10px 0;border-radius:0 8px 8px 0}
+.ev q{display:block;margin:3px 0;font-size:15px}
+.ev small{color:var(--muted)}
+.say{margin:8px 0 0}
+.say dt{font-weight:600;margin-top:8px}
+.say dd{margin:1px 0 0}
+.warn{font-size:14px;color:var(--rust);margin:10px 0 0}
+.drop{font-size:14px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)}
+.drop ul{margin:4px 0 0;padding-left:18px}
+.small{font-size:14px;color:var(--muted)}
+
+/* queue and weights inside the story */
+.queue{display:grid;gap:8px;margin:12px 0}
+.tag{display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center;text-align:left;font:inherit;color:inherit;background:var(--panel);border:2px solid var(--ink);border-radius:12px;padding:8px 12px;cursor:pointer}
+.tag:hover{background:#fff}
+.tag[aria-pressed=true]{background:var(--lit-soft);border-color:var(--lit)}
+.tag .n{font:800 28px/1 var(--display)}
+.tag .nm{font-weight:600;line-height:1.2}
+.tag .nm small{display:block;font-weight:400;color:var(--muted)}
+.tag .pts{font:800 22px/1 var(--display)}
+.w{display:grid;grid-template-columns:minmax(110px,170px) 1fr 70px;gap:10px;align-items:center;margin:7px 0;font-size:15px}
+.bar{height:12px;background:#fff;border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden}
+.bar span{position:absolute;left:0;top:0;bottom:0}
+.bar .b0{background:#b8c7bb}
+.bar .b1{background:var(--lit);opacity:.85;transition:width .3s}
+.w output{text-align:right;font-weight:600}
+.vote{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.vote .btn{padding:6px 16px;font-size:15px}
+.vote .btn[aria-pressed=true]{background:var(--ink);color:#fff}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}
+.box{background:var(--panel);border:2px solid var(--ink);border-radius:12px;padding:12px 14px}
+.box h3{margin:0 0 6px;font:800 20px/1.1 var(--display)}
+.box p{margin:0;font-size:15px}
+ol.fail{margin:8px 0;padding-left:20px}
+ol.fail li{margin-bottom:8px;font-size:15px}
+footer{background:var(--ink);color:#c4d3c8;padding:18px 0;font-size:14px}
+footer a{color:#fff}
+@media (prefers-reduced-motion:reduce){.st,.bar .b1{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Why <span>now</span></div>
+    <div class="note">A proof of concept. The client, Gantrywell, is fictional. The manufacturers and their signals are real, linked to public sources, and dated <span id="runDate"></span>.</div>
+  </div>
+</header>
+<nav class="steps" aria-label="Walk-through steps"><ol id="stepper"></ol></nav>
+
+<main class="wrap">
+  <div class="grid">
+    <div class="story" id="story" aria-live="polite"></div>
+    <div class="right">
+      <div class="floor" id="floor" role="group" aria-label="Floor map of 60 researched accounts"></div>
+      <div class="key" id="key"></div>
+      <div class="card" id="card"></div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap">Static page built from one run of the pipeline. People appear by role only and every signal links to its source. No meetings, pipeline or revenue are claimed. <a href="https://github.com/RyColls/why-now-signal-agent">Code and data on GitHub</a>.</div></footer>
+
+<script>
+const DATA = {"runDate": "2026-11-11", "weights": {"hiring_maintenance": 30, "expansion": 25, "new_ops_leader": 20, "pain_in_job_post": 15, "funding_or_pe": 10}, "decay": {"half_after_days": 180, "zero_after_days": 365}, "accounts": [{"rank": 1, "id": "A047", "name": "Wixon", "industry": "food_beverage", "city": "St Francis", "state": "WI", "emp": 305, "plants": 1, "fit": "fit", "status": "call", "score": 25.0, "fitReason": "Company history says current leadership bought Wixon in 2004 with no parent group named, and the input reports 305 employees.", "parent": null, "signals": [{"type": "expansion", "published": "2026-11-05", "age": 6, "url": "https://perishablenews.com/?p=437595", "sentence": "The project, which began in fall 2025, more than tripled the operation's footprint and created 110 new jobs.", "summary": "Wixon completed a Milwaukee-area facility expansion (Wixon West) that more than tripled its footprint, a site other than the St. Francis plant on file.", "role": "VP of Operations", "factor": 1.0}], "cands": [{"type": "expansion", "published": "2026-11-05", "url": "https://perishablenews.com/?p=437595", "counts": true, "closed": false, "why": null}], "brief": {"Likely pain": "A tripled footprint may mean far more equipment and a second site to schedule maintenance across, which can strain spreadsheet or paper routines.", "Opening angle": "Congratulate the expansion, then ask how maintenance work is being planned across the old and new sites.", "Contact": "VP of Operations; the Maintenance Manager as champion.", "Caveat": "The new site is not the St. Francis plant on file."}}, {"rank": 2, "id": "A043", "name": "Shearer's Foods - PHX", "industry": "food_beverage", "city": "Phoenix", "state": "AZ", "emp": 392, "plants": 1, "fit": "unclear", "status": "call", "score": 25.0, "fitReason": "Private equity-owned (CD&R, 2023) snack maker with 17 manufacturing facilities, but no group headcount was stated on the pages opened, so its size could not be confirmed.", "parent": null, "signals": [{"type": "expansion", "published": "2026-08-02", "age": 101, "url": "https://www.potatopro.com/node/173705", "sentence": "Shearer's Foods has officially opened its newest manufacturing facility in Moraine, Ohio", "summary": "Shearer's Foods opened a new manufacturing facility in Moraine, Ohio, which is company-level and not at the Phoenix plant.", "role": "VP Operations", "factor": 1.0}], "cands": [{"type": "expansion", "published": "2026-08-02", "url": "https://www.potatopro.com/node/173705", "counts": true, "closed": false, "why": null}, {"type": "expansion", "published": "2026-04-28", "url": "https://www.pulse.bot/manufacturing/news/shearers-foods-launches-potato-chip-line-at-dayton-plant-expanding-106m-facility-319d859d-2737-4fbb-b24b-1f98819fd3c6/", "counts": true, "closed": false, "why": null}], "brief": {"Likely pain": "A new plant at a multi-site snack maker may raise the question of one maintenance system across all sites.", "Opening angle": "Ask how maintenance is standardized across plants.", "Contact": "VP of Operations.", "Caveat": "This is a company-level signal from a different plant than the Phoenix one on file. Shearer's is private-equity owned and reported to run 17 manufacturing facilities, which suggests a headcount above the 200 to 2,000 range. Treat fit as doubtful until size is confirmed."}}, {"rank": 3, "id": "A010", "name": "Cooper Farms", "industry": "food_beverage", "city": "St. Henry", "state": "OH", "emp": 1751, "plants": 2, "fit": "fit", "status": "call", "score": 25.0, "fitReason": "Its company history page describes it as a family-owned and privately held company with no parent group named, though the page does not state an employee count.", "parent": null, "signals": [{"type": "expansion", "published": "2026-05-21", "age": 174, "url": "https://www.dailystandard.com/archive/2026-05-21/stories/54861/cooper-farms-plans-processing-plant-in-celina", "sentence": "The company said in a news release the 28,000-square-foot facility will serve as a value-added further processing plant", "summary": "Cooper Farms plans a new 28,000-square-foot further processing plant in Celina, Ohio.", "role": "VP or Director of Operations", "factor": 1.0}], "cands": [{"type": "hiring_maintenance", "published": "2026-07-01", "url": "https://gfj.cooperfarms.com/jobdetails/celina-oh-maintenance-supervisor-6a4543643791e70e28b5823f", "counts": true, "closed": true, "why": "The job post had closed, so the role was probably filled."}, {"type": "hiring_maintenance", "published": "2026-07-01", "url": "https://gfj.cooperfarms.com/jobdetails/van-wert-oh-maintenance-supervisor-6a45439787280d3f6eab62c3", "counts": true, "closed": true, "why": "The job post had closed, so the role was probably filled."}, {"type": "expansion", "published": "2026-05-21", "url": "https://www.dailystandard.com/archive/2026-05-21/stories/54861/cooper-farms-plans-processing-plant-in-celina", "counts": true, "closed": false, "why": null}], "brief": {"Likely pain": "A third site would add equipment to maintain and may prompt a review of how work orders are handled across plants.", "Opening angle": "Ask how maintenance will be set up at the new plant before it opens.", "Contact": "VP or Director of Operations.", "Caveat": "The company's 2026 maintenance-supervisor job posts were closed by the time they were checked, so they are not counted."}}, {"rank": 4, "id": "A056", "name": "CEMCO, LLC", "industry": "metal_fabrication", "city": "City Of Industry", "state": "CA", "emp": 483, "plants": 5, "fit": "unclear", "status": "call", "score": 12.5, "fitReason": "Wholly owned by JFE Shoji America Holdings, part of Tokyo-based JFE Shoji Corporation; CEMCO reports over 500 employees, but the parent group's total headcount was not confirmed.", "parent": "JFE Shoji Corporation", "signals": [{"type": "expansion", "published": "2026-03-16", "age": 240, "url": "https://www.wconline.com/articles/98068-cemco-opens-new-manufacturing-facility-in-commerce-city-colo", "sentence": "CEMCO has opened a 140,000-square-foot manufacturing facility in Commerce City, Colo.", "summary": "CEMCO opened a 140,000 sq ft manufacturing facility in Commerce City, Colorado.", "role": "Plant Manager", "factor": 0.5}], "cands": [{"type": "expansion", "published": "2026-03-16", "url": "https://www.wconline.com/articles/98068-cemco-opens-new-manufacturing-facility-in-commerce-city-colo", "counts": true, "closed": false, "why": null}], "brief": {"Likely pain": "A large new plant may be re-opening the question of how maintenance work is tracked across CEMCO's sites.", "Opening angle": "Ask how the Colorado plant's maintenance is being set up compared with the older plants.", "Contact": "Plant Manager.", "Caveat": "CEMCO is owned by JFE Shoji America Holdings, part of a Tokyo group whose total headcount was not confirmed."}}, {"rank": 5, "id": "A015", "name": "Farmer's Fridge", "industry": "food_beverage", "city": "Chicago", "state": "IL", "emp": 463, "plants": 5, "fit": "fit", "status": "call", "score": 12.5, "fitReason": "Independent, venture-backed Chicago food producer that makes its salads in its own kitchens; the input lists 463 employees and no parent group was found.", "parent": null, "signals": [{"type": "expansion", "published": "2026-01-05", "age": 310, "url": "https://www.spokesman.com/stories/2026/jan/05/chicago-based-farmers-fridge-has-turned-vending-ma/", "sentence": "Farmer's Fridge has since doubled its kitchen to 100,000 square feet", "summary": "A January 2026 article reports Farmer's Fridge has doubled its kitchen to 100,000 sq ft, though it does not say when.", "role": "Plant Manager", "factor": 0.5}], "cands": [{"type": "expansion", "published": "2026-01-05", "url": "https://www.spokesman.com/stories/2026/jan/05/chicago-based-farmers-fridge-has-turned-vending-ma/", "counts": true, "closed": false, "why": null}], "brief": {"Likely pain": "A kitchen that has doubled in size may carry more equipment than its original maintenance routines were built for.", "Opening angle": "Ask how the bigger kitchen changed maintenance planning.", "Contact": "Plant Manager.", "Caveat": "The weakest signal in this set: its timing is unclear."}}, {"rank": 6, "id": "A053", "name": "Advance Mfg. Co., Inc.", "industry": "metal_fabrication", "city": "Westfield", "state": "MA", "emp": 261, "plants": 1, "fit": "unclear", "status": "call", "score": 10.0, "fitReason": "The operating company is about 261 employees, but its parent Precinmac LP runs eight North American facilities with no group headcount found.", "parent": "Precinmac LP", "signals": [{"type": "funding_or_pe", "published": "2026-07-07", "age": 127, "url": "https://www.precinmac.com/news/precinmac-lp-announces-the-acquisition-of-massachusetts-based-advance-mfg-co-inc", "sentence": "today announced the acquisition of Advance Mfg. Co.", "summary": "Precinmac LP, a manufacturing group backed by Centerbridge Partners, announced its acquisition of Advance Mfg. Co.", "role": "General Manager, Westfield", "factor": 1.0}], "cands": [{"type": "funding_or_pe", "published": "2026-07-07", "url": "https://www.precinmac.com/news/precinmac-lp-announces-the-acquisition-of-massachusetts-based-advance-mfg-co-inc", "counts": true, "closed": false, "why": null}], "brief": {"Likely pain": "A new owner running eight facilities may push for shared systems and reporting.", "Opening angle": "Ask what the new owner expects on uptime reporting.", "Contact": "General Manager of the Westfield site.", "Caveat": "The new parent's group headcount was not found, so the account may be outside the 200 to 2,000 range."}}, {"rank": 7, "id": "A001", "name": "AFP advanced food products llc", "industry": "food_beverage", "city": "New Holland", "state": "PA", "emp": 484, "plants": 3, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The company page describes an international alliance with Groupe Soparind Bongrain and Land O' Lakes rather than ownership, and gives no headcount.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 8, "id": "A102", "name": "American Packaging Corp", "industry": "packaging", "city": "Rochester", "state": "NY", "emp": 266, "plants": 2, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Independently owned family business; its own page gives about 1,200 employees (2022), within range (input says 266), with no parent group found.", "parent": null, "signals": [], "cands": [{"type": "hiring_maintenance", "published": "2026-01-15", "url": "https://jobs.y-axis.com/jobs/maintenance-lead-american-packaging-corporation", "counts": true, "closed": true, "why": "The job post had closed, so the role was probably filled."}], "brief": null}, {"rank": 9, "id": "A054", "name": "Ameriforge-IR", "industry": "metal_fabrication", "city": "Houston", "state": "TX", "emp": 258, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Houston-based forger now listed as part of Walworth Group, but I found no page giving the group's size, and the one headcount shown (30+) conflicts with the input figure.", "parent": "Walworth Group", "signals": [], "cands": [], "brief": null}, {"rank": 10, "id": "A003", "name": "Ancient Crunch", "industry": "food_beverage", "city": "Lebanon", "state": "NJ", "emp": 290, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Builtin lists 34 total employees, which conflicts with the 290 reported in the input, and no parent or owner was found on the pages opened.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 11, "id": "A004", "name": "Anitas Mexican Foods Corp", "industry": "food_beverage", "city": "San Bernardino", "state": "CA", "emp": 207, "plants": 1, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Family-owned company with one 145,000 sq ft San Bernardino plant and 275 employees per its own page, with no parent group named.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 12, "id": "A104", "name": "Arrow Packaging Solutions", "industry": "packaging", "city": "Indianapolis", "state": "IN", "emp": 443, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The input reports 443 employees, but the profiles opened give 51-200 or 51-100 employees, and the 2011 expansion article concerns a different entity, Arrow Container LLC.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 13, "id": "A151", "name": "Beacon Engineered Solutions - MN", "industry": "plastics", "city": "Alexandria", "state": "MN", "emp": 210, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "A third-party directory gives 56 employees, a job site gives 201 to 500, and the input gives 210; no parent is stated for Beacon Engineered Solutions, so group size could not be confirmed.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 14, "id": "A055", "name": "BlueScope Steel", "industry": "metal_fabrication", "city": "St. Joseph", "state": "MO", "emp": 245, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Part of the BlueScope group, which had 16,500 employees as of June 30, 2024.", "parent": "BlueScope Steel Limited", "signals": [], "cands": [], "brief": null}, {"rank": 15, "id": "A152", "name": "Bruss North America", "industry": "plastics", "city": "Russell Springs", "state": "KY", "emp": 469, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "A Russell County page calls its parent an unnamed German company, so the parent group's size could not be determined.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 16, "id": "A112", "name": "Continental O'Sullivan Films", "industry": "packaging", "city": "Winchester", "state": "VA", "emp": 285, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The Continental press release does not state the parent of the Winchester plant, and no group headcount was confirmed.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 17, "id": "A113", "name": "Coroplast Tape Corporation", "industry": "packaging", "city": "Rock Hill", "state": "SC", "emp": 400, "plants": 2, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Its website calls it a subsidiary brand of the Coroplast Group, which employs around 6,800 people worldwide.", "parent": "Coroplast Group", "signals": [], "cands": [], "brief": null}, {"rank": 18, "id": "A157", "name": "Creative Pultrusions", "industry": "plastics", "city": "Alum Bank", "state": "PA", "emp": 304, "plants": 2, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Its website says it was acquired by Hill and Smith Holdings PLC, which reports about 5,000 employees as of 30 June 2026.", "parent": "Hill and Smith Holdings PLC", "signals": [], "cands": [], "brief": null}, {"rank": 19, "id": "A155", "name": "CSP Innovations North Carolina, Inc.", "industry": "plastics", "city": "Salisbury", "state": "NC", "emp": 450, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Continental Structural Plastics is a Teijin Group company, and Teijin had 15,689 employees as of March 31, 2026.", "parent": "Teijin Limited", "signals": [], "cands": [], "brief": null}, {"rank": 20, "id": "A057", "name": "CST", "industry": "metal_fabrication", "city": "Springdale", "state": "AR", "emp": 1465, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Springdale, AR plant of Central States Manufacturing (assumed to be the account named CST), a metal-products maker with 12 sites; no page I opened gives group headcount or confirms independence.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 21, "id": "A012", "name": "Danone US, LLC", "industry": "food_beverage", "city": "West Jordan", "state": "UT", "emp": 1093, "plants": 6, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "US unit of Danone S.A., a global group with 89,528 employees in 2024, well above 2,000.", "parent": "Danone S.A.", "signals": [], "cands": [{"type": "expansion", "published": "2026-01-08", "url": "https://www.dairybusinessmea.com/2026/01/08/danone-north-america-commences-us4m-expansion-at-texas-facility/", "counts": true, "closed": false, "why": null}, {"type": "hiring_maintenance", "published": "2026-06-10", "url": "https://careers.danone.com/us/en/jobs/maintenance-lead-26044-en-us.html", "counts": true, "closed": false, "why": null}, {"type": "pain_in_job_post", "published": "2026-03-27", "url": "https://careers.danone.com/us/en/jobs/digital-manufacturing-leader-24385-en-us.html", "counts": false, "closed": false, "why": "The page mentions Excel for reporting, not a maintenance system."}], "brief": null}, {"rank": 22, "id": "A061", "name": "Duravent Inc", "industry": "metal_fabrication", "city": "Vacaville", "state": "CA", "emp": 221, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Part of the Duravent Group, a Bain Capital-backed portfolio of 14 brands, with no group headcount stated on the page checked.", "parent": "Duravent Group", "signals": [], "cands": [{"type": "funding_or_pe", "published": "2026-03-18", "url": "https://pulse2.com/duravent-group-strategic-growth-investment-secured-to-expand-hvac-and-air-quality-platform/amp/", "counts": false, "closed": false, "why": "Investment is at the parent group, a different entity from the account."}], "brief": null}, {"rank": 23, "id": "A062", "name": "E-Z Line Pipe Support Co LLC", "industry": "metal_fabrication", "city": "Manvel", "state": "TX", "emp": 306, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The directory lists about 215 employees at 21340 Highway 6, Manvel, TX, with no parent or ownership shown, so independence could not be confirmed against the input's 306.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 24, "id": "A163", "name": "East Jordan Plastics", "industry": "plastics", "city": "Beaverton", "state": "MI", "emp": 472, "plants": 4, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Described as a family business with no parent group named, so it appears to be an independent operating manufacturer; the 472-employee figure is from the input file and was not verified.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 25, "id": "A064", "name": "Fortune Brands Home & Security, Inc.", "industry": "metal_fabrication", "city": "New Bern", "state": "NC", "emp": 1063, "plants": 2, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Operating unit of Fortune Brands Innovations, which reported 10,000 employees as of December 27, 2025.", "parent": "Fortune Brands Innovations, Inc.", "signals": [], "cands": [], "brief": null}, {"rank": 26, "id": "A017", "name": "Franklin Baking Company, LLC", "industry": "food_beverage", "city": "Goldsboro", "state": "NC", "emp": 352, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Subsidiary of Flowers Foods, which reported 10,300 employees as of January 3, 2026.", "parent": "Flowers Foods, Inc.", "signals": [], "cands": [{"type": "hiring_maintenance", "published": "2026-05-13", "url": "https://tallo.com/talent/job/maintenance-and-repair/maintenance-or-service-supervisor/nc/goldsboro/industrial-maintenance-superin-263a5337", "counts": false, "closed": false, "why": "Printed date is not labelled as a posting date."}], "brief": null}, {"rank": 27, "id": "A164", "name": "Gilkey Window Company", "industry": "plastics", "city": "Cincinnati", "state": "OH", "emp": 266, "plants": 4, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The input reports 266 employees, but the one profile opened estimates about 110 employees, and no parent group is named.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 28, "id": "A023", "name": "Gregory Packaging Inc", "industry": "food_beverage", "city": "Bethlehem", "state": "PA", "emp": 222, "plants": 5, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Operating packaging manufacturer in Bethlehem, PA with multi-site operations, but no employee count or parent company could be verified from accessible sources.", "parent": null, "signals": [], "cands": [{"type": "hiring_maintenance", "published": "2026-06-25", "url": "https://www.career.com/job/gregory-packaging-inc/corporate-maintenance-manager/j202605290417420777064", "counts": true, "closed": true, "why": "The job post had closed, so the role was probably filled."}, {"type": "pain_in_job_post", "published": "2026-06-25", "url": "https://www.career.com/job/gregory-packaging-inc/corporate-maintenance-manager/j202605290417420777064", "counts": true, "closed": true, "why": "The job post had closed, so the role was probably filled."}], "brief": null}, {"rank": 29, "id": "A074", "name": "Hoffman Industries, LLC", "industry": "metal_fabrication", "city": "Anoka", "state": "MN", "emp": 1491, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "The Anoka site appears to be nVent's HOFFMAN enclosures plant, and nVent Electric plc had 12,000 employees at end-2025.", "parent": "nVent Electric plc", "signals": [], "cands": [], "brief": null}, {"rank": 30, "id": "A026", "name": "ICL Specialty Products", "industry": "food_beverage", "city": "St. Louis", "state": "MO", "emp": 200, "plants": 3, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "This is a unit of the global ICL Group, which had 13,007 employees at 31 December 2025, far above 2,000.", "parent": "ICL Group Ltd", "signals": [], "cands": [], "brief": null}, {"rank": 31, "id": "A027", "name": "Interamerican Foods Corp", "industry": "food_beverage", "city": "Cleburne", "state": "TX", "emp": 221, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "A 2018 article ties the Cleburne plant to Interamerican Foods, but no current headcount or parent-group size was confirmed.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 32, "id": "A121", "name": "Interflex Acquisition Company LLC", "industry": "packaging", "city": "Wilkesboro", "state": "NC", "emp": 213, "plants": 3, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Its parent InterFlex Group was sold to Toppan Holdings, which reported about 53,700 employees as of March 2024.", "parent": "Toppan Holdings", "signals": [], "cands": [], "brief": null}, {"rank": 33, "id": "A078", "name": "International Crankshaft Inc", "industry": "metal_fabrication", "city": "Georgetown", "state": "KY", "emp": 290, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "A 2012 article describes it as a subsidiary of Sumitomo Metal Industries, Ltd.; the size of that parent group was not verified, so fit cannot be confirmed.", "parent": "Sumitomo Metal Industries, Ltd.", "signals": [], "cands": [], "brief": null}, {"rank": 34, "id": "A030", "name": "Josephs Bakery", "industry": "food_beverage", "city": "Lawrence", "state": "MA", "emp": 266, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "A March 2026 release describes a third-generation owner, but none of the pages read states an employee count.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 35, "id": "A124", "name": "Kelly Box & Packaging", "industry": "packaging", "city": "Fort Wayne", "state": "IN", "emp": 340, "plants": 1, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Independent third-generation family-owned company with five sites in Indianapolis and Fort Wayne; the page does not state headcount, and the input gives 340 employees.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 36, "id": "A031", "name": "Lavazza North America", "industry": "food_beverage", "city": "Westchester", "state": "PA", "emp": 391, "plants": 2, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Lavazza North America is part of Lavazza Group, which the group's FY2025 results release says employs over 5,800 people worldwide.", "parent": "Lavazza Group", "signals": [], "cands": [], "brief": null}, {"rank": 37, "id": "A084", "name": "MAC VALVES INC", "industry": "metal_fabrication", "city": "Wixom", "state": "MI", "emp": 421, "plants": 3, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Village lists the company as privately held with 200+ employees and no parent group appears in the sources checked, though the reported headcount is 421.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 38, "id": "A175", "name": "Mack Molding Company", "industry": "plastics", "city": "Statesville", "state": "VT", "emp": 623, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Mack Molding is a wholly owned subsidiary of privately held Mack Group; Mack says the group employs more than 3,000 people while Revelio Labs shows about 1,559, so group size is unresolved. Headquarters is Arlington, VT, not Statesville, VT as the input guess says.", "parent": "Mack Group", "signals": [], "cands": [], "brief": null}, {"rank": 39, "id": "A034", "name": "Macrocap Laboraties, LLC.", "industry": "food_beverage", "city": "Lake Mary", "state": "FL", "emp": 250, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "A MacroCap Labs contract manufacturer in Longwood, FL (founded 2010) appears to match, but the input spelling and Lake Mary location differ and no employee count was found; the company was acquired by private equity firm A111 Capital Partners in 2023.", "parent": "A111 Capital Partners", "signals": [], "cands": [], "brief": null}, {"rank": 40, "id": "A087", "name": "Mason Industries Inc", "industry": "metal_fabrication", "city": "Hauppauge", "state": "NY", "emp": 230, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Village.ai lists privately held status and 90+ employees with no parent or owner named, so independence could not be confirmed against the input's 230 employees.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 41, "id": "A088", "name": "Microflex Inc", "industry": "metal_fabrication", "city": "Ormond Beach", "state": "FL", "emp": 205, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "No source found names a parent group; the Microflex Inc. page gives founders and relocation history only, and states no employee count.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 42, "id": "A127", "name": "MM Packaging Americas", "industry": "packaging", "city": "Clayton", "state": "NC", "emp": 300, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Operates as a division of the MM Group, whose copyright line names Mayr-Melnhof Karton AG, which had 13,347 employees as of 31 December 2025.", "parent": "Mayr-Melnhof Karton AG", "signals": [], "cands": [], "brief": null}, {"rank": 43, "id": "A174", "name": "MSA Safety", "industry": "plastics", "city": "Murrysville", "state": "PA", "emp": 488, "plants": 2, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "MSA Safety has approximately 5,402 total employees worldwide as of March 2026 per Revelio Labs, well above the 2,000 threshold.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 44, "id": "A131", "name": "Nittany Paper Mills", "industry": "packaging", "city": "Lewistown", "state": "PA", "emp": 210, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Operating company owned by Atlas Holdings, LLC (a group of 16 companies); the input's 210-employee headcount and the group's total size were not verified.", "parent": "Atlas Holdings, LLC", "signals": [], "cands": [], "brief": null}, {"rank": 45, "id": "A089", "name": "Nucor (Vulcraft Division)", "industry": "metal_fabrication", "city": "Saint Joe", "state": "IN", "emp": 312, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Vulcraft is a division of steel group Nucor, which acquired it in 1962, so it is not an independent mid-sized manufacturer.", "parent": "Nucor", "signals": [], "cands": [{"type": "expansion", "published": "2026-08-13", "url": "https://investors.nucor.com/news/news-details/2026/Nucor-to-Invest-59-Million-to-Expand-Production-Capabilities-at-its-Vulcraft-Indiana-Manufacturing-Facility/default.aspx", "counts": true, "closed": false, "why": null}], "brief": null}, {"rank": 46, "id": "A037", "name": "Olam West Coast", "industry": "food_beverage", "city": "Gilroy", "state": "CA", "emp": 858, "plants": 6, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Listed as a subsidiary of Olam, whose 2026 factsheet cites about 78,000 employees, so it belongs to a group far above 2,000 employees.", "parent": "Olam Group", "signals": [], "cands": [], "brief": null}, {"rank": 47, "id": "A135", "name": "Pacific Southwest Container, LLC", "industry": "packaging", "city": "Modesto", "state": "CA", "emp": 1111, "plants": 4, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "A directory profile lists about 500 employees and no parent group, which is within range, although the input's 1,111 figure is not confirmed by any page I opened.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 48, "id": "A136", "name": "Poly-Tainer, Inc.", "industry": "packaging", "city": "Simi Valley", "state": "CA", "emp": 382, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The village.ai profile says the company is independently owned, but it lists only 70+ employees versus 382 in the input, so size is unconfirmed.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 49, "id": "A138", "name": "Progressive Converting", "industry": "packaging", "city": "Appleton", "state": "WI", "emp": 465, "plants": 6, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "The profile lists 201-500 employees, Appleton, WI headquarters, and no parent company or owner is stated.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 50, "id": "A140", "name": "Royal Paper Box Co.", "industry": "packaging", "city": "Montebello", "state": "CA", "emp": 210, "plants": 1, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Thomasnet lists an independent, family-owned folding carton maker with 200-499 employees and no parent company.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 51, "id": "A187", "name": "Rubbermaid, Inc.", "industry": "plastics", "city": "Winfield", "state": "KS", "emp": 539, "plants": 3, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "Rubbermaid is a unit of Newell Brands, which had 22,514 employees as of June 2026 per Revelio Labs.", "parent": "Newell Brands", "signals": [], "cands": [], "brief": null}, {"rank": 52, "id": "A042", "name": "Sandridge Food Corporation", "industry": "food_beverage", "city": "Medina", "state": "OH", "emp": 612, "plants": 1, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Independent, third-generation family-owned company that states it has nearly 1,000 employees (input reports 612).", "parent": null, "signals": [], "cands": [{"type": "hiring_maintenance", "published": "2026-04-09", "url": "https://www.career.com/job/sandridge-crafted-foods/sr-maintenance-manager/j202512200015068250282", "counts": true, "closed": true, "why": "The job post had closed, so the role was probably filled."}], "brief": null}, {"rank": 53, "id": "A094", "name": "Taylor Made  112", "industry": "metal_fabrication", "city": "Yoder", "state": "IN", "emp": 638, "plants": 5, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "No Taylor Made company headquartered in Yoder, IN was found; the Taylor Made Group found is based in Gloversville, NY and its 2009 article does not mention Yoder.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 54, "id": "A144", "name": "Tetra Pak Materials LLC", "industry": "packaging", "city": "Denton", "state": "TX", "emp": 282, "plants": 1, "fit": "not_fit", "status": "not a fit", "score": 0, "fitReason": "The Denton, TX facility belongs to Tetra Pak, part of Tetra Laval Group, which reported 35,132 employees in December 2025.", "parent": "Tetra Laval Group", "signals": [], "cands": [], "brief": null}, {"rank": 55, "id": "A193", "name": "TH Plastics, Inc.", "industry": "plastics", "city": "Bowling Green", "state": "OH", "emp": 846, "plants": 3, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "No source found names an owner or parent group, the company website could not be opened, and the employee count is from the input file and not verified.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 56, "id": "A095", "name": "The Lee Company", "industry": "metal_fabrication", "city": "Westbrook", "state": "CT", "emp": 1078, "plants": 6, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "The company's own site says it has over 1,100 employees at Westbrook and Essex, CT, and names no parent group.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 57, "id": "A195", "name": "Ultra-Poly Corporation", "industry": "plastics", "city": "Portland", "state": "PA", "emp": 254, "plants": 4, "fit": "fit", "status": "no reason to call yet", "score": 0, "fitReason": "Portland, PA company with no parent group found; a 2023 trade article gives 220 employees and five plants, consistent with the input.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 58, "id": "A098", "name": "Ventcon Inc.", "industry": "metal_fabrication", "city": "Troy", "state": "MI", "emp": 493, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "Described as an HVAC sheet metal mechanical contractor rather than a plain manufacturer, and its headcount is reported differently (90+ in one directory, 493 in the input), with no parent group found.", "parent": null, "signals": [], "cands": [], "brief": null}, {"rank": 59, "id": "A199", "name": "Wilsonart LLC - Temple North", "industry": "plastics", "city": "Temple", "state": "TX", "emp": 600, "plants": 1, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "CB Insights lists Clayton, Dubilier & Rice as an investor, but no parent group size or total headcount was found, so fit cannot be confirmed.", "parent": "Clayton, Dubilier & Rice (investor)", "signals": [], "cands": [{"type": "expansion", "published": "2026-01-08", "url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026009620", "counts": false, "closed": false, "why": "A state building-project registration, not a company announcement; date is a filing date."}], "brief": null}, {"rank": 60, "id": "A099", "name": "ZEPHYR PRODUCTS, INC", "industry": "metal_fabrication", "city": "Leavenworth", "state": "KS", "emp": 224, "plants": 2, "fit": "unclear", "status": "no reason to call yet", "score": 0, "fitReason": "The input reports 224 employees, but the profile opened estimates about 110 employees, and no parent company is named.", "parent": null, "signals": [], "cands": [], "brief": null}]};
+const TYPE = {hiring_maintenance:"Hiring a maintenance lead", expansion:"New plant or expansion", new_ops_leader:"New operations leader", pain_in_job_post:"Pain in a job post", funding_or_pe:"Funding or acquisition"};
+const LINE = {food_beverage:["Food and beverage"], metal_fabrication:["Metal fabrication"], packaging:["Packaging"], plastics:["Plastics"]};
+const base = DATA.weights, factors = {}; Object.keys(base).forEach(k => factors[k] = 1);
+const votes = {};
+let step = 1, selected = null;
+const LAST = 8;
+const TITLES = ["Start","Fit","Signals","Check","Score","Calls","Feedback","Results"];
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const W = k => base[k] * factors[k];
+const score = a => a.status === "not a fit" ? 0 : a.signals.reduce((t, s) => t + W(s.type) * s.factor, 0);
+const minAge = a => Math.min(...a.signals.map(s => s.age), 9e9);
+const byScore = (x, y) => score(y) - score(x) || minAge(x) - minAge(y) || x.name.localeCompare(y.name);
+const isOut = a => a.status === "not a fit";
+const isCall = a => !isOut(a) && score(a) > 0;
+const fmt = n => String(Math.round(n * 10) / 10);
+const place = a => a.city + ", " + a.state;
+const A = DATA.accounts;
+const nOut = A.filter(isOut).length, nFit = A.filter(a => a.fit === "fit").length, nUnc = A.filter(a => a.fit === "unclear").length;
+const allCands = A.flatMap(a => a.cands);
+const nCand = allCands.length, nCount = allCands.filter(c => c.counts).length, nClosed = allCands.filter(c => c.closed).length;
+document.getElementById("runDate").textContent = DATA.runDate;
+
+/* what each step shows on the floor */
+function stationState(a){
+  const hasCand = a.cands.length > 0, anyOk = a.cands.some(c => c.counts);
+  switch (step){
+    case 1: return "plain";
+    case 2: return isOut(a) ? "out" : a.fit === "fit" ? "fit" : a.fit === "unclear" ? "unclear" : "plain";
+    case 3: return isOut(a) ? "out" : hasCand ? "cand" : "plain";
+    case 4: return isOut(a) ? "out" : anyOk ? "ver" : hasCand ? "rej" : "plain";
+    default: return isOut(a) ? "out" : isCall(a) ? "call" : "plain";
+  }
+}
+const KEYS = {
+  1:[["plain","A researched account"]],
+  2:[["fit","Looks like a fit"],["unclear","Fit not confirmed"],["out","Part of a larger group"]],
+  3:[["cand","A possible signal was found"],["out","Removed"]],
+  4:[["ver","Signal confirmed on its page"],["rej","Found, but did not hold up"],["out","Removed"]],
+  5:[["call","Call this week"],["plain","No reason to call yet"],["out","Removed"]]
+};
+
+function renderFloor(){
+  const by = {}; A.forEach(a => (by[a.industry] = by[a.industry] || []).push(a));
+  const rank = {call:0, ver:0, cand:1, fit:1, unclear:2, rej:3, plain:4, out:5};
+  document.getElementById("floor").innerHTML = Object.keys(LINE).map(k => {
+    const list = (by[k] || []).slice().sort((x, y) => rank[stationState(x)] - rank[stationState(y)] || byScore(x, y));
+    return `<div class="line"><div class="lname">${LINE[k][0]}<small>${list.length} accounts</small></div><div class="stations">` +
+      list.map(a => `<button class="st" data-s="${stationState(a)}" data-id="${a.id}" aria-pressed="${selected === a.id}" aria-label="${esc(a.name)}" title="${esc(a.name)}"></button>`).join("") + `</div></div>`;
+  }).join("");
+  const keys = KEYS[Math.min(step, 5)];
+  document.getElementById("key").innerHTML = keys.map(([s, t]) => `<span><i data-s="${s}"></i>${t}</span>`).join("");
+}
+
+function renderCard(){
+  const el = document.getElementById("card");
+  const a = A.find(x => x.id === selected);
+  if (!a) { el.innerHTML = ""; return; }
+  let h = `<h2>${esc(a.name)}</h2><p class="meta">${esc(place(a))}. ${a.emp} employees across ${a.plants} plant${a.plants > 1 ? "s" : ""} on OSHA's record.</p>`;
+  if (step >= 2) h += `<p class="small" style="margin:0 0 6px"><b>${{fit:"Looks like a fit.",unclear:"Fit not confirmed.",not_fit:"Part of a larger group."}[a.fit] || ""}</b> ${esc(a.fitReason)}${a.parent ? " Parent: " + esc(a.parent) + "." : ""}</p>`;
+  if (step >= 5 && isCall(a)) {
+    h += a.signals.map(s => `<div class="ev"><b>${esc(TYPE[s.type])}</b>, published ${esc(s.published)} (${s.age} days ago). Worth ${fmt(W(s.type) * s.factor)} points${s.factor < 1 ? ", halved because it is over 180 days old" : ""}.
+      <q>${esc(s.sentence)}</q><small><a href="${esc(s.url)}" target="_blank" rel="noopener">Open the source</a></small></div>`).join("");
+    if (a.brief) {
+      h += `<dl class="say"><dt>Likely pain</dt><dd>${esc(a.brief["Likely pain"])}</dd><dt>Opening angle</dt><dd>${esc(a.brief["Opening angle"])}</dd><dt>Who to contact</dt><dd>${esc(a.brief["Contact"])}</dd></dl>`;
+      if (a.brief["Caveat"]) h += `<p class="warn"><b>Caveat.</b> ${esc(a.brief["Caveat"])}</p>`;
+    }
+    if (step === 7) {
+      const v = votes[a.id];
+      h += `<div class="vote"><span class="small">Would a rep call on this?</span>
+        <button class="btn" data-vote="up" aria-pressed="${v === "up"}">Useful</button>
+        <button class="btn" data-vote="down" aria-pressed="${v === "down"}">Not useful</button></div>`;
+    }
+  } else if (step >= 5) {
+    h += isOut(a) ? `<p>Taken off the list: it looks like a unit of a much larger group than the client sells to.</p>`
+                  : `<p>No signal was found that is current, about this company, and confirmed on its page. That is a result, not a gap to fill with a guess.</p>`;
+  }
+  if (step >= 3 && a.cands.length) {
+    const rows = step >= 4 ? a.cands.filter(c => c.why) : a.cands;
+    if (rows.length) h += `<div class="drop"><b>${step >= 4 ? "Found but not counted" : "Possible signals found"}</b><ul>` +
+      rows.map(c => `<li>${esc(TYPE[c.type])}, ${esc(c.published)}${step >= 4 && c.why ? ": " + esc(c.why) : ""} <a href="${esc(c.url)}" target="_blank" rel="noopener">Source</a></li>`).join("") + `</ul></div>`;
+  }
+  el.innerHTML = h;
+}
+
+function queue(){ return A.filter(isCall).sort(byScore); }
+function queueHtml(){
+  return `<div class="queue">` + queue().map((a, i) => `<button class="tag" data-id="${a.id}" aria-pressed="${selected === a.id}"><span class="n">${i + 1}</span><span class="nm">${esc(a.name)}<small>${esc(place(a))}. ${a.signals.map(s => esc(TYPE[s.type])).join(", ")}</small></span><span class="pts" title="Score">${fmt(score(a))}</span></button>`).join("") + `</div>`;
+}
+function weightsHtml(){
+  const keys = Object.keys(base), max = Math.max(...keys.map(k => base[k] * 2));
+  return keys.map(k => `<div class="w"><span>${TYPE[k]}</span><div class="bar" aria-hidden="true"><span class="b0" style="width:${base[k] / max * 100}%"></span><span class="b1" style="width:${W(k) / max * 100}%;mix-blend-mode:multiply"></span></div><output>${fmt(base[k])} to ${fmt(W(k))}</output></div>`).join("");
+}
+
+const exampleOut = A.find(a => isOut(a) && a.parent) || A.find(isOut);
+const STORY = {
+  1: () => `<h1>Start with a list of real factories</h1>
+    <p>A sales team that calls from an old purchased list gets few replies. This agent starts from public records instead, so every company on it exists and can be checked.</p>
+    <ul class="facts">
+      <li><span class="n">365,391</span><span>workplaces in OSHA's 2025 injury-reporting file</span></li>
+      <li><span class="n">2,252</span><span>companies that match the profile: US manufacturers, 200 to 2,000 employees, 1 to 6 plants</span></li>
+      <li><span class="n">60</span><span>drawn at random for this run, shown on the map. The full list is 200.</span></li>
+    </ul>`,
+  2: () => `<h1>Remove what is not a fit</h1>
+    <p>OSHA's file shows who filed, not who owns them, so some "mid-sized" companies are really plants of giants. Each account is checked on the web.</p>
+    <ul class="facts">
+      <li><span class="n">${nFit}</span><span>look like independent mid-sized makers</span></li>
+      <li><span class="n">${nUnc}</span><span>could not be confirmed either way</span></li>
+      <li><span class="n">${nOut}</span><span>belong to much larger groups and are removed${exampleOut ? `, such as ${esc(exampleOut.name)}` : ""}</span></li>
+    </ul><p class="small">Select any station to read its fit check.</p>`,
+  3: () => `<h1>Look for a reason to call</h1>
+    <p>For each account the agent searches for five public signals that a maintenance-software buyer may be forming. It keeps only ones with a source link, a printed date and a quoted sentence.</p>
+    <ul class="facts">${Object.keys(base).map(k => `<li><span class="n">${base[k]}</span><span>${TYPE[k]}</span></li>`).join("")}</ul>
+    <p class="small">The numbers are starting weights. ${nCand} possible signals turned up across the map.</p>`,
+  4: () => `<h1>Check every source again</h1>
+    <p>A second reviewer, who never saw the first one's reasoning, re-opens each page. It must be the same company, with the sentence and the date on the page.</p>
+    <ul class="facts">
+      <li><span class="n">${nCand}</span><span>possible signals found</span></li>
+      <li><span class="n">10</span><span>passed the reviewer's strict checks on their own</span></li>
+      <li><span class="n">${nCount}</span><span>counted after I reviewed each disagreement. The reasons are on each station.</span></li>
+    </ul><p class="small">${nClosed} of the ${nCount} were job posts that had already closed, which scoring ignores.</p>`,
+  5: () => `<h1>Score with rules anyone can read</h1>
+    <p>Code, not the model, adds up the points: each signal type counts once, at its weight. A signal over 180 days old counts half, and over a year counts nothing. An account with no current signal is labelled "no reason to call yet".</p>
+    <ul class="facts">
+      <li><span class="n">${queue().length}</span><span>accounts have a current, confirmed signal</span></li>
+      <li><span class="n">${A.filter(a => !isOut(a) && !isCall(a)).length}</span><span>have no reason to call yet</span></li>
+      <li><span class="n">${nOut}</span><span>were removed as parts of larger groups</span></li>
+    </ul><p class="small">Select a lit station to read the evidence.</p>`,
+  6: () => `<h1>This week's calls</h1>
+    <p>Each account is one screen: the signal, its date and source link, the likely pain, an opening line, and the role to contact. Pain is a hypothesis, so the wording says "may" and "likely".</p>
+    ${queueHtml()}<p class="small">Select an account to open its brief.</p>`,
+  7: () => `<h1>Teach it from rep feedback</h1>
+    <p>Open a brief and mark it useful or not useful. Each vote moves the weight of that brief's signals by 15 percent, and the order below changes. This shows the mechanism. Nothing here comes from real reps.</p>
+    ${queueHtml()}${weightsHtml()}<p class="small">Gray is the starting weight and orange is the weight after your votes.</p>`,
+  8: () => `<h1>How well it worked</h1>
+    <p>Measured on these 60 accounts, a small sample, so read the counts, not the percentages. The cost was about $0.07 per account at list prices.</p>
+    <div class="two"><div class="box"><h3>What held up</h3><p>${nCount} of ${nCand} found signals counted after review, but only 10 passed the reviewer's strict checks alone.</p></div>
+    <div class="box"><h3>What did not</h3><p>Only ${queue().length} of 60 accounts have a current signal, and 3 of those ${queue().length} have a fit that is not confirmed.</p></div></div>
+    <p><b>Where it went wrong</b></p><ol class="fail">
+      <li>Right company, wrong plant: seven signals came from a different site than the one on file. Fix: resolve the parent company first.</li>
+      <li>Not an announcement: a state building filing and a parent-level investment were taken for company news. Fix: require the company's own statement.</li>
+      <li>Closed job posts: ${nClosed} of the hiring signals had already closed. Fix: scoring now ignores them.</li></ol>
+    <p class="small">Three checks still need a person: hand-labelled fit, a hand-researched recall sample, and a blind ranking test. <a href="https://github.com/RyColls/why-now-signal-agent/blob/main/docs/results.md">Full results</a>.</p>`
+};
+
+function renderStepper(){
+  document.getElementById("stepper").innerHTML = TITLES.map((t, i) =>
+    `<li><button data-step="${i + 1}" class="${i + 1 < step ? "done" : ""}" ${i + 1 === step ? 'aria-current="step"' : ""}><b>${i + 1}</b>${t}</button></li>`).join("");
+}
+function renderStory(){
+  document.getElementById("story").innerHTML = STORY[step]() +
+    `<div class="nav"><button class="btn" data-go="-1" ${step === 1 ? "disabled" : ""}>Back</button>
+     <button class="btn go" data-go="1" ${step === LAST ? "disabled" : ""}>${step === LAST ? "End of walk-through" : "Next: " + TITLES[step]}</button>
+     <span class="count">Step ${step} of ${LAST}</span></div>`;
+}
+function render(){ renderStepper(); renderStory(); renderFloor(); renderCard(); }
+function go(n, focusStory){
+  step = Math.min(LAST, Math.max(1, n));
+  if (step < 5 && selected) { const a = A.find(x => x.id === selected); if (a && step < 2) selected = null; }
+  history.replaceState(null, "", "#step-" + step);
+  render();
+  if (focusStory) document.getElementById("story").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion:reduce)").matches ? "auto" : "smooth", block:"start"});
+}
+
+document.addEventListener("click", e => {
+  const g = e.target.closest("[data-go]"); if (g) return go(step + Number(g.dataset.go), true);
+  const s = e.target.closest("[data-step]"); if (s) return go(Number(s.dataset.step), false);
+  const p = e.target.closest("[data-id]");
+  if (p) { selected = p.dataset.id; render(); if (matchMedia("(max-width:900px)").matches) document.getElementById("card").scrollIntoView({behavior:"smooth", block:"nearest"}); return; }
+  const v = e.target.closest("[data-vote]");
+  if (v && selected) {
+    const a = A.find(x => x.id === selected), prev = votes[selected], next = v.dataset.vote === prev ? null : v.dataset.vote, k = {up:1.15, down:0.85};
+    a.signals.forEach(sg => {
+      if (prev) factors[sg.type] /= k[prev];
+      if (next) factors[sg.type] *= k[next];
+      factors[sg.type] = Math.min(2, Math.max(0.5, factors[sg.type]));
+    });
+    if (next) votes[selected] = next; else delete votes[selected];
+    render();
+  }
+});
+document.addEventListener("keydown", e => {
+  if (e.target.closest("input,textarea")) return;
+  if (e.key === "ArrowRight") go(step + 1, false);
+  if (e.key === "ArrowLeft") go(step - 1, false);
+});
+const m = location.hash.match(/step-(\d)/);
+go(m ? Number(m[1]) : 1, false);
+</script>
+</body>
+</html>

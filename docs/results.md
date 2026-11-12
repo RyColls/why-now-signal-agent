@@ -13,7 +13,8 @@ figures on a small sample, with a failure list.
 | Candidate signals found by the research workers | 20 |
 | Signals the reviewer confirmed under strict rules | 10 of 20 (50%) |
 | Signals counted after the final review | 16 of 20 (80%) |
-| Of those 16, still current when scored | 8 of 16 (6 job posts were closed) |
+| Of those 16, still current when scored | 10 of 16 (6 job posts were closed) |
+| Of those 10, on accounts that stayed on the list | 7 signals on 6 accounts (3 sat on accounts removed as parts of larger groups) |
 | Accounts with a current verified signal | 6 of 60 |
 
 The strict figure is the reviewer's own pass. The final figure includes seven
