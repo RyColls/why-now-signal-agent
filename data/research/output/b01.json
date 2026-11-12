@@ -1,0 +1,99 @@
+{
+  "batch": "b01",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A175",
+      "company_name": "Mack Molding Company",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Mack Molding is a wholly owned subsidiary of privately held Mack Group; Mack says the group employs more than 3,000 people while Revelio Labs shows about 1,559, so group size is unresolved. Headquarters is Arlington, VT, not Statesville, VT as the input guess says.",
+        "parent_company": "Mack Group",
+        "source_url": "https://www.mack.com/company/mack-group"
+      },
+      "searches_run": 4,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.mack.com/news/press-releases", "reason": "stale"},
+        {"type": "new_ops_leader", "source_url": "https://www.mack.com/news/press-releases", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A034",
+      "company_name": "Macrocap Laboraties, LLC.",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "A MacroCap Labs contract manufacturer in Longwood, FL (founded 2010) appears to match, but the input spelling and Lake Mary location differ and no employee count was found; the company was acquired by private equity firm A111 Capital Partners in 2023.",
+        "parent_company": "A111 Capital Partners",
+        "source_url": "https://www.nombase.com/companies/macrocap-labs"
+      },
+      "searches_run": 3,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.privsource.com/acquisitions/deal/vXSgzl", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://business.mammothtimes.com/mammothtimes/news/read/43627471/longwood_supplements_maker_macrocap_labs_to_expand", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A174",
+      "company_name": "MSA Safety",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "MSA Safety has approximately 5,402 total employees worldwide as of March 2026 per Revelio Labs, well above the 2,000 threshold.",
+        "parent_company": null,
+        "source_url": "https://www.reveliolabs.com/companies/msa-safety/employees/"
+      },
+      "searches_run": 3,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": []
+    },
+    {
+      "account_id": "A187",
+      "company_name": "Rubbermaid, Inc.",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Rubbermaid is a unit of Newell Brands, which had 22,514 employees as of June 2026 per Revelio Labs.",
+        "parent_company": "Newell Brands",
+        "source_url": "https://www.reveliolabs.com/companies/newell-brands/employees/"
+      },
+      "searches_run": 3,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": []
+    },
+    {
+      "account_id": "A023",
+      "company_name": "Gregory Packaging Inc",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Operating packaging manufacturer in Bethlehem, PA with multi-site operations, but no employee count or parent company could be verified from accessible sources.",
+        "parent_company": null,
+        "source_url": null
+      },
+      "searches_run": 6,
+      "pages_opened": 1,
+      "signals": [
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://www.career.com/job/gregory-packaging-inc/corporate-maintenance-manager/j202605290417420777064",
+          "published": "2026-06-25",
+          "sentence": "Proven experience building maintenance systems in a multi-site manufacturing environment",
+          "summary": "Gregory Packaging posted a Corporate Maintenance Manager job in Bethlehem, PA on 2026-06-25.",
+          "role_to_contact": "Corporate Maintenance Manager"
+        },
+        {
+          "type": "pain_in_job_post",
+          "source_url": "https://www.career.com/job/gregory-packaging-inc/corporate-maintenance-manager/j202605290417420777064",
+          "published": "2026-06-25",
+          "sentence": "Own and govern the CMMS (MVP) system structure and usage",
+          "summary": "The same Corporate Maintenance Manager posting asks the hire to build and standardize the maintenance system and govern its CMMS across sites.",
+          "role_to_contact": "Corporate Maintenance Manager"
+        }
+      ],
+      "rejected": []
+    }
+  ]
+}

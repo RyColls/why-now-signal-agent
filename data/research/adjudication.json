@@ -1,0 +1,206 @@
+{
+ "run_date": "2026-11-11",
+ "method": "Independent Haiku verifier pass re-opened each source; final call by Claude (Sonnet 5.5), reasons recorded per signal.",
+ "results": [
+  {
+   "id": "S01",
+   "account_id": "A023",
+   "company_name": "Gregory Packaging Inc",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Page prints 'POSTED ON 6/25/2026 CLOSED ON 7/25/2026' and says 'This job has expired', so the posting is no longer open."
+  },
+  {
+   "id": "S02",
+   "account_id": "A023",
+   "company_name": "Gregory Packaging Inc",
+   "type": "pain_in_job_post",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Same expired corporate maintenance manager posting as S01; the CMMS sentence is on the page, but the job is closed."
+  },
+  {
+   "id": "S03",
+   "account_id": "A056",
+   "company_name": "CEMCO, LLC",
+   "type": "expansion",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Same company name; article is about a new plant elsewhere than the OSHA site. Company-level signal.",
+   "verifier_notes": "Article is about CEMCO's new Commerce City, Colo. facility; it never mentions City Of Industry, CA, so the claimed company location cannot be confirmed."
+  },
+  {
+   "id": "S04",
+   "account_id": "A042",
+   "company_name": "Sandridge Food Corporation",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Sandridge Crafted Foods is the trade name of the same Medina, OH manufacturer. Post is expired, so scoring drops it.",
+   "verifier_notes": "Page names 'Sandridge Crafted Foods' in Medina, OH, not 'Sandridge Food Corporation'; cannot confirm it is the same entity. Posting shows 'CLOSED ON 7/25/2026' and 'This job has expired'."
+  },
+  {
+   "id": "S05",
+   "account_id": "A015",
+   "company_name": "Farmer's Fridge",
+   "type": "expansion",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Article dated Jan. 5, 2026 says the kitchen has doubled to 100,000 sq ft; it is a kitchen expansion report, not a retail distribution deal."
+  },
+  {
+   "id": "S06",
+   "account_id": "A017",
+   "company_name": "Franklin Baking Company, LLC",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": true,
+   "counts": false,
+   "reason": "Printed date is not labelled as a posting date.",
+   "verifier_notes": "The May 13, 2026 date sits beside the address and is not labeled as a posting date; no closed or expired notice appears."
+  },
+  {
+   "id": "S07",
+   "account_id": "A061",
+   "company_name": "Duravent Inc",
+   "type": "funding_or_pe",
+   "strict_verifier_pass": false,
+   "counts": false,
+   "reason": "Investment is at the parent group, a different entity from the account.",
+   "verifier_notes": "The page is about parent Duravent Group, a Detroit-based company, not the Vacaville, CA entity; the investment is at the parent level."
+  },
+  {
+   "id": "S08",
+   "account_id": "A047",
+   "company_name": "Wixon",
+   "type": "expansion",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Wixon in St. Francis, Wis. confirmed; the page uses a curly apostrophe in 'operation's', which is a trivial difference."
+  },
+  {
+   "id": "S09",
+   "account_id": "A089",
+   "company_name": "Nucor (Vulcraft Division)",
+   "type": "expansion",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Nucor press release about its own Vulcraft Indiana facility in St. Joe, Indiana; the claimed company is Nucor, so it matches."
+  },
+  {
+   "id": "S10",
+   "account_id": "A199",
+   "company_name": "Wilsonart LLC - Temple North",
+   "type": "expansion",
+   "strict_verifier_pass": false,
+   "counts": false,
+   "reason": "A state building-project registration, not a company announcement; date is a filing date.",
+   "verifier_notes": "The printed 1/8/2026 is a TDLR registration date, not a publication date; the record is a state building-project filing (owner Wilsonart LLC, project in Temple, TX), not a company announcement of a plant or line."
+  },
+  {
+   "id": "S11",
+   "account_id": "A012",
+   "company_name": "Danone US, LLC",
+   "type": "expansion",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Same company, different plant than the OSHA site. Company-level signal.",
+   "verifier_notes": "Article covers Danone North America's Fort Worth, TX plant, not the West Jordan, UT location claimed; date and sentence match."
+  },
+  {
+   "id": "S12",
+   "account_id": "A012",
+   "company_name": "Danone US, LLC",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Same company, different plant than the OSHA site. Company-level signal.",
+   "verifier_notes": "Posting is for a Maintenance Lead in Fort Worth, TX, not West Jordan, UT; no closed notice, so it appears open."
+  },
+  {
+   "id": "S13",
+   "account_id": "A012",
+   "company_name": "Danone US, LLC",
+   "type": "pain_in_job_post",
+   "strict_verifier_pass": false,
+   "counts": false,
+   "reason": "The page mentions Excel for reporting, not a maintenance system.",
+   "verifier_notes": "Posting is for a role in Fort Worth, TX, not West Jordan, UT; the Excel mention is about reporting, not a maintenance system."
+  },
+  {
+   "id": "S14",
+   "account_id": "A102",
+   "company_name": "American Packaging Corp",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Same company, different plant than the OSHA site. Post is expired, so scoring drops it.",
+   "verifier_notes": "Posting is for Story City, Iowa, not Rochester, NY, and its printed expiry date of 15 Apr 26 has passed."
+  },
+  {
+   "id": "S15",
+   "account_id": "A053",
+   "company_name": "Advance Mfg. Co., Inc.",
+   "type": "funding_or_pe",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Acquirer's press release confirms the acquisition of Advance Mfg. Co. in Westfield, MA."
+  },
+  {
+   "id": "S16",
+   "account_id": "A043",
+   "company_name": "Shearer's Foods - PHX",
+   "type": "expansion",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Same company, different plant than the OSHA site. Company-level signal.",
+   "verifier_notes": "Page is about Shearer's Foods' Moraine, Ohio plant, not a Phoenix, AZ site as the item's location hint says; the claimed sentence is verbatim, and the expansion itself is real."
+  },
+  {
+   "id": "S17",
+   "account_id": "A043",
+   "company_name": "Shearer's Foods - PHX",
+   "type": "expansion",
+   "strict_verifier_pass": false,
+   "counts": true,
+   "reason": "Same company, different plant than the OSHA site. Aggregator copy of the news.",
+   "verifier_notes": "Page is about the Dayton, Ohio plant (potato chip line, $106M facility), not Phoenix, AZ; the headline matches, and the page appears to be an aggregator rather than the original source."
+  },
+  {
+   "id": "S18",
+   "account_id": "A010",
+   "company_name": "Cooper Farms",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Maintenance Supervisor posting for Cooper Farms in Celina, OH; the page's stated deadline of 29 July 2026 has passed as of 2026-11-11, though the page shows an Apply Now button and no closed label."
+  },
+  {
+   "id": "S19",
+   "account_id": "A010",
+   "company_name": "Cooper Farms",
+   "type": "hiring_maintenance",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Maintenance Supervisor posting for Cooper Farms in Van Wert, OH (not St. Henry); the stated deadline of 29 July 2026 has passed as of 2026-11-11, though the page shows no closed label."
+  },
+  {
+   "id": "S20",
+   "account_id": "A010",
+   "company_name": "Cooper Farms",
+   "type": "expansion",
+   "strict_verifier_pass": true,
+   "counts": true,
+   "reason": "Verifier confirmed.",
+   "verifier_notes": "Daily Standard article on Cooper Farms' Celina, OH processing plant; the claimed sentence is verbatim, and the article's dateline reads CELNA as printed."
+  }
+ ]
+}

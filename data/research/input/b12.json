@@ -1,0 +1,55 @@
+{
+ "batch": "b12",
+ "accounts": [
+  {
+   "account_id": "A193",
+   "company_name": "TH Plastics, Inc.",
+   "industry": "plastics",
+   "employees_reported": 846,
+   "plant_count": 3,
+   "hq_guess_city": "Bowling Green",
+   "hq_guess_state": "OH",
+   "plant_locations": "Bowling Green, OH; Mendon, MI; Findlay, OH"
+  },
+  {
+   "account_id": "A113",
+   "company_name": "Coroplast Tape Corporation",
+   "industry": "packaging",
+   "employees_reported": 400,
+   "plant_count": 2,
+   "hq_guess_city": "Rock Hill",
+   "hq_guess_state": "SC",
+   "plant_locations": "Rock Hill, SC; Rock Hilll, SC"
+  },
+  {
+   "account_id": "A157",
+   "company_name": "Creative Pultrusions",
+   "industry": "plastics",
+   "employees_reported": 304,
+   "plant_count": 2,
+   "hq_guess_city": "Alum Bank",
+   "hq_guess_state": "PA",
+   "plant_locations": "Alum Bank, PA; Springfield, OH"
+  },
+  {
+   "account_id": "A010",
+   "company_name": "Cooper Farms",
+   "industry": "food_beverage",
+   "employees_reported": 1751,
+   "plant_count": 2,
+   "hq_guess_city": "St. Henry",
+   "hq_guess_state": "OH",
+   "plant_locations": "St. Henry, OH; Van Wert, OH"
+  },
+  {
+   "account_id": "A088",
+   "company_name": "Microflex Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 205,
+   "plant_count": 2,
+   "hq_guess_city": "Ormond Beach",
+   "hq_guess_state": "FL",
+   "plant_locations": "Ormond Beach, FL; Ormond Beach, FL"
+  }
+ ]
+}

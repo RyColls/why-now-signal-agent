@@ -1,0 +1,55 @@
+{
+ "batch": "b13",
+ "accounts": [
+  {
+   "account_id": "A166",
+   "company_name": "HellermannTyton USA",
+   "industry": "plastics",
+   "employees_reported": 897,
+   "plant_count": 3,
+   "hq_guess_city": "Milwaukee",
+   "hq_guess_state": "WI",
+   "plant_locations": "Milwaukee, WI; Milwaukee, WI; Milwaukee, WI"
+  },
+  {
+   "account_id": "A149",
+   "company_name": "Viaflex",
+   "industry": "packaging",
+   "employees_reported": 520,
+   "plant_count": 4,
+   "hq_guess_city": "Sioux Falls",
+   "hq_guess_state": "SD",
+   "plant_locations": "Sioux Falls, SD; Madison, SD; Midland, TX; Brandon, SD"
+  },
+  {
+   "account_id": "A096",
+   "company_name": "USF Fabrication, Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 208,
+   "plant_count": 2,
+   "hq_guess_city": "Hialeah",
+   "hq_guess_state": "FL",
+   "plant_locations": "Hialeah, FL; Ogden, UT"
+  },
+  {
+   "account_id": "A189",
+   "company_name": "Simonton Windows",
+   "industry": "plastics",
+   "employees_reported": 552,
+   "plant_count": 3,
+   "hq_guess_city": "Ellenboro",
+   "hq_guess_state": "WV",
+   "plant_locations": "Ellenboro, WV; Pennsboro, WV; Harrisville, WV"
+  },
+  {
+   "account_id": "A033",
+   "company_name": "MBC Companies",
+   "industry": "food_beverage",
+   "employees_reported": 502,
+   "plant_count": 4,
+   "hq_guess_city": "Lebanon",
+   "hq_guess_state": "PA",
+   "plant_locations": "Lebanon, PA; Lebanon, PA; Mcdonald, TN; Lebanon, PA"
+  }
+ ]
+}

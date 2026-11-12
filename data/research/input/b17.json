@@ -1,0 +1,55 @@
+{
+ "batch": "b17",
+ "accounts": [
+  {
+   "account_id": "A013",
+   "company_name": "Dessert Holdings LLC",
+   "industry": "food_beverage",
+   "employees_reported": 700,
+   "plant_count": 2,
+   "hq_guess_city": "Humble",
+   "hq_guess_state": "TX",
+   "plant_locations": "Humble, TX; Newburyport, MA"
+  },
+  {
+   "account_id": "A180",
+   "company_name": "Myers Industries - Akro Mils",
+   "industry": "plastics",
+   "employees_reported": 210,
+   "plant_count": 1,
+   "hq_guess_city": "Wadsworth",
+   "hq_guess_state": "OH",
+   "plant_locations": "Wadsworth, OH"
+  },
+  {
+   "account_id": "A198",
+   "company_name": "Whirley Industries",
+   "industry": "plastics",
+   "employees_reported": 399,
+   "plant_count": 4,
+   "hq_guess_city": "Warren",
+   "hq_guess_state": "PA",
+   "plant_locations": "Warren, PA; Warren, PA; Warren, PA; Bradenton, FL"
+  },
+  {
+   "account_id": "A050",
+   "company_name": "Zinpro",
+   "industry": "food_beverage",
+   "employees_reported": 294,
+   "plant_count": 4,
+   "hq_guess_city": "Garner",
+   "hq_guess_state": "IA",
+   "plant_locations": "Garner, IA; Shell Rock, IA; North Branch, MN; Eden Prairie, MN"
+  },
+  {
+   "account_id": "A065",
+   "company_name": "Frank Calandra Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 207,
+   "plant_count": 3,
+   "hq_guess_city": "Cedar Bluff",
+   "hq_guess_state": "VA",
+   "plant_locations": "Cedar Bluff, VA; Earlington, KY; Cedar Bluff, VA"
+  }
+ ]
+}

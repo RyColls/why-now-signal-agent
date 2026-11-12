@@ -14,3 +14,4 @@ zero_after_days = 365      # older than this counts zero
 
 [rules]
 require_verified = true    # only signals whose source was re-opened and confirmed count
+require_open_job_posts = true   # a job post marked closed or expired does not count

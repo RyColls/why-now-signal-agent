@@ -1,0 +1,55 @@
+{
+ "batch": "b11",
+ "accounts": [
+  {
+   "account_id": "A043",
+   "company_name": "Shearer's Foods - PHX",
+   "industry": "food_beverage",
+   "employees_reported": 392,
+   "plant_count": 1,
+   "hq_guess_city": "Phoenix",
+   "hq_guess_state": "AZ",
+   "plant_locations": "Phoenix, AZ"
+  },
+  {
+   "account_id": "A155",
+   "company_name": "CSP Innovations North Carolina, Inc.",
+   "industry": "plastics",
+   "employees_reported": 450,
+   "plant_count": 1,
+   "hq_guess_city": "Salisbury",
+   "hq_guess_state": "NC",
+   "plant_locations": "Salisbury, NC"
+  },
+  {
+   "account_id": "A124",
+   "company_name": "Kelly Box & Packaging",
+   "industry": "packaging",
+   "employees_reported": 340,
+   "plant_count": 1,
+   "hq_guess_city": "Fort Wayne",
+   "hq_guess_state": "IN",
+   "plant_locations": "Fort Wayne, IN"
+  },
+  {
+   "account_id": "A195",
+   "company_name": "Ultra-Poly Corporation",
+   "industry": "plastics",
+   "employees_reported": 254,
+   "plant_count": 4,
+   "hq_guess_city": "Portland",
+   "hq_guess_state": "PA",
+   "plant_locations": "Portland, PA; Tacoma, WA; Bloomsburg, PA; Scranton, PA"
+  },
+  {
+   "account_id": "A151",
+   "company_name": "Beacon Engineered Solutions - MN",
+   "industry": "plastics",
+   "employees_reported": 210,
+   "plant_count": 1,
+   "hq_guess_city": "Alexandria",
+   "hq_guess_state": "MN",
+   "plant_locations": "Alexandria, MN"
+  }
+ ]
+}

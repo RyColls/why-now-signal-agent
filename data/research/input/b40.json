@@ -1,0 +1,55 @@
+{
+ "batch": "b40",
+ "accounts": [
+  {
+   "account_id": "A082",
+   "company_name": "Kratos Defense",
+   "industry": "metal_fabrication",
+   "employees_reported": 619,
+   "plant_count": 2,
+   "hq_guess_city": "Dallastown",
+   "hq_guess_state": "PA",
+   "plant_locations": "Dallastown, PA; Fort Walton Beach, FL"
+  },
+  {
+   "account_id": "A092",
+   "company_name": "Ranews Companies",
+   "industry": "metal_fabrication",
+   "employees_reported": 499,
+   "plant_count": 5,
+   "hq_guess_city": "Milner",
+   "hq_guess_state": "GA",
+   "plant_locations": "Milner, GA; Thomaston, GA; Waterloo, IA; Davenport, IA; Griffin, GA"
+  },
+  {
+   "account_id": "A081",
+   "company_name": "Kobelco Aluminum Automotive Products LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 788,
+   "plant_count": 1,
+   "hq_guess_city": "Bowling Green",
+   "hq_guess_state": "KY",
+   "plant_locations": "Bowling Green, KY"
+  },
+  {
+   "account_id": "A192",
+   "company_name": "Sumitomo Electric Interconnect Products, Inc.",
+   "industry": "plastics",
+   "employees_reported": 272,
+   "plant_count": 2,
+   "hq_guess_city": "San Marcos",
+   "hq_guess_state": "CA",
+   "plant_locations": "San Marcos, CA; San Marcos, CA"
+  },
+  {
+   "account_id": "A154",
+   "company_name": "C&J Industries",
+   "industry": "plastics",
+   "employees_reported": 267,
+   "plant_count": 1,
+   "hq_guess_city": "Meadville",
+   "hq_guess_state": "PA",
+   "plant_locations": "Meadville, PA"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "results": [
+  {
+   "id": "S06",
+   "opened": true,
+   "right_company": true,
+   "sentence_found": true,
+   "printed_date": "2026-05-13",
+   "date_matches": true,
+   "signal_type_fits": true,
+   "still_current": true,
+   "notes": "The May 13, 2026 date sits beside the address and is not labeled as a posting date; no closed or expired notice appears."
+  },
+  {
+   "id": "S07",
+   "opened": true,
+   "right_company": false,
+   "sentence_found": true,
+   "printed_date": "2026-03-18",
+   "date_matches": true,
+   "signal_type_fits": false,
+   "still_current": null,
+   "notes": "The page is about parent Duravent Group, a Detroit-based company, not the Vacaville, CA entity; the investment is at the parent level."
+  },
+  {
+   "id": "S08",
+   "opened": true,
+   "right_company": true,
+   "sentence_found": true,
+   "printed_date": "2026-11-05",
+   "date_matches": true,
+   "signal_type_fits": true,
+   "still_current": null,
+   "notes": "Wixon in St. Francis, Wis. confirmed; the page uses a curly apostrophe in 'operation's', which is a trivial difference."
+  },
+  {
+   "id": "S09",
+   "opened": true,
+   "right_company": true,
+   "sentence_found": true,
+   "printed_date": "2026-08-13",
+   "date_matches": true,
+   "signal_type_fits": true,
+   "still_current": null,
+   "notes": "Nucor press release about its own Vulcraft Indiana facility in St. Joe, Indiana; the claimed company is Nucor, so it matches."
+  },
+  {
+   "id": "S10",
+   "opened": true,
+   "right_company": true,
+   "sentence_found": true,
+   "printed_date": "2026-01-08",
+   "date_matches": true,
+   "signal_type_fits": false,
+   "still_current": null,
+   "notes": "The printed 1/8/2026 is a TDLR registration date, not a publication date; the record is a state building-project filing (owner Wilsonart LLC, project in Temple, TX), not a company announcement of a plant or line."
+  }
+ ]
+}

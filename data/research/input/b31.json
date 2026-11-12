@@ -1,0 +1,55 @@
+{
+ "batch": "b31",
+ "accounts": [
+  {
+   "account_id": "A132",
+   "company_name": "Northgate",
+   "industry": "packaging",
+   "employees_reported": 258,
+   "plant_count": 1,
+   "hq_guess_city": "Flint",
+   "hq_guess_state": "MI",
+   "plant_locations": "Flint, MI"
+  },
+  {
+   "account_id": "A002",
+   "company_name": "AVEKA Group, Inc.",
+   "industry": "food_beverage",
+   "employees_reported": 200,
+   "plant_count": 5,
+   "hq_guess_city": "Fredericksburg",
+   "hq_guess_state": "IA",
+   "plant_locations": "Fredericksburg, IA; Woodbury, MN; Woodbury, MN; Cottage Grove, MN; Cottage Grove, MN"
+  },
+  {
+   "account_id": "A191",
+   "company_name": "Spencer Industries Incorporated",
+   "industry": "plastics",
+   "employees_reported": 291,
+   "plant_count": 4,
+   "hq_guess_city": "Dale",
+   "hq_guess_state": "IN",
+   "plant_locations": "Dale, IN; Wapello, IA; Hampton, SC; Elyria, OH"
+  },
+  {
+   "account_id": "A134",
+   "company_name": "PLASKOLITE, LLC",
+   "industry": "packaging",
+   "employees_reported": 656,
+   "plant_count": 6,
+   "hq_guess_city": "Columbus",
+   "hq_guess_state": "OH",
+   "plant_locations": "Columbus, OH; Scranton, PA; Zanesville, OH; Olive Branch, MS; Sheffield, MA; Linden, NJ"
+  },
+  {
+   "account_id": "A160",
+   "company_name": "Duo-Form Acquistition Corp.",
+   "industry": "plastics",
+   "employees_reported": 511,
+   "plant_count": 3,
+   "hq_guess_city": "Edwardsburg",
+   "hq_guess_state": "MI",
+   "plant_locations": "Edwardsburg, MI; Edwardsburg, MI; Britol, IN"
+  }
+ ]
+}

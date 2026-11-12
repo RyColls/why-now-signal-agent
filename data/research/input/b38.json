@@ -1,0 +1,55 @@
+{
+ "batch": "b38",
+ "accounts": [
+  {
+   "account_id": "A177",
+   "company_name": "Merlin Industries, Inc",
+   "industry": "plastics",
+   "employees_reported": 360,
+   "plant_count": 1,
+   "hq_guess_city": "Hamilton",
+   "hq_guess_state": "NJ",
+   "plant_locations": "Hamilton, NJ"
+  },
+  {
+   "account_id": "A093",
+   "company_name": "Superheat FGH Services, Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 375,
+   "plant_count": 1,
+   "hq_guess_city": "New Lenox",
+   "hq_guess_state": "IL",
+   "plant_locations": "New Lenox, IL"
+  },
+  {
+   "account_id": "A110",
+   "company_name": "Classic Containers Inc.",
+   "industry": "packaging",
+   "employees_reported": 235,
+   "plant_count": 1,
+   "hq_guess_city": "Ontario",
+   "hq_guess_state": "CA",
+   "plant_locations": "Ontario, CA"
+  },
+  {
+   "account_id": "A025",
+   "company_name": "House Foods America",
+   "industry": "food_beverage",
+   "employees_reported": 518,
+   "plant_count": 2,
+   "hq_guess_city": "Garden Grove",
+   "hq_guess_state": "CA",
+   "plant_locations": "Garden Grove, CA; Somerset, NJ"
+  },
+  {
+   "account_id": "A083",
+   "company_name": "LMT Defense",
+   "industry": "metal_fabrication",
+   "employees_reported": 215,
+   "plant_count": 1,
+   "hq_guess_city": "Eldridge",
+   "hq_guess_state": "IA",
+   "plant_locations": "Eldridge, IA"
+  }
+ ]
+}

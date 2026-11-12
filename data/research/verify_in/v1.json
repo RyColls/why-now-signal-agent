@@ -1,0 +1,49 @@
+{
+ "items": [
+  {
+   "id": "S01",
+   "company_name": "Gregory Packaging Inc",
+   "location_hint": "Bethlehem, PA",
+   "type": "hiring_maintenance",
+   "source_url": "https://www.career.com/job/gregory-packaging-inc/corporate-maintenance-manager/j202605290417420777064",
+   "claimed_published": "2026-06-25",
+   "claimed_sentence": "Proven experience building maintenance systems in a multi-site manufacturing environment"
+  },
+  {
+   "id": "S02",
+   "company_name": "Gregory Packaging Inc",
+   "location_hint": "Bethlehem, PA",
+   "type": "pain_in_job_post",
+   "source_url": "https://www.career.com/job/gregory-packaging-inc/corporate-maintenance-manager/j202605290417420777064",
+   "claimed_published": "2026-06-25",
+   "claimed_sentence": "Own and govern the CMMS (MVP) system structure and usage"
+  },
+  {
+   "id": "S03",
+   "company_name": "CEMCO, LLC",
+   "location_hint": "City Of Industry, CA",
+   "type": "expansion",
+   "source_url": "https://www.wconline.com/articles/98068-cemco-opens-new-manufacturing-facility-in-commerce-city-colo",
+   "claimed_published": "2026-03-16",
+   "claimed_sentence": "CEMCO has opened a 140,000-square-foot manufacturing facility in Commerce City, Colo."
+  },
+  {
+   "id": "S04",
+   "company_name": "Sandridge Food Corporation",
+   "location_hint": "Medina, OH",
+   "type": "hiring_maintenance",
+   "source_url": "https://www.career.com/job/sandridge-crafted-foods/sr-maintenance-manager/j202512200015068250282",
+   "claimed_published": "2026-04-09",
+   "claimed_sentence": "We're seeking a hands-on Maintenance Manager who enjoys tackling complex challenges, developing strong teams"
+  },
+  {
+   "id": "S05",
+   "company_name": "Farmer's Fridge",
+   "location_hint": "Chicago, IL",
+   "type": "expansion",
+   "source_url": "https://www.spokesman.com/stories/2026/jan/05/chicago-based-farmers-fridge-has-turned-vending-ma/",
+   "claimed_published": "2026-01-05",
+   "claimed_sentence": "Farmer's Fridge has since doubled its kitchen to 100,000 square feet"
+  }
+ ]
+}

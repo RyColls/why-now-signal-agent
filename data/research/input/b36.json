@@ -1,0 +1,55 @@
+{
+ "batch": "b36",
+ "accounts": [
+  {
+   "account_id": "A196",
+   "company_name": "Waddington North America",
+   "industry": "plastics",
+   "employees_reported": 411,
+   "plant_count": 4,
+   "hq_guess_city": "Chelmsford",
+   "hq_guess_state": "MA",
+   "plant_locations": "Chelmsford, MA; Holley, NY; City Of Industry, CA; Houston, TX"
+  },
+  {
+   "account_id": "A038",
+   "company_name": "Perfetti Van Melle USA",
+   "industry": "food_beverage",
+   "employees_reported": 384,
+   "plant_count": 1,
+   "hq_guess_city": "Loves Park",
+   "hq_guess_state": "IL",
+   "plant_locations": "Loves Park, IL"
+  },
+  {
+   "account_id": "A075",
+   "company_name": "Howmet Aerospace - COI",
+   "industry": "metal_fabrication",
+   "employees_reported": 257,
+   "plant_count": 1,
+   "hq_guess_city": "City Of Industry",
+   "hq_guess_state": "CA",
+   "plant_locations": "City Of Industry, CA"
+  },
+  {
+   "account_id": "A130",
+   "company_name": "New Receiptco Opco LLC",
+   "industry": "packaging",
+   "employees_reported": 298,
+   "plant_count": 4,
+   "hq_guess_city": "Morristown",
+   "hq_guess_state": "TN",
+   "plant_locations": "Morristown, TN; Rosedale, KS; Phoenix, AZ; Ashland, VA"
+  },
+  {
+   "account_id": "A141",
+   "company_name": "SOUTHEASTERN CONTAINER",
+   "industry": "packaging",
+   "employees_reported": 402,
+   "plant_count": 5,
+   "hq_guess_city": "Candler",
+   "hq_guess_state": "NC",
+   "plant_locations": "Candler, NC; Winchester, VA; Bowling Green, OH; Cleveland, TN; Kings Mountain, NC"
+  }
+ ]
+}

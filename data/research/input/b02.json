@@ -1,0 +1,55 @@
+{
+ "batch": "b02",
+ "accounts": [
+  {
+   "account_id": "A054",
+   "company_name": "Ameriforge-IR",
+   "industry": "metal_fabrication",
+   "employees_reported": 258,
+   "plant_count": 1,
+   "hq_guess_city": "Houston",
+   "hq_guess_state": "TX",
+   "plant_locations": "Houston, TX"
+  },
+  {
+   "account_id": "A135",
+   "company_name": "Pacific Southwest Container, LLC",
+   "industry": "packaging",
+   "employees_reported": 1111,
+   "plant_count": 4,
+   "hq_guess_city": "Modesto",
+   "hq_guess_state": "CA",
+   "plant_locations": "Modesto, CA; Visalia, CA; Modesto, CA; Modesto, CA"
+  },
+  {
+   "account_id": "A057",
+   "company_name": "CST",
+   "industry": "metal_fabrication",
+   "employees_reported": 1465,
+   "plant_count": 1,
+   "hq_guess_city": "Springdale",
+   "hq_guess_state": "AR",
+   "plant_locations": "Springdale, AR"
+  },
+  {
+   "account_id": "A144",
+   "company_name": "Tetra Pak Materials LLC",
+   "industry": "packaging",
+   "employees_reported": 282,
+   "plant_count": 1,
+   "hq_guess_city": "Denton",
+   "hq_guess_state": "TX",
+   "plant_locations": "Denton, TX"
+  },
+  {
+   "account_id": "A095",
+   "company_name": "The Lee Company",
+   "industry": "metal_fabrication",
+   "employees_reported": 1078,
+   "plant_count": 6,
+   "hq_guess_city": "Westbrook",
+   "hq_guess_state": "CT",
+   "plant_locations": "Westbrook, CT; Essex, CT; Westbrook, CT; Westbrook, CT; Westbrook, CT; Westbrook, CT"
+  }
+ ]
+}

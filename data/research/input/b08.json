@@ -1,0 +1,55 @@
+{
+ "batch": "b08",
+ "accounts": [
+  {
+   "account_id": "A037",
+   "company_name": "Olam West Coast",
+   "industry": "food_beverage",
+   "employees_reported": 858,
+   "plant_count": 6,
+   "hq_guess_city": "Gilroy",
+   "hq_guess_state": "CA",
+   "plant_locations": "Gilroy, CA; Las Cruces, NM; Fernley, NV; Lemoore, CA; Firebaugh, CA; Merced, CA"
+  },
+  {
+   "account_id": "A084",
+   "company_name": "MAC VALVES INC",
+   "industry": "metal_fabrication",
+   "employees_reported": 421,
+   "plant_count": 3,
+   "hq_guess_city": "Wixom",
+   "hq_guess_state": "MI",
+   "plant_locations": "Wixom, MI; Dundee, MI; Wixom, MI"
+  },
+  {
+   "account_id": "A152",
+   "company_name": "Bruss North America",
+   "industry": "plastics",
+   "employees_reported": 469,
+   "plant_count": 1,
+   "hq_guess_city": "Russell Springs",
+   "hq_guess_state": "KY",
+   "plant_locations": "Russell Springs, KY"
+  },
+  {
+   "account_id": "A140",
+   "company_name": "Royal Paper Box Co.",
+   "industry": "packaging",
+   "employees_reported": 210,
+   "plant_count": 1,
+   "hq_guess_city": "Montebello",
+   "hq_guess_state": "CA",
+   "plant_locations": "Montebello, CA"
+  },
+  {
+   "account_id": "A121",
+   "company_name": "Interflex Acquisition Company LLC",
+   "industry": "packaging",
+   "employees_reported": 213,
+   "plant_count": 3,
+   "hq_guess_city": "Wilkesboro",
+   "hq_guess_state": "NC",
+   "plant_locations": "Wilkesboro, NC; Merrill, WI; Wilkesboro, NC"
+  }
+ ]
+}

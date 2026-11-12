@@ -1,0 +1,91 @@
+{
+  "batch": "b02",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A054",
+      "company_name": "Ameriforge-IR",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Houston-based forger now listed as part of Walworth Group, but I found no page giving the group's size, and the one headcount shown (30+) conflicts with the input figure.",
+        "parent_company": "Walworth Group",
+        "source_url": "https://village.ai/company/ameriforgellc"
+      },
+      "searches_run": 5,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.pipersandler.com/investment-banking-transactions/afglobal-corporation-20260228", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A135",
+      "company_name": "Pacific Southwest Container, LLC",
+      "fit": {
+        "verdict": "fit",
+        "reason": "A directory profile lists about 500 employees and no parent group, which is within range, although the input's 1,111 figure is not confirmed by any page I opened.",
+        "parent_company": null,
+        "source_url": "https://naicslist.com/company-profile/pacific-southwest-container-llc-modesto-ca-95357"
+      },
+      "searches_run": 4,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://jobs.recruiter.com/jobs/7191654501-maintenance-manager", "reason": "wrong company"},
+        {"type": "hiring_maintenance", "source_url": "https://www.careerbuilder.com/job-details/maintenance-manager-832619-modesto-ca--1b7f98bf-258c-4ce7-98d7-2f52c205f864", "reason": "wrong company"}
+      ]
+    },
+    {
+      "account_id": "A057",
+      "company_name": "CST",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Springdale, AR plant of Central States Manufacturing (assumed to be the account named CST), a metal-products maker with 12 sites; no page I opened gives group headcount or confirms independence.",
+        "parent_company": null,
+        "source_url": "https://www.arkansasedc.com/news-events/newsroom/detail/2025/08/07/central-states-opens-new-frame-plant-in-springdale--arkansas"
+      },
+      "searches_run": 4,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.arkansasedc.com/news-events/newsroom/detail/2025/08/07/central-states-opens-new-frame-plant-in-springdale--arkansas", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://www.careerbuilder.com/job-details/industrial-maintenance-supervisor-lowell-ar--ac4fdc6b-29c5-41d5-82fe-ffc484af2d10", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://www.sonara.ai/job-details/industrial-maintenance-supervisor-at-central-states-manufacturing-534994ae-c42a-aa0a-2025-28d8725aaa17", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A144",
+      "company_name": "Tetra Pak Materials LLC",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "The Denton, TX facility belongs to Tetra Pak, part of Tetra Laval Group, which reported 35,132 employees in December 2025.",
+        "parent_company": "Tetra Laval Group",
+        "source_url": "https://www.tetralaval.com/annual-report/tetra-laval/tetra-laval-in-brief"
+      },
+      "searches_run": 3,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.tetrapak.com/en-us/about-tetra-pak/news-and-events/newsarchive/tetra-pak-breaks-ground-on-expanded-product-development-center-t", "reason": "other"},
+        {"type": "expansion", "source_url": "https://www.packagingstrategies.com/articles/106360-tetra-pak-breaks-ground-on-new-facility-in-denton-texas", "reason": "other"}
+      ]
+    },
+    {
+      "account_id": "A095",
+      "company_name": "The Lee Company",
+      "fit": {
+        "verdict": "fit",
+        "reason": "The company's own site says it has over 1,100 employees at Westbrook and Essex, CT, and names no parent group.",
+        "parent_company": null,
+        "source_url": "https://www.theleeco.com/insights/the-lee-company-announces-plans-to-expand-manufacturing-footprint/"
+      },
+      "searches_run": 4,
+      "pages_opened": 5,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.theleeco.com/insights/the-lee-company-announces-plans-to-expand-manufacturing-footprint/", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://hartfordbusiness.com/article/lee-co-buys-beacon-falls-industrial-building-for-3-69m/", "reason": "could not open"}
+      ]
+    }
+  ]
+}

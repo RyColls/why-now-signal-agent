@@ -1,0 +1,55 @@
+{
+ "batch": "b09",
+ "accounts": [
+  {
+   "account_id": "A164",
+   "company_name": "Gilkey Window Company",
+   "industry": "plastics",
+   "employees_reported": 266,
+   "plant_count": 4,
+   "hq_guess_city": "Cincinnati",
+   "hq_guess_state": "OH",
+   "plant_locations": "Cincinnati, OH; Cincinnati, OH; Chicago Ridge, IL; Louisville, KY"
+  },
+  {
+   "account_id": "A138",
+   "company_name": "Progressive Converting",
+   "industry": "packaging",
+   "employees_reported": 465,
+   "plant_count": 6,
+   "hq_guess_city": "Appleton",
+   "hq_guess_state": "WI",
+   "plant_locations": "Appleton, WI; Hazleton, PA; Little Chute, WI; Beaver Dam, WI; Pomona, CA; Raphine, VA"
+  },
+  {
+   "account_id": "A031",
+   "company_name": "Lavazza North America",
+   "industry": "food_beverage",
+   "employees_reported": 391,
+   "plant_count": 2,
+   "hq_guess_city": "Westchester",
+   "hq_guess_state": "PA",
+   "plant_locations": "Westchester, PA; New York City, NY"
+  },
+  {
+   "account_id": "A104",
+   "company_name": "Arrow Packaging Solutions",
+   "industry": "packaging",
+   "employees_reported": 443,
+   "plant_count": 2,
+   "hq_guess_city": "Indianapolis",
+   "hq_guess_state": "IN",
+   "plant_locations": "Indianapolis, IN; Indianapolis, IN"
+  },
+  {
+   "account_id": "A099",
+   "company_name": "ZEPHYR PRODUCTS, INC",
+   "industry": "metal_fabrication",
+   "employees_reported": 224,
+   "plant_count": 2,
+   "hq_guess_city": "Leavenworth",
+   "hq_guess_state": "KS",
+   "plant_locations": "Leavenworth, KS; Lansing, KS"
+  }
+ ]
+}

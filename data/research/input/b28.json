@@ -1,0 +1,55 @@
+{
+ "batch": "b28",
+ "accounts": [
+  {
+   "account_id": "A041",
+   "company_name": "Ruiz Foods Product Inc.",
+   "industry": "food_beverage",
+   "employees_reported": 980,
+   "plant_count": 1,
+   "hq_guess_city": "Denison",
+   "hq_guess_state": "TX",
+   "plant_locations": "Denison, TX"
+  },
+  {
+   "account_id": "A111",
+   "company_name": "Conco, Inc.",
+   "industry": "packaging",
+   "employees_reported": 439,
+   "plant_count": 2,
+   "hq_guess_city": "Louisville",
+   "hq_guess_state": "KY",
+   "plant_locations": "Louisville, KY; Scottsburg, IN"
+  },
+  {
+   "account_id": "A048",
+   "company_name": "Wm. Bolthouse Farms, Inc. dba Generous Brands",
+   "industry": "food_beverage",
+   "employees_reported": 982,
+   "plant_count": 4,
+   "hq_guess_city": "Bakersfield",
+   "hq_guess_state": "CA",
+   "plant_locations": "Bakersfield, CA; Torrance, CA; Hodgkin'S Ill, IL; Buena Park, CA"
+  },
+  {
+   "account_id": "A049",
+   "company_name": "Ziegenfelder",
+   "industry": "food_beverage",
+   "employees_reported": 517,
+   "plant_count": 4,
+   "hq_guess_city": "Wheeling",
+   "hq_guess_state": "WV",
+   "plant_locations": "Wheeling, WV; Denver, CO; Lockhart, TX; Chino, CA"
+  },
+  {
+   "account_id": "A019",
+   "company_name": "Freshway Foods LLC",
+   "industry": "food_beverage",
+   "employees_reported": 341,
+   "plant_count": 1,
+   "hq_guess_city": "Sidney",
+   "hq_guess_state": "OH",
+   "plant_locations": "Sidney, OH"
+  }
+ ]
+}

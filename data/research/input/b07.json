@@ -1,0 +1,55 @@
+{
+ "batch": "b07",
+ "accounts": [
+  {
+   "account_id": "A136",
+   "company_name": "Poly-Tainer, Inc.",
+   "industry": "packaging",
+   "employees_reported": 382,
+   "plant_count": 2,
+   "hq_guess_city": "Simi Valley",
+   "hq_guess_state": "CA",
+   "plant_locations": "Simi Valley, CA; Greenwood, IN"
+  },
+  {
+   "account_id": "A030",
+   "company_name": "Josephs Bakery",
+   "industry": "food_beverage",
+   "employees_reported": 266,
+   "plant_count": 1,
+   "hq_guess_city": "Lawrence",
+   "hq_guess_state": "MA",
+   "plant_locations": "Lawrence, MA"
+  },
+  {
+   "account_id": "A026",
+   "company_name": "ICL Specialty Products",
+   "industry": "food_beverage",
+   "employees_reported": 200,
+   "plant_count": 3,
+   "hq_guess_city": "St. Louis",
+   "hq_guess_state": "MO",
+   "plant_locations": "St. Louis, MO; Hammond, IN; Hammond, IN"
+  },
+  {
+   "account_id": "A027",
+   "company_name": "Interamerican Foods Corp",
+   "industry": "food_beverage",
+   "employees_reported": 221,
+   "plant_count": 1,
+   "hq_guess_city": "Cleburne",
+   "hq_guess_state": "TX",
+   "plant_locations": "Cleburne, TX"
+  },
+  {
+   "account_id": "A094",
+   "company_name": "Taylor Made  112",
+   "industry": "metal_fabrication",
+   "employees_reported": 638,
+   "plant_count": 5,
+   "hq_guess_city": "Yoder",
+   "hq_guess_state": "IN",
+   "plant_locations": "Yoder, IN; Bradenton, FL; Gloversvile, NY; Payne, OH; Elkhart, IN"
+  }
+ ]
+}

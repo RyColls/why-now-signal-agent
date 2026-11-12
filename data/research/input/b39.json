@@ -1,0 +1,55 @@
+{
+ "batch": "b39",
+ "accounts": [
+  {
+   "account_id": "A072",
+   "company_name": "Harken Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 256,
+   "plant_count": 3,
+   "hq_guess_city": "Pewaukee",
+   "hq_guess_state": "WI",
+   "plant_locations": "Pewaukee, WI; Ferndale, WA; Sandpoint, ID"
+  },
+  {
+   "account_id": "A162",
+   "company_name": "EVCO Plastics",
+   "industry": "plastics",
+   "employees_reported": 817,
+   "plant_count": 5,
+   "hq_guess_city": "Deforest",
+   "hq_guess_state": "WI",
+   "plant_locations": "Deforest, WI; Calhoun, GA; Oshkosh, WI; Deforest, WI; Deforest, WI"
+  },
+  {
+   "account_id": "A077",
+   "company_name": "ITT Engineered Valves, LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 210,
+   "plant_count": 2,
+   "hq_guess_city": "Lancaster",
+   "hq_guess_state": "PA",
+   "plant_locations": "Lancaster, PA; Amory, MS"
+  },
+  {
+   "account_id": "A014",
+   "company_name": "Evolution Insurance Company, Ltd. SHEHADEY FAMILY FOODS, LLC",
+   "industry": "food_beverage",
+   "employees_reported": 1050,
+   "plant_count": 6,
+   "hq_guess_city": "Fresno",
+   "hq_guess_state": "CA",
+   "plant_locations": "Fresno, CA; Turlock, CA; Fairfield, CA; Reno, NV; Fresno, CA; Bakersfield, CA"
+  },
+  {
+   "account_id": "A184",
+   "company_name": "Placon",
+   "industry": "plastics",
+   "employees_reported": 744,
+   "plant_count": 4,
+   "hq_guess_city": "Madison",
+   "hq_guess_state": "WI",
+   "plant_locations": "Madison, WI; West Springfield, MA; Elkhart, IN; Plymouth, MN"
+  }
+ ]
+}

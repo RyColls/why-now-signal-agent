@@ -1,0 +1,55 @@
+{
+ "batch": "b27",
+ "accounts": [
+  {
+   "account_id": "A076",
+   "company_name": "Hydrafoce",
+   "industry": "metal_fabrication",
+   "employees_reported": 821,
+   "plant_count": 3,
+   "hq_guess_city": "Lincolnshire",
+   "hq_guess_state": "IL",
+   "plant_locations": "Lincolnshire, IL; Lincolnshire, IL; Lincolnshire, IL"
+  },
+  {
+   "account_id": "A125",
+   "company_name": "Kimbery-Clark Ogden",
+   "industry": "packaging",
+   "employees_reported": 506,
+   "plant_count": 1,
+   "hq_guess_city": "Ogden",
+   "hq_guess_state": "UT",
+   "plant_locations": "Ogden, UT"
+  },
+  {
+   "account_id": "A106",
+   "company_name": "Bagcraft Packaging",
+   "industry": "packaging",
+   "employees_reported": 899,
+   "plant_count": 5,
+   "hq_guess_city": "Baxter Springs",
+   "hq_guess_state": "KS",
+   "plant_locations": "Baxter Springs, KS; Norcross, GA; Vancouver, WA; City Of Industry, CA; City Of Industry, CA"
+  },
+  {
+   "account_id": "A179",
+   "company_name": "Montville Plastics and Rubber",
+   "industry": "plastics",
+   "employees_reported": 216,
+   "plant_count": 2,
+   "hq_guess_city": "Parkman",
+   "hq_guess_state": "OH",
+   "plant_locations": "Parkman, OH; Parkman, OH"
+  },
+  {
+   "account_id": "A009",
+   "company_name": "Cookie Baker LLC",
+   "industry": "food_beverage",
+   "employees_reported": 782,
+   "plant_count": 1,
+   "hq_guess_city": "Missouri City",
+   "hq_guess_state": "TX",
+   "plant_locations": "Missouri City, TX"
+  }
+ ]
+}

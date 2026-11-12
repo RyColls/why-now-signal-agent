@@ -1,0 +1,55 @@
+{
+ "batch": "b33",
+ "accounts": [
+  {
+   "account_id": "A139",
+   "company_name": "Ronpak, Inc",
+   "industry": "packaging",
+   "employees_reported": 774,
+   "plant_count": 3,
+   "hq_guess_city": "South Plainfield",
+   "hq_guess_state": "NJ",
+   "plant_locations": "South Plainfield, NJ; Mira Loma, CA; Shreveport, LA"
+  },
+  {
+   "account_id": "A108",
+   "company_name": "Bradford Company",
+   "industry": "packaging",
+   "employees_reported": 335,
+   "plant_count": 4,
+   "hq_guess_city": "Holland",
+   "hq_guess_state": "MI",
+   "plant_locations": "Holland, MI; Gallatin, TN; Findlay, OH; Wixom, MI"
+  },
+  {
+   "account_id": "A090",
+   "company_name": "Proto Labs",
+   "industry": "metal_fabrication",
+   "employees_reported": 255,
+   "plant_count": 2,
+   "hq_guess_city": "Morrisville",
+   "hq_guess_state": "NC",
+   "plant_locations": "Morrisville, NC; Morrisville, NC"
+  },
+  {
+   "account_id": "A171",
+   "company_name": "Jacuzzi Brands, LLC",
+   "industry": "plastics",
+   "employees_reported": 1209,
+   "plant_count": 4,
+   "hq_guess_city": "Chino",
+   "hq_guess_state": "CA",
+   "plant_locations": "Chino, CA; Roselle, IL; Valdosta, GA; Lake Mary, FL"
+  },
+  {
+   "account_id": "A156",
+   "company_name": "Corvac Composites",
+   "industry": "plastics",
+   "employees_reported": 525,
+   "plant_count": 5,
+   "hq_guess_city": "Greenfield",
+   "hq_guess_state": "OH",
+   "plant_locations": "Greenfield, OH; Kentwood, MI; Morgantown, KY; San Marcos, TX; Morgantown, KY"
+  }
+ ]
+}

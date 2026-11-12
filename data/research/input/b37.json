@@ -1,0 +1,55 @@
+{
+ "batch": "b37",
+ "accounts": [
+  {
+   "account_id": "A035",
+   "company_name": "New Dairy Kentucky, LLC.",
+   "industry": "food_beverage",
+   "employees_reported": 237,
+   "plant_count": 1,
+   "hq_guess_city": "London",
+   "hq_guess_state": "KY",
+   "plant_locations": "London, KY"
+  },
+  {
+   "account_id": "A133",
+   "company_name": "Ontex Operations USA, LLC",
+   "industry": "packaging",
+   "employees_reported": 274,
+   "plant_count": 1,
+   "hq_guess_city": "Stokesdale",
+   "hq_guess_state": "NC",
+   "plant_locations": "Stokesdale, NC"
+  },
+  {
+   "account_id": "A126",
+   "company_name": "Kittrich Corporation",
+   "industry": "packaging",
+   "employees_reported": 251,
+   "plant_count": 2,
+   "hq_guess_city": "Pomona",
+   "hq_guess_state": "CA",
+   "plant_locations": "Pomona, CA; Atlanta, GA"
+  },
+  {
+   "account_id": "A046",
+   "company_name": "Taylor Farms Pacific, Inc.",
+   "industry": "food_beverage",
+   "employees_reported": 1406,
+   "plant_count": 1,
+   "hq_guess_city": "Tracy",
+   "hq_guess_state": "CA",
+   "plant_locations": "Tracy, CA"
+  },
+  {
+   "account_id": "A161",
+   "company_name": "EAM Mosca",
+   "industry": "plastics",
+   "employees_reported": 540,
+   "plant_count": 2,
+   "hq_guess_city": "Hazle Township",
+   "hq_guess_state": "PA",
+   "plant_locations": "Hazle Township, PA; Hazle Township, PA"
+  }
+ ]
+}

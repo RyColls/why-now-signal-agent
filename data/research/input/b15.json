@@ -1,0 +1,55 @@
+{
+ "batch": "b15",
+ "accounts": [
+  {
+   "account_id": "A067",
+   "company_name": "GLOCK Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 654,
+   "plant_count": 1,
+   "hq_guess_city": "Smyrna",
+   "hq_guess_state": "GA",
+   "plant_locations": "Smyrna, GA"
+  },
+  {
+   "account_id": "A128",
+   "company_name": "Minigrip LLC",
+   "industry": "packaging",
+   "employees_reported": 273,
+   "plant_count": 3,
+   "hq_guess_city": "Seguin",
+   "hq_guess_state": "TX",
+   "plant_locations": "Seguin, TX; Seguin, TX; Houston, TX"
+  },
+  {
+   "account_id": "A052",
+   "company_name": "AZZ Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 466,
+   "plant_count": 6,
+   "hq_guess_city": "Hurst",
+   "hq_guess_state": "TX",
+   "plant_locations": "Hurst, TX; Tulsa, OK; Houston, TX; Commerce City, CO; St. Louis, MO; Louisville, KY"
+  },
+  {
+   "account_id": "A159",
+   "company_name": "Display Pack",
+   "industry": "plastics",
+   "employees_reported": 240,
+   "plant_count": 1,
+   "hq_guess_city": "Cedar Springs",
+   "hq_guess_state": "MI",
+   "plant_locations": "Cedar Springs, MI"
+  },
+  {
+   "account_id": "A182",
+   "company_name": "Palram Americas",
+   "industry": "plastics",
+   "employees_reported": 220,
+   "plant_count": 2,
+   "hq_guess_city": "Kutztown",
+   "hq_guess_state": "PA",
+   "plant_locations": "Kutztown, PA; Kutztown, PA"
+  }
+ ]
+}

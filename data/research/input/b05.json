@@ -1,0 +1,55 @@
+{
+ "batch": "b05",
+ "accounts": [
+  {
+   "account_id": "A003",
+   "company_name": "Ancient Crunch",
+   "industry": "food_beverage",
+   "employees_reported": 290,
+   "plant_count": 2,
+   "hq_guess_city": "Lebanon",
+   "hq_guess_state": "NJ",
+   "plant_locations": "Lebanon, NJ; Hackettstown, NJ"
+  },
+  {
+   "account_id": "A047",
+   "company_name": "Wixon",
+   "industry": "food_beverage",
+   "employees_reported": 305,
+   "plant_count": 1,
+   "hq_guess_city": "St Francis",
+   "hq_guess_state": "WI",
+   "plant_locations": "St Francis, WI"
+  },
+  {
+   "account_id": "A087",
+   "company_name": "Mason Industries Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 230,
+   "plant_count": 1,
+   "hq_guess_city": "Hauppauge",
+   "hq_guess_state": "NY",
+   "plant_locations": "Hauppauge, NY"
+  },
+  {
+   "account_id": "A089",
+   "company_name": "Nucor (Vulcraft Division)",
+   "industry": "metal_fabrication",
+   "employees_reported": 312,
+   "plant_count": 1,
+   "hq_guess_city": "Saint Joe",
+   "hq_guess_state": "IN",
+   "plant_locations": "Saint Joe, IN"
+  },
+  {
+   "account_id": "A062",
+   "company_name": "E-Z Line Pipe Support Co LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 306,
+   "plant_count": 2,
+   "hq_guess_city": "Manvel",
+   "hq_guess_state": "TX",
+   "plant_locations": "Manvel, TX; Manvel, TX"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "batch": "b29",
+ "accounts": [
+  {
+   "account_id": "A044",
+   "company_name": "Sierra Nevada Brewing Company",
+   "industry": "food_beverage",
+   "employees_reported": 459,
+   "plant_count": 1,
+   "hq_guess_city": "Chico",
+   "hq_guess_state": "CA",
+   "plant_locations": "Chico, CA"
+  },
+  {
+   "account_id": "A018",
+   "company_name": "Freshpet",
+   "industry": "food_beverage",
+   "employees_reported": 1159,
+   "plant_count": 2,
+   "hq_guess_city": "Bethlehem",
+   "hq_guess_state": "PA",
+   "plant_locations": "Bethlehem, PA; Ennis, TX"
+  },
+  {
+   "account_id": "A091",
+   "company_name": "Qualico Steel",
+   "industry": "metal_fabrication",
+   "employees_reported": 251,
+   "plant_count": 2,
+   "hq_guess_city": "Webb",
+   "hq_guess_state": "AL",
+   "plant_locations": "Webb, AL; Midlothian, TX"
+  },
+  {
+   "account_id": "A118",
+   "company_name": "GTI Fabrication",
+   "industry": "packaging",
+   "employees_reported": 248,
+   "plant_count": 1,
+   "hq_guess_city": "Goodyear",
+   "hq_guess_state": "AZ",
+   "plant_locations": "Goodyear, AZ"
+  },
+  {
+   "account_id": "A020",
+   "company_name": "Good Foods Group, LLC",
+   "industry": "food_beverage",
+   "employees_reported": 334,
+   "plant_count": 1,
+   "hq_guess_city": "Pleasant Prairie",
+   "hq_guess_state": "WI",
+   "plant_locations": "Pleasant Prairie, WI"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "batch": "b34",
+ "accounts": [
+  {
+   "account_id": "A024",
+   "company_name": "Hershey's",
+   "industry": "food_beverage",
+   "employees_reported": 505,
+   "plant_count": 1,
+   "hq_guess_city": "Memphis",
+   "hq_guess_state": "TN",
+   "plant_locations": "Memphis, TN"
+  },
+  {
+   "account_id": "A097",
+   "company_name": "Valtir, LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 345,
+   "plant_count": 3,
+   "hq_guess_city": "Pell City",
+   "hq_guess_state": "AL",
+   "plant_locations": "Pell City, AL; Fort Worth, TX; Orangeburg, SC"
+  },
+  {
+   "account_id": "A080",
+   "company_name": "Kleeberg Sheet Metal",
+   "industry": "metal_fabrication",
+   "employees_reported": 203,
+   "plant_count": 1,
+   "hq_guess_city": "Ludlow",
+   "hq_guess_state": "MA",
+   "plant_locations": "Ludlow, MA"
+  },
+  {
+   "account_id": "A183",
+   "company_name": "Pioneer Plastics Corporation",
+   "industry": "plastics",
+   "employees_reported": 407,
+   "plant_count": 4,
+   "hq_guess_city": "Auburn",
+   "hq_guess_state": "ME",
+   "plant_locations": "Auburn, ME; Dixon, KY; Eagan, MN; Morristown, TN"
+  },
+  {
+   "account_id": "A115",
+   "company_name": "Envases Commerce, LLC",
+   "industry": "packaging",
+   "employees_reported": 230,
+   "plant_count": 1,
+   "hq_guess_city": "Waco",
+   "hq_guess_state": "TX",
+   "plant_locations": "Waco, TX"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "batch": "b14",
+ "accounts": [
+  {
+   "account_id": "A016",
+   "company_name": "Flowers Baking Company of Knoxville",
+   "industry": "food_beverage",
+   "employees_reported": 244,
+   "plant_count": 1,
+   "hq_guess_city": "Knoxville",
+   "hq_guess_state": "TN",
+   "plant_locations": "Knoxville, TN"
+  },
+  {
+   "account_id": "A123",
+   "company_name": "Justrite Safety Group",
+   "industry": "packaging",
+   "employees_reported": 370,
+   "plant_count": 2,
+   "hq_guess_city": "Mattoon",
+   "hq_guess_state": "IL",
+   "plant_locations": "Mattoon, IL; Moselle, MS"
+  },
+  {
+   "account_id": "A185",
+   "company_name": "Plastic Ingenuity",
+   "industry": "plastics",
+   "employees_reported": 215,
+   "plant_count": 2,
+   "hq_guess_city": "Maumelle",
+   "hq_guess_state": "AR",
+   "plant_locations": "Maumelle, AR; Oxford, NC"
+  },
+  {
+   "account_id": "A070",
+   "company_name": "Girtz Industries Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 225,
+   "plant_count": 1,
+   "hq_guess_city": "Monticello",
+   "hq_guess_state": "IN",
+   "plant_locations": "Monticello, IN"
+  },
+  {
+   "account_id": "A129",
+   "company_name": "NPS Holdings",
+   "industry": "packaging",
+   "employees_reported": 235,
+   "plant_count": 4,
+   "hq_guess_city": "Green Bay",
+   "hq_guess_state": "WI",
+   "plant_locations": "Green Bay, WI; Cudahy, WI; Lenoir, NC; Lenoir, NC"
+  }
+ ]
+}

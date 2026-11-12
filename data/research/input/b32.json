@@ -1,0 +1,55 @@
+{
+ "batch": "b32",
+ "accounts": [
+  {
+   "account_id": "A168",
+   "company_name": "IMS Gear",
+   "industry": "plastics",
+   "employees_reported": 223,
+   "plant_count": 2,
+   "hq_guess_city": "Gainesville",
+   "hq_guess_state": "GA",
+   "plant_locations": "Gainesville, GA; Gainesville, GA"
+  },
+  {
+   "account_id": "A008",
+   "company_name": "Cheese Merchants of America",
+   "industry": "food_beverage",
+   "employees_reported": 496,
+   "plant_count": 1,
+   "hq_guess_city": "Bartlett",
+   "hq_guess_state": "IL",
+   "plant_locations": "Bartlett, IL"
+  },
+  {
+   "account_id": "A143",
+   "company_name": "Specialty Quality Packaging",
+   "industry": "packaging",
+   "employees_reported": 200,
+   "plant_count": 1,
+   "hq_guess_city": "Scotia",
+   "hq_guess_state": "NY",
+   "plant_locations": "Scotia, NY"
+  },
+  {
+   "account_id": "A045",
+   "company_name": "Southeast Poultry",
+   "industry": "food_beverage",
+   "employees_reported": 300,
+   "plant_count": 1,
+   "hq_guess_city": "Rogers",
+   "hq_guess_state": "AR",
+   "plant_locations": "Rogers, AR"
+  },
+  {
+   "account_id": "A028",
+   "company_name": "JBS",
+   "industry": "food_beverage",
+   "employees_reported": 881,
+   "plant_count": 1,
+   "hq_guess_city": "Sanford",
+   "hq_guess_state": "NC",
+   "plant_locations": "Sanford, NC"
+  }
+ ]
+}

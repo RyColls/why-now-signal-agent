@@ -1,0 +1,55 @@
+{
+ "batch": "b19",
+ "accounts": [
+  {
+   "account_id": "A122",
+   "company_name": "Jamestown Container Companies",
+   "industry": "packaging",
+   "employees_reported": 202,
+   "plant_count": 2,
+   "hq_guess_city": "Rochester",
+   "hq_guess_state": "NY",
+   "plant_locations": "Rochester, NY; Lyons, NY"
+  },
+  {
+   "account_id": "A116",
+   "company_name": "FineLine Technologies Inc",
+   "industry": "packaging",
+   "employees_reported": 328,
+   "plant_count": 5,
+   "hq_guess_city": "Peachtree Corners",
+   "hq_guess_state": "GA",
+   "plant_locations": "Peachtree Corners, GA; O'Fallon, MO; Norcross, GA; Van Buren, AR; Costa Mesa, CA"
+  },
+  {
+   "account_id": "A150",
+   "company_name": "York Wallcoverings, Inc.",
+   "industry": "packaging",
+   "employees_reported": 324,
+   "plant_count": 1,
+   "hq_guess_city": "York",
+   "hq_guess_state": "PA",
+   "plant_locations": "York, PA"
+  },
+  {
+   "account_id": "A059",
+   "company_name": "DeWys Metal Solutions",
+   "industry": "metal_fabrication",
+   "employees_reported": 271,
+   "plant_count": 4,
+   "hq_guess_city": "Marne",
+   "hq_guess_state": "MI",
+   "plant_locations": "Marne, MI; Grand Haven, MI; Marne, MI; Grand Haven, MI"
+  },
+  {
+   "account_id": "A007",
+   "company_name": "Central Valley Meat Company",
+   "industry": "food_beverage",
+   "employees_reported": 779,
+   "plant_count": 1,
+   "hq_guess_city": "Hanford",
+   "hq_guess_state": "CA",
+   "plant_locations": "Hanford, CA"
+  }
+ ]
+}

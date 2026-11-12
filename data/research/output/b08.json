@@ -1,0 +1,97 @@
+{
+  "batch": "b08",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A037",
+      "company_name": "Olam West Coast",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Listed as a subsidiary of Olam, whose 2026 factsheet cites about 78,000 employees, so it belongs to a group far above 2,000 employees.",
+        "parent_company": "Olam Group",
+        "source_url": "https://mergr.com/olam-west-coast-overview"
+      },
+      "searches_run": 5,
+      "pages_opened": 8,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://abc30.com/archive/8139521/", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://careers.olamagri.com/job/Maintenance-Manager/57998044/", "reason": "wrong company"},
+        {"type": "hiring_maintenance", "source_url": "https://www.ihire.com/jobs/view/486463653", "reason": "wrong company"},
+        {"type": "funding_or_pe", "source_url": "https://www.just-food.com/?p=42854", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A084",
+      "company_name": "MAC VALVES INC",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Village lists the company as privately held with 200+ employees and no parent group appears in the sources checked, though the reported headcount is 421.",
+        "parent_company": null,
+        "source_url": "https://village.ai/company/mac-valves-inc."
+      },
+      "searches_run": 6,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://www.career.com/job/mac-valves-inc/manufacturing-process-engineer/j202604292250134440374", "reason": "other"}
+      ]
+    },
+    {
+      "account_id": "A152",
+      "company_name": "Bruss North America",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "A Russell County page calls its parent an unnamed German company, so the parent group's size could not be determined.",
+        "parent_company": null,
+        "source_url": "https://www.rcidaky.com/industry-successes-in-russell-county/127-bruss-north-america-inc"
+      },
+      "searches_run": 6,
+      "pages_opened": 7,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://rcidaky.com/news-events/92-bruss-expansion-adds-100-jobs", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://branscumconstruction.com/bruss-north-america", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://jobs.jobg8.com/jobs/maintenance-manager-in-russell-springs-kentucky-united-states/4658-2939317694BE", "reason": "wrong company"},
+        {"type": "hiring_maintenance", "source_url": "https://www.career.com/job/bruss-n-a-inc/maintenance-tech-2/j202604091311491832367", "reason": "other"},
+        {"type": "expansion", "source_url": "https://rcidaky.com/news-events/157-new-manufacturing-facility-coming-to-russell-county", "reason": "wrong company"}
+      ]
+    },
+    {
+      "account_id": "A140",
+      "company_name": "Royal Paper Box Co.",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Thomasnet lists an independent, family-owned folding carton maker with 200-499 employees and no parent company.",
+        "parent_company": null,
+        "source_url": "https://www.thomasnet.com/company/royal-paper-box-co-214525/profile"
+      },
+      "searches_run": 5,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://piworld.com/article/royal-paper-box-optimizes-quality-and-efficiency-with-third-kba-press", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://us.koenig-bauer.com/en/news/details/article/royal-paper-box-optimizes-quality-and-efficiency-with-third-new-kba-41-press", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A121",
+      "company_name": "Interflex Acquisition Company LLC",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Its parent InterFlex Group was sold to Toppan Holdings, which reported about 53,700 employees as of March 2024.",
+        "parent_company": "Toppan Holdings",
+        "source_url": "https://www.lincolninternational.com/transactions/nicolet-capital-partners-has-sold-interflex-group-to-toppan/"
+      },
+      "searches_run": 6,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.lincolninternational.com/transactions/nicolet-capital-partners-has-sold-interflex-group-to-toppan/", "reason": "stale"},
+        {"type": "funding_or_pe", "source_url": "https://www.canplastics.com/packaging/flexible-packager-interflex-sold-to-private-equity-firm/1001398426/", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://www.packaging-gateway.com/news/interflex-to-expand-business-activities-in-wilkes-county-north-carolina-4156038/", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://www.career.com/job/interflex-acquisition-company-llc/production-shift-supervisor/j202606130029404679455", "reason": "other"}
+      ]
+    }
+  ]
+}

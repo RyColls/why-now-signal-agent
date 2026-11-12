@@ -1,0 +1,55 @@
+{
+ "batch": "b22",
+ "accounts": [
+  {
+   "account_id": "A142",
+   "company_name": "Sellars Absorbent Materials",
+   "industry": "packaging",
+   "employees_reported": 204,
+   "plant_count": 2,
+   "hq_guess_city": "Milwaukee",
+   "hq_guess_state": "WI",
+   "plant_locations": "Milwaukee, WI; Milwaukee, WI"
+  },
+  {
+   "account_id": "A107",
+   "company_name": "Bancroft Bag",
+   "industry": "packaging",
+   "employees_reported": 210,
+   "plant_count": 1,
+   "hq_guess_city": "West Monroe",
+   "hq_guess_state": "LA",
+   "plant_locations": "West Monroe, LA"
+  },
+  {
+   "account_id": "A021",
+   "company_name": "Grain Processing Corporation",
+   "industry": "food_beverage",
+   "employees_reported": 282,
+   "plant_count": 3,
+   "hq_guess_city": "Washington",
+   "hq_guess_state": "IN",
+   "plant_locations": "Washington, IN; Grinnell, IA; Oskaloosa, IA"
+  },
+  {
+   "account_id": "A086",
+   "company_name": "Marino \\\\ WARE",
+   "industry": "metal_fabrication",
+   "employees_reported": 488,
+   "plant_count": 3,
+   "hq_guess_city": "South Plainfield",
+   "hq_guess_state": "NJ",
+   "plant_locations": "South Plainfield, NJ; Griffin, GA; East Chicago, IN"
+  },
+  {
+   "account_id": "A158",
+   "company_name": "Dinesol Plastics Inc",
+   "industry": "plastics",
+   "employees_reported": 415,
+   "plant_count": 3,
+   "hq_guess_city": "Niles",
+   "hq_guess_state": "OH",
+   "plant_locations": "Niles, OH; Youngstown, OH; Youngstown, OH"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "batch": "b20",
+ "accounts": [
+  {
+   "account_id": "A105",
+   "company_name": "Attindas Hygiene Partners",
+   "industry": "packaging",
+   "employees_reported": 363,
+   "plant_count": 1,
+   "hq_guess_city": "Greenville",
+   "hq_guess_state": "NC",
+   "plant_locations": "Greenville, NC"
+  },
+  {
+   "account_id": "A100",
+   "company_name": "nVent Enclosure Systems - Chattanooga LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 209,
+   "plant_count": 1,
+   "hq_guess_city": "Chattanooga",
+   "hq_guess_state": "TN",
+   "plant_locations": "Chattanooga, TN"
+  },
+  {
+   "account_id": "A172",
+   "company_name": "Kaysun Corporation",
+   "industry": "plastics",
+   "employees_reported": 221,
+   "plant_count": 1,
+   "hq_guess_city": "Manitowoc",
+   "hq_guess_state": "WI",
+   "plant_locations": "Manitowoc, WI"
+  },
+  {
+   "account_id": "A022",
+   "company_name": "Grassland Dairy Products Inc",
+   "industry": "food_beverage",
+   "employees_reported": 1090,
+   "plant_count": 3,
+   "hq_guess_city": "Greenwood",
+   "hq_guess_state": "WI",
+   "plant_locations": "Greenwood, WI; Hyrum, UT; West Point, NE"
+  },
+  {
+   "account_id": "A036",
+   "company_name": "Novus Foods LLC",
+   "industry": "food_beverage",
+   "employees_reported": 525,
+   "plant_count": 1,
+   "hq_guess_city": "Delphos",
+   "hq_guess_state": "OH",
+   "plant_locations": "Delphos, OH"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "batch": "b26",
+ "accounts": [
+  {
+   "account_id": "A051",
+   "company_name": "AY MCDONALD MANUFACTURING CO",
+   "industry": "metal_fabrication",
+   "employees_reported": 505,
+   "plant_count": 1,
+   "hq_guess_city": "Dubuque",
+   "hq_guess_state": "IA",
+   "plant_locations": "Dubuque, IA"
+  },
+  {
+   "account_id": "A085",
+   "company_name": "Mac Arthur Co.",
+   "industry": "metal_fabrication",
+   "employees_reported": 304,
+   "plant_count": 2,
+   "hq_guess_city": "Graettinger",
+   "hq_guess_state": "IA",
+   "plant_locations": "Graettinger, IA; Perryville, MO"
+  },
+  {
+   "account_id": "A167",
+   "company_name": "Hi-Tech Mold & Engineering",
+   "industry": "plastics",
+   "employees_reported": 361,
+   "plant_count": 2,
+   "hq_guess_city": "Winchester",
+   "hq_guess_state": "TN",
+   "plant_locations": "Winchester, TN; Rochester Hills, MI"
+  },
+  {
+   "account_id": "A145",
+   "company_name": "Trinity Plastics Inc.",
+   "industry": "packaging",
+   "employees_reported": 454,
+   "plant_count": 1,
+   "hq_guess_city": "Lewistown",
+   "hq_guess_state": "PA",
+   "plant_locations": "Lewistown, PA"
+  },
+  {
+   "account_id": "A148",
+   "company_name": "Up North Plastics",
+   "industry": "packaging",
+   "employees_reported": 785,
+   "plant_count": 1,
+   "hq_guess_city": "Cottage Grove",
+   "hq_guess_state": "MN",
+   "plant_locations": "Cottage Grove, MN"
+  }
+ ]
+}

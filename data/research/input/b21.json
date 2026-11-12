@@ -1,0 +1,55 @@
+{
+ "batch": "b21",
+ "accounts": [
+  {
+   "account_id": "A120",
+   "company_name": "Icon Protection",
+   "industry": "packaging",
+   "employees_reported": 486,
+   "plant_count": 6,
+   "hq_guess_city": "Manning",
+   "hq_guess_state": "SC",
+   "plant_locations": "Manning, SC; Surprise, AZ; Elk Grove Village, IL; Tinley Park, IL; Hazle Twp., PA; Ridgefield, WA"
+  },
+  {
+   "account_id": "A178",
+   "company_name": "Molded Fiber Glass",
+   "industry": "plastics",
+   "employees_reported": 778,
+   "plant_count": 4,
+   "hq_guess_city": "Ashtabula",
+   "hq_guess_state": "OH",
+   "plant_locations": "Ashtabula, OH; Morganton, NC; Linesville, PA; Ashtabula, OH"
+  },
+  {
+   "account_id": "A147",
+   "company_name": "United Envelope",
+   "industry": "packaging",
+   "employees_reported": 246,
+   "plant_count": 1,
+   "hq_guess_city": "Mount Pocono",
+   "hq_guess_state": "PA",
+   "plant_locations": "Mount Pocono, PA"
+  },
+  {
+   "account_id": "A063",
+   "company_name": "EJ USA, Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 227,
+   "plant_count": 3,
+   "hq_guess_city": "East Jordan",
+   "hq_guess_state": "MI",
+   "plant_locations": "East Jordan, MI; Phoenix, NY; East Jordan, MI"
+  },
+  {
+   "account_id": "A176",
+   "company_name": "McClarin Composites",
+   "industry": "plastics",
+   "employees_reported": 261,
+   "plant_count": 5,
+   "hq_guess_city": "Wapato",
+   "hq_guess_state": "WA",
+   "plant_locations": "Wapato, WA; Hanover, PA; Hanover, PA; Hanover, PA; Hanover, PA"
+  }
+ ]
+}

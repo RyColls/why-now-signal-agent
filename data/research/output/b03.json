@@ -1,0 +1,127 @@
+{
+  "batch": "b03",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A056",
+      "company_name": "CEMCO, LLC",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Wholly owned by JFE Shoji America Holdings, part of Tokyo-based JFE Shoji Corporation; CEMCO reports over 500 employees, but the parent group's total headcount was not confirmed.",
+        "parent_company": "JFE Shoji Corporation",
+        "source_url": "https://buildsteel.org/news/jfe-shoji-corporation-to-acquire-california-expanded-metal-products-co-cemco/"
+      },
+      "searches_run": 4,
+      "pages_opened": 6,
+      "signals": [
+        {
+          "type": "expansion",
+          "source_url": "https://www.wconline.com/articles/98068-cemco-opens-new-manufacturing-facility-in-commerce-city-colo",
+          "published": "2026-03-16",
+          "sentence": "CEMCO has opened a 140,000-square-foot manufacturing facility in Commerce City, Colo.",
+          "summary": "CEMCO opened a 140,000 sq ft manufacturing facility in Commerce City, Colorado.",
+          "role_to_contact": "Plant Manager"
+        }
+      ],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://buildsteel.org/sfia-member-news/jfe-shoji-america-holdings-acquires-new-facility-to-support-cemcos-expansion/", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.wconline.com/articles/97539-explore-jfe-shojis-latest-expansion-for-cemco", "reason": "stale"},
+        {"type": "new_ops_leader", "source_url": "https://www.wconline.com/articles/98483-cemco-ceo-tom-porter-to-retire-after-39-years", "reason": "other"},
+        {"type": "hiring_maintenance", "source_url": "https://www.ziprecruiter.com/co/CEMCO-LLC", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://talents.vaia.com/companies/cemco/california/maintenance-planning-cmms-lead-121535816/", "reason": "no date on page"},
+        {"type": "funding_or_pe", "source_url": "https://buildsteel.org/news/jfe-shoji-corporation-to-acquire-california-expanded-metal-products-co-cemco/", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A074",
+      "company_name": "Hoffman Industries, LLC",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "The Anoka site appears to be nVent's HOFFMAN enclosures plant, and nVent Electric plc had 12,000 employees at end-2025.",
+        "parent_company": "nVent Electric plc",
+        "source_url": "https://tracer.nvent.com/hoffman/global-locations"
+      },
+      "searches_run": 6,
+      "pages_opened": 5,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://talents.vaia.com/companies/nvent/anoka/maintenance-sr-supervisor-90406085/", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://minneapolimedia.town.news/g/coon-rapids-mn/n/334317/nvent-expands-again-minnesota-driving-ai-infrastructure-growth", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A131",
+      "company_name": "Nittany Paper Mills",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Operating company owned by Atlas Holdings, LLC (a group of 16 companies); the input's 210-employee headcount and the group's total size were not verified.",
+        "parent_company": "Atlas Holdings, LLC",
+        "source_url": "https://imcpa.com/nittany-paper-investment"
+      },
+      "searches_run": 4,
+      "pages_opened": 5,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.pa.gov/governor/newsroom/2025-press-releases/creating-jobs-mifflin-co-shapiro-admin-secures--142-2m-investmen", "reason": "wrong company"},
+        {"type": "funding_or_pe", "source_url": "https://imcpa.com/nittany-paper-investment", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A042",
+      "company_name": "Sandridge Food Corporation",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Independent, third-generation family-owned company that states it has nearly 1,000 employees (input reports 612).",
+        "parent_company": null,
+        "source_url": "https://sandridge.com/about-us/"
+      },
+      "searches_run": 4,
+      "pages_opened": 7,
+      "signals": [
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://www.career.com/job/sandridge-crafted-foods/sr-maintenance-manager/j202512200015068250282",
+          "published": "2026-04-09",
+          "sentence": "We're seeking a hands-on Maintenance Manager who enjoys tackling complex challenges, developing strong teams",
+          "summary": "Sandridge posted a Sr. Maintenance Manager job in Medina, OH on 2026-04-09; the page now shows it as expired.",
+          "role_to_contact": "Plant Manager"
+        }
+      ],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://qualityassurancemag.com/news/sandridge-foods-to-construct-15000-square-foot-addition-add-jobs-in-medina-ohio", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://www.prweb.com/releases/sandridge-crafted-foods-acquires-new-production-site-in-new-oxford-pa-301974582.html", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.prweb.com/releases/sandridge-crafted-foods-holds-ribbon-cutting-for-the-sandridge-center-for-excellence-302618976.html", "reason": "other"},
+        {"type": "expansion", "source_url": "https://www.qualityassurancemag.com/news/sandridge-crafted-foods-holds-ribbon-cutting-for-sandridge-center-for-excellence", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://us242.dayforcehcm.com/CandidatePortal/en-US/sandridge/Posting/View/4625", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://jobs.wizehire.com/job/sr-maintenance-manager-in-medina-oh-us-993b7254adb20d5f", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A015",
+      "company_name": "Farmer's Fridge",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Independent, venture-backed Chicago food producer that makes its salads in its own kitchens; the input lists 463 employees and no parent group was found.",
+        "parent_company": null,
+        "source_url": "https://www.spokesman.com/stories/2026/jan/05/chicago-based-farmers-fridge-has-turned-vending-ma/"
+      },
+      "searches_run": 6,
+      "pages_opened": 2,
+      "signals": [
+        {
+          "type": "expansion",
+          "source_url": "https://www.spokesman.com/stories/2026/jan/05/chicago-based-farmers-fridge-has-turned-vending-ma/",
+          "published": "2026-01-05",
+          "sentence": "Farmer's Fridge has since doubled its kitchen to 100,000 square feet",
+          "summary": "A January 2026 article reports Farmer's Fridge has doubled its kitchen to 100,000 sq ft, though it does not say when.",
+          "role_to_contact": "Plant Manager"
+        }
+      ],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://www.theladders.com/job/facilities-maintenance-manager-farmer-s-fridge-chicago-il_88098393", "reason": "could not open"},
+        {"type": "hiring_maintenance", "source_url": "https://www.jobtarget.com/jobs/jt-vao6s6jrq6/facilities-and-maintenance-manager-chicago-illinois", "reason": "could not open"},
+        {"type": "expansion", "source_url": "https://www.financialcontent.com/article/prlog-2026-6-24-farmers-fridge-expands-fresh-convenient-meal-access-across-eastern-pennsylvania", "reason": "could not open"}
+      ]
+    }
+  ]
+}

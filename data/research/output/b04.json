@@ -1,0 +1,104 @@
+{
+  "batch": "b04",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A064",
+      "company_name": "Fortune Brands Home & Security, Inc.",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Operating unit of Fortune Brands Innovations, which reported 10,000 employees as of December 27, 2025.",
+        "parent_company": "Fortune Brands Innovations, Inc.",
+        "source_url": "https://stockanalysis.com/stocks/fbin/employees/"
+      },
+      "searches_run": 6,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://jobs.smartrecruiters.com/FortuneBrands/744000079911303", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://builtincharlotte.com/job/manager-facilities-and-maintenance-excellence/8163568", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A017",
+      "company_name": "Franklin Baking Company, LLC",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Subsidiary of Flowers Foods, which reported 10,300 employees as of January 3, 2026.",
+        "parent_company": "Flowers Foods, Inc.",
+        "source_url": "https://www.fastdol.com/employers/franklin-baking-company-68e0783b-8868-4e0e-8a1a-b43b4297673d"
+      },
+      "searches_run": 4,
+      "pages_opened": 4,
+      "signals": [
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://tallo.com/talent/job/maintenance-and-repair/maintenance-or-service-supervisor/nc/goldsboro/industrial-maintenance-superin-263a5337",
+          "published": "2026-05-13",
+          "sentence": "Industrial Maintenance Superintendents ensure optimal efficiency is achieved through supporting the Engineering Manager",
+          "summary": "Franklin Baking posted an Industrial Maintenance Superintendent job in Goldsboro, NC, a senior maintenance leadership role.",
+          "role_to_contact": "Engineering Manager"
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "account_id": "A061",
+      "company_name": "Duravent Inc",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Part of the Duravent Group, a Bain Capital-backed portfolio of 14 brands, with no group headcount stated on the page checked.",
+        "parent_company": "Duravent Group",
+        "source_url": "https://duravent.com/about"
+      },
+      "searches_run": 5,
+      "pages_opened": 6,
+      "signals": [
+        {
+          "type": "funding_or_pe",
+          "source_url": "https://pulse2.com/duravent-group-strategic-growth-investment-secured-to-expand-hvac-and-air-quality-platform/amp/",
+          "published": "2026-03-18",
+          "sentence": "has secured a strategic growth investment from Bain Capital.",
+          "summary": "Duravent Group, the parent of Duravent Inc, took a strategic growth investment from Bain Capital in March 2026.",
+          "role_to_contact": "VP Operations"
+        }
+      ],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.achrnews.com/articles/149301-european-group-buys-simpson-duravent", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A112",
+      "company_name": "Continental O'Sullivan Films",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The Continental press release does not state the parent of the Winchester plant, and no group headcount was confirmed.",
+        "parent_company": null,
+        "source_url": "https://continental.com/en/press/press-releases/winchester"
+      },
+      "searches_run": 4,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://continental.com/en/press/press-releases/winchester", "reason": "stale"},
+        {"type": "funding_or_pe", "source_url": "https://www.plasticstoday.com/automotive-mobility/continental-sells-contitech-for-4-6-billion-to-lone-star", "reason": "wrong company"}
+      ]
+    },
+    {
+      "account_id": "A001",
+      "company_name": "AFP advanced food products llc",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The company page describes an international alliance with Groupe Soparind Bongrain and Land O' Lakes rather than ownership, and gives no headcount.",
+        "parent_company": null,
+        "source_url": "https://meoadvisors.com/ai-opportunities/afp-advanced-food-products/"
+      },
+      "searches_run": 6,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://www.theladders.com/job/maintenance-manager-undefined-new-holland-pa_87187984", "reason": "no date on page"}
+      ]
+    }
+  ]
+}

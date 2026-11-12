@@ -1,0 +1,7 @@
+{"results":[
+{"id":"S11","opened":true,"right_company":false,"sentence_found":true,"printed_date":"2026-01-08","date_matches":true,"signal_type_fits":true,"still_current":null,"notes":"Article covers Danone North America's Fort Worth, TX plant, not the West Jordan, UT location claimed; date and sentence match."},
+{"id":"S12","opened":true,"right_company":false,"sentence_found":true,"printed_date":"2026-06-10","date_matches":true,"signal_type_fits":true,"still_current":true,"notes":"Posting is for a Maintenance Lead in Fort Worth, TX, not West Jordan, UT; no closed notice, so it appears open."},
+{"id":"S13","opened":true,"right_company":false,"sentence_found":true,"printed_date":"2026-03-27","date_matches":true,"signal_type_fits":true,"still_current":true,"notes":"Posting is for a role in Fort Worth, TX, not West Jordan, UT; the Excel mention is about reporting, not a maintenance system."},
+{"id":"S14","opened":true,"right_company":false,"sentence_found":true,"printed_date":"2026-01-15","date_matches":true,"signal_type_fits":true,"still_current":false,"notes":"Posting is for Story City, Iowa, not Rochester, NY, and its printed expiry date of 15 Apr 26 has passed."},
+{"id":"S15","opened":true,"right_company":true,"sentence_found":true,"printed_date":"2026-07-07","date_matches":true,"signal_type_fits":true,"still_current":null,"notes":"Acquirer's press release confirms the acquisition of Advance Mfg. Co. in Westfield, MA."}
+]}

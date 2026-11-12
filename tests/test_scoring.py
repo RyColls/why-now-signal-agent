@@ -10,7 +10,7 @@ CONFIG = {
     "weights": {"hiring_maintenance": 30, "expansion": 25, "new_ops_leader": 20,
                 "pain_in_job_post": 15, "funding_or_pe": 10},
     "decay": {"half_after_days": 180, "zero_after_days": 365},
-    "rules": {"require_verified": True},
+    "rules": {"require_verified": True, "require_open_job_posts": True},
 }
 AS_OF = date(2026, 11, 11)
 
@@ -66,3 +66,23 @@ def test_rank_orders_by_score_then_freshness():
     ], AS_OF, CONFIG)
     assert [r["company_name"] for r in ranked] == ["Charlie", "Alpha", "Bravo"]
     assert ranked[2]["status"] == s.NO_SIGNAL and ranked[2]["rank"] == 3
+
+
+def test_expired_job_post_does_not_count_but_news_does():
+    out = s.score_account([
+        sig("hiring_maintenance", "2026-10-01", still_current=False),
+        sig("pain_in_job_post", "2026-10-01", still_current=True),
+        sig("expansion", "2026-10-01", still_current=None),
+    ], AS_OF, CONFIG)
+    assert sorted(x["type"] for x in out["signals"]) == ["expansion", "pain_in_job_post"]
+
+
+def test_not_fit_accounts_are_removed_from_the_call_list():
+    universe = pd.DataFrame({"account_id": ["A001", "A002"], "company_name": ["Alpha", "Bravo"],
+                             "industry": ["plastics"] * 2})
+    ranked = s.rank(universe, [sig("expansion", "2026-10-01", account_id="A001"),
+                               sig("expansion", "2026-10-01", account_id="A002")],
+                    AS_OF, CONFIG, fits={"A001": "not_fit", "A002": "unclear"})
+    assert [r["company_name"] for r in ranked] == ["Bravo", "Alpha"]
+    assert ranked[1]["status"] == s.NOT_A_FIT and ranked[1]["score"] == 0
+    assert ranked[0]["fit"] == "unclear"

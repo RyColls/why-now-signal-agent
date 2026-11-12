@@ -1,0 +1,55 @@
+{
+ "batch": "b16",
+ "accounts": [
+  {
+   "account_id": "A114",
+   "company_name": "Darnel Inc",
+   "industry": "packaging",
+   "employees_reported": 207,
+   "plant_count": 1,
+   "hq_guess_city": "Monroe",
+   "hq_guess_state": "NC",
+   "plant_locations": "Monroe, NC"
+  },
+  {
+   "account_id": "A173",
+   "company_name": "Kumi manufacturing Alabama LLC",
+   "industry": "plastics",
+   "employees_reported": 346,
+   "plant_count": 1,
+   "hq_guess_city": "Clanton",
+   "hq_guess_state": "AL",
+   "plant_locations": "Clanton, AL"
+  },
+  {
+   "account_id": "A165",
+   "company_name": "Global Enterprises",
+   "industry": "plastics",
+   "employees_reported": 229,
+   "plant_count": 1,
+   "hq_guess_city": "El Paso",
+   "hq_guess_state": "TX",
+   "plant_locations": "El Paso, TX"
+  },
+  {
+   "account_id": "A119",
+   "company_name": "Gusmer Enterprises, Inc.",
+   "industry": "packaging",
+   "employees_reported": 317,
+   "plant_count": 3,
+   "hq_guess_city": "Waupaca",
+   "hq_guess_state": "WI",
+   "plant_locations": "Waupaca, WI; Newton, NC; Fresno, CA"
+  },
+  {
+   "account_id": "A103",
+   "company_name": "Appvion",
+   "industry": "packaging",
+   "employees_reported": 401,
+   "plant_count": 1,
+   "hq_guess_city": "Appleton",
+   "hq_guess_state": "WI",
+   "plant_locations": "Appleton, WI"
+  }
+ ]
+}

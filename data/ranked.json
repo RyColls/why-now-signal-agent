@@ -2,62 +2,165 @@
   "as_of": "2026-11-11",
   "accounts": [
     {
-      "account_id": "A053",
-      "company_name": "Advance Mfg. Co., Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
+      "fit": "fit",
+      "account_id": "A047",
+      "company_name": "Wixon",
+      "industry": "food_beverage",
+      "score": 25.0,
+      "status": "call",
+      "signals": [
+        {
+          "account_id": "A047",
+          "type": "expansion",
+          "source_url": "https://perishablenews.com/?p=437595",
+          "published": "2026-11-05",
+          "found": "2026-11-11",
+          "sentence": "The project, which began in fall 2025, more than tripled the operation's footprint and created 110 new jobs.",
+          "summary": "Wixon completed a Milwaukee-area facility expansion (Wixon West) that more than tripled its footprint, a site other than the St. Francis plant on file.",
+          "role_to_contact": "VP of Operations",
+          "verified": true,
+          "still_current": null,
+          "scope": "account",
+          "points": 25.0,
+          "age_days": 6
+        }
+      ],
       "rank": 1
     },
     {
-      "account_id": "A001",
-      "company_name": "AFP advanced food products llc",
+      "fit": "unclear",
+      "account_id": "A043",
+      "company_name": "Shearer's Foods - PHX",
       "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
+      "score": 25.0,
+      "status": "call",
+      "signals": [
+        {
+          "account_id": "A043",
+          "type": "expansion",
+          "source_url": "https://www.potatopro.com/node/173705",
+          "published": "2026-08-02",
+          "found": "2026-11-11",
+          "sentence": "Shearer's Foods has officially opened its newest manufacturing facility in Moraine, Ohio",
+          "summary": "Shearer's Foods opened a new manufacturing facility in Moraine, Ohio, which is company-level and not at the Phoenix plant.",
+          "role_to_contact": "VP Operations",
+          "verified": true,
+          "still_current": null,
+          "scope": "company-level, other plant",
+          "points": 25.0,
+          "age_days": 101
+        }
+      ],
       "rank": 2
     },
     {
-      "account_id": "A101",
-      "company_name": "Amcor Flexibles North America - New London",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
+      "fit": "fit",
+      "account_id": "A010",
+      "company_name": "Cooper Farms",
+      "industry": "food_beverage",
+      "score": 25.0,
+      "status": "call",
+      "signals": [
+        {
+          "account_id": "A010",
+          "type": "expansion",
+          "source_url": "https://www.dailystandard.com/archive/2026-05-21/stories/54861/cooper-farms-plans-processing-plant-in-celina",
+          "published": "2026-05-21",
+          "found": "2026-11-11",
+          "sentence": "The company said in a news release the 28,000-square-foot facility will serve as a value-added further processing plant",
+          "summary": "Cooper Farms plans a new 28,000-square-foot further processing plant in Celina, Ohio.",
+          "role_to_contact": "VP or Director of Operations",
+          "verified": true,
+          "still_current": null,
+          "scope": "account",
+          "points": 25.0,
+          "age_days": 174
+        }
+      ],
       "rank": 3
     },
     {
-      "account_id": "A102",
-      "company_name": "American Packaging Corp",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
+      "fit": "unclear",
+      "account_id": "A056",
+      "company_name": "CEMCO, LLC",
+      "industry": "metal_fabrication",
+      "score": 12.5,
+      "status": "call",
+      "signals": [
+        {
+          "account_id": "A056",
+          "type": "expansion",
+          "source_url": "https://www.wconline.com/articles/98068-cemco-opens-new-manufacturing-facility-in-commerce-city-colo",
+          "published": "2026-03-16",
+          "found": "2026-11-11",
+          "sentence": "CEMCO has opened a 140,000-square-foot manufacturing facility in Commerce City, Colo.",
+          "summary": "CEMCO opened a 140,000 sq ft manufacturing facility in Commerce City, Colorado.",
+          "role_to_contact": "Plant Manager",
+          "verified": true,
+          "still_current": null,
+          "scope": "company-level, other plant",
+          "points": 12.5,
+          "age_days": 240
+        }
+      ],
       "rank": 4
     },
     {
-      "account_id": "A054",
-      "company_name": "Ameriforge-IR",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
+      "fit": "fit",
+      "account_id": "A015",
+      "company_name": "Farmer's Fridge",
+      "industry": "food_beverage",
+      "score": 12.5,
+      "status": "call",
+      "signals": [
+        {
+          "account_id": "A015",
+          "type": "expansion",
+          "source_url": "https://www.spokesman.com/stories/2026/jan/05/chicago-based-farmers-fridge-has-turned-vending-ma/",
+          "published": "2026-01-05",
+          "found": "2026-11-11",
+          "sentence": "Farmer's Fridge has since doubled its kitchen to 100,000 square feet",
+          "summary": "A January 2026 article reports Farmer's Fridge has doubled its kitchen to 100,000 sq ft, though it does not say when.",
+          "role_to_contact": "Plant Manager",
+          "verified": true,
+          "still_current": null,
+          "scope": "account",
+          "points": 12.5,
+          "age_days": 310
+        }
+      ],
       "rank": 5
     },
     {
-      "account_id": "A003",
-      "company_name": "Ancient Crunch",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
+      "fit": "unclear",
+      "account_id": "A053",
+      "company_name": "Advance Mfg. Co., Inc.",
+      "industry": "metal_fabrication",
+      "score": 10.0,
+      "status": "call",
+      "signals": [
+        {
+          "account_id": "A053",
+          "type": "funding_or_pe",
+          "source_url": "https://www.precinmac.com/news/precinmac-lp-announces-the-acquisition-of-massachusetts-based-advance-mfg-co-inc",
+          "published": "2026-07-07",
+          "found": "2026-11-11",
+          "sentence": "today announced the acquisition of Advance Mfg. Co.",
+          "summary": "Precinmac LP, a manufacturing group backed by Centerbridge Partners, announced its acquisition of Advance Mfg. Co.",
+          "role_to_contact": "General Manager, Westfield",
+          "verified": true,
+          "still_current": null,
+          "scope": "account",
+          "points": 10.0,
+          "age_days": 127
+        }
+      ],
       "rank": 6
     },
     {
-      "account_id": "A004",
-      "company_name": "Anitas Mexican Foods Corp",
+      "fit": "unclear",
+      "account_id": "A001",
+      "company_name": "AFP advanced food products llc",
       "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
@@ -65,8 +168,9 @@
       "rank": 7
     },
     {
-      "account_id": "A103",
-      "company_name": "Appvion",
+      "fit": "fit",
+      "account_id": "A102",
+      "company_name": "American Packaging Corp",
       "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
@@ -74,26 +178,29 @@
       "rank": 8
     },
     {
-      "account_id": "A104",
-      "company_name": "Arrow Packaging Solutions",
-      "industry": "packaging",
+      "fit": "unclear",
+      "account_id": "A054",
+      "company_name": "Ameriforge-IR",
+      "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 9
     },
     {
-      "account_id": "A105",
-      "company_name": "Attindas Hygiene Partners",
-      "industry": "packaging",
+      "fit": "unclear",
+      "account_id": "A003",
+      "company_name": "Ancient Crunch",
+      "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 10
     },
     {
-      "account_id": "A002",
-      "company_name": "AVEKA Group, Inc.",
+      "fit": "fit",
+      "account_id": "A004",
+      "company_name": "Anitas Mexican Foods Corp",
       "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
@@ -101,152 +208,169 @@
       "rank": 11
     },
     {
-      "account_id": "A051",
-      "company_name": "AY MCDONALD MANUFACTURING CO",
-      "industry": "metal_fabrication",
+      "fit": "unclear",
+      "account_id": "A104",
+      "company_name": "Arrow Packaging Solutions",
+      "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 12
     },
     {
-      "account_id": "A052",
-      "company_name": "AZZ Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 13
-    },
-    {
-      "account_id": "A106",
-      "company_name": "Bagcraft Packaging",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 14
-    },
-    {
-      "account_id": "A107",
-      "company_name": "Bancroft Bag",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 15
-    },
-    {
-      "account_id": "A005",
-      "company_name": "Barkley Seed Inc",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 16
-    },
-    {
+      "fit": "unclear",
       "account_id": "A151",
       "company_name": "Beacon Engineered Solutions - MN",
       "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 17
+      "rank": 13
     },
     {
+      "fit": "not_fit",
       "account_id": "A055",
       "company_name": "BlueScope Steel",
       "industry": "metal_fabrication",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 18
+      "rank": 14
     },
     {
-      "account_id": "A108",
-      "company_name": "Bradford Company",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 19
-    },
-    {
+      "fit": "unclear",
       "account_id": "A152",
       "company_name": "Bruss North America",
       "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
+      "rank": 15
+    },
+    {
+      "fit": "unclear",
+      "account_id": "A112",
+      "company_name": "Continental O'Sullivan Films",
+      "industry": "packaging",
+      "score": 0,
+      "status": "no reason to call yet",
+      "signals": [],
+      "rank": 16
+    },
+    {
+      "fit": "not_fit",
+      "account_id": "A113",
+      "company_name": "Coroplast Tape Corporation",
+      "industry": "packaging",
+      "score": 0,
+      "status": "not a fit",
+      "signals": [],
+      "rank": 17
+    },
+    {
+      "fit": "not_fit",
+      "account_id": "A157",
+      "company_name": "Creative Pultrusions",
+      "industry": "plastics",
+      "score": 0,
+      "status": "not a fit",
+      "signals": [],
+      "rank": 18
+    },
+    {
+      "fit": "not_fit",
+      "account_id": "A155",
+      "company_name": "CSP Innovations North Carolina, Inc.",
+      "industry": "plastics",
+      "score": 0,
+      "status": "not a fit",
+      "signals": [],
+      "rank": 19
+    },
+    {
+      "fit": "unclear",
+      "account_id": "A057",
+      "company_name": "CST",
+      "industry": "metal_fabrication",
+      "score": 0,
+      "status": "no reason to call yet",
+      "signals": [],
       "rank": 20
     },
     {
-      "account_id": "A153",
-      "company_name": "Buckhorn Inc",
-      "industry": "plastics",
+      "fit": "not_fit",
+      "account_id": "A012",
+      "company_name": "Danone US, LLC",
+      "industry": "food_beverage",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 21
     },
     {
-      "account_id": "A006",
-      "company_name": "Buffalo Trace Distillery",
-      "industry": "food_beverage",
+      "fit": "unclear",
+      "account_id": "A061",
+      "company_name": "Duravent Inc",
+      "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 22
     },
     {
-      "account_id": "A154",
-      "company_name": "C&J Industries",
-      "industry": "plastics",
+      "fit": "unclear",
+      "account_id": "A062",
+      "company_name": "E-Z Line Pipe Support Co LLC",
+      "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 23
     },
     {
-      "account_id": "A109",
-      "company_name": "CANPACK",
-      "industry": "packaging",
+      "fit": "fit",
+      "account_id": "A163",
+      "company_name": "East Jordan Plastics",
+      "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 24
     },
     {
-      "account_id": "A058",
-      "company_name": "Carlton Forge Works",
+      "fit": "not_fit",
+      "account_id": "A064",
+      "company_name": "Fortune Brands Home & Security, Inc.",
       "industry": "metal_fabrication",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 25
     },
     {
-      "account_id": "A056",
-      "company_name": "CEMCO, LLC",
-      "industry": "metal_fabrication",
+      "fit": "not_fit",
+      "account_id": "A017",
+      "company_name": "Franklin Baking Company, LLC",
+      "industry": "food_beverage",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 26
     },
     {
-      "account_id": "A007",
-      "company_name": "Central Valley Meat Company",
-      "industry": "food_beverage",
+      "fit": "unclear",
+      "account_id": "A164",
+      "company_name": "Gilkey Window Company",
+      "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 27
     },
     {
-      "account_id": "A008",
-      "company_name": "Cheese Merchants of America",
+      "fit": "unclear",
+      "account_id": "A023",
+      "company_name": "Gregory Packaging Inc",
       "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
@@ -254,98 +378,109 @@
       "rank": 28
     },
     {
-      "account_id": "A110",
-      "company_name": "Classic Containers Inc.",
-      "industry": "packaging",
+      "fit": "not_fit",
+      "account_id": "A074",
+      "company_name": "Hoffman Industries, LLC",
+      "industry": "metal_fabrication",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 29
     },
     {
-      "account_id": "A111",
-      "company_name": "Conco, Inc.",
-      "industry": "packaging",
+      "fit": "not_fit",
+      "account_id": "A026",
+      "company_name": "ICL Specialty Products",
+      "industry": "food_beverage",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 30
     },
     {
-      "account_id": "A112",
-      "company_name": "Continental O'Sullivan Films",
-      "industry": "packaging",
+      "fit": "unclear",
+      "account_id": "A027",
+      "company_name": "Interamerican Foods Corp",
+      "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 31
     },
     {
-      "account_id": "A009",
-      "company_name": "Cookie Baker LLC",
-      "industry": "food_beverage",
+      "fit": "not_fit",
+      "account_id": "A121",
+      "company_name": "Interflex Acquisition Company LLC",
+      "industry": "packaging",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 32
     },
     {
-      "account_id": "A010",
-      "company_name": "Cooper Farms",
-      "industry": "food_beverage",
+      "fit": "unclear",
+      "account_id": "A078",
+      "company_name": "International Crankshaft Inc",
+      "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 33
     },
     {
-      "account_id": "A113",
-      "company_name": "Coroplast Tape Corporation",
-      "industry": "packaging",
+      "fit": "unclear",
+      "account_id": "A030",
+      "company_name": "Josephs Bakery",
+      "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 34
     },
     {
-      "account_id": "A156",
-      "company_name": "Corvac Composites",
-      "industry": "plastics",
+      "fit": "fit",
+      "account_id": "A124",
+      "company_name": "Kelly Box & Packaging",
+      "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 35
     },
     {
-      "account_id": "A157",
-      "company_name": "Creative Pultrusions",
-      "industry": "plastics",
+      "fit": "not_fit",
+      "account_id": "A031",
+      "company_name": "Lavazza North America",
+      "industry": "food_beverage",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
       "rank": 36
     },
     {
-      "account_id": "A155",
-      "company_name": "CSP Innovations North Carolina, Inc.",
-      "industry": "plastics",
+      "fit": "fit",
+      "account_id": "A084",
+      "company_name": "MAC VALVES INC",
+      "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 37
     },
     {
-      "account_id": "A057",
-      "company_name": "CST",
-      "industry": "metal_fabrication",
+      "fit": "unclear",
+      "account_id": "A175",
+      "company_name": "Mack Molding Company",
+      "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
       "rank": 38
     },
     {
-      "account_id": "A011",
-      "company_name": "Culver Duck Farms, Inc.",
+      "fit": "unclear",
+      "account_id": "A034",
+      "company_name": "Macrocap Laboraties, LLC.",
       "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
@@ -353,1453 +488,214 @@
       "rank": 39
     },
     {
-      "account_id": "A012",
-      "company_name": "Danone US, LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 40
-    },
-    {
-      "account_id": "A114",
-      "company_name": "Darnel Inc",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 41
-    },
-    {
-      "account_id": "A060",
-      "company_name": "Deltrol Corporation",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 42
-    },
-    {
-      "account_id": "A013",
-      "company_name": "Dessert Holdings LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 43
-    },
-    {
-      "account_id": "A059",
-      "company_name": "DeWys Metal Solutions",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 44
-    },
-    {
-      "account_id": "A158",
-      "company_name": "Dinesol Plastics Inc",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 45
-    },
-    {
-      "account_id": "A159",
-      "company_name": "Display Pack",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 46
-    },
-    {
-      "account_id": "A160",
-      "company_name": "Duo-Form Acquistition Corp.",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 47
-    },
-    {
-      "account_id": "A061",
-      "company_name": "Duravent Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 48
-    },
-    {
-      "account_id": "A062",
-      "company_name": "E-Z Line Pipe Support Co LLC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 49
-    },
-    {
-      "account_id": "A161",
-      "company_name": "EAM Mosca",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 50
-    },
-    {
-      "account_id": "A163",
-      "company_name": "East Jordan Plastics",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 51
-    },
-    {
-      "account_id": "A063",
-      "company_name": "EJ USA, Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 52
-    },
-    {
-      "account_id": "A115",
-      "company_name": "Envases Commerce, LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 53
-    },
-    {
-      "account_id": "A162",
-      "company_name": "EVCO Plastics",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 54
-    },
-    {
-      "account_id": "A014",
-      "company_name": "Evolution Insurance Company, Ltd. SHEHADEY FAMILY FOODS, LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 55
-    },
-    {
-      "account_id": "A015",
-      "company_name": "Farmer's Fridge",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 56
-    },
-    {
-      "account_id": "A116",
-      "company_name": "FineLine Technologies Inc",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 57
-    },
-    {
-      "account_id": "A016",
-      "company_name": "Flowers Baking Company of Knoxville",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 58
-    },
-    {
-      "account_id": "A064",
-      "company_name": "Fortune Brands Home & Security, Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 59
-    },
-    {
-      "account_id": "A065",
-      "company_name": "Frank Calandra Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 60
-    },
-    {
-      "account_id": "A017",
-      "company_name": "Franklin Baking Company, LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 61
-    },
-    {
-      "account_id": "A018",
-      "company_name": "Freshpet",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 62
-    },
-    {
-      "account_id": "A019",
-      "company_name": "Freshway Foods LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 63
-    },
-    {
-      "account_id": "A066",
-      "company_name": "Frey-Moss Structures Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 64
-    },
-    {
-      "account_id": "A068",
-      "company_name": "General Dynamics OTS (Pennsylvania), Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 65
-    },
-    {
-      "account_id": "A069",
-      "company_name": "Giffin Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 66
-    },
-    {
-      "account_id": "A164",
-      "company_name": "Gilkey Window Company",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 67
-    },
-    {
-      "account_id": "A070",
-      "company_name": "Girtz Industries Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 68
-    },
-    {
-      "account_id": "A165",
-      "company_name": "Global Enterprises",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 69
-    },
-    {
-      "account_id": "A067",
-      "company_name": "GLOCK Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 70
-    },
-    {
-      "account_id": "A117",
-      "company_name": "GOEX Corporation",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 71
-    },
-    {
-      "account_id": "A020",
-      "company_name": "Good Foods Group, LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 72
-    },
-    {
-      "account_id": "A021",
-      "company_name": "Grain Processing Corporation",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 73
-    },
-    {
-      "account_id": "A022",
-      "company_name": "Grassland Dairy Products Inc",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 74
-    },
-    {
-      "account_id": "A023",
-      "company_name": "Gregory Packaging Inc",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 75
-    },
-    {
-      "account_id": "A118",
-      "company_name": "GTI Fabrication",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 76
-    },
-    {
-      "account_id": "A119",
-      "company_name": "Gusmer Enterprises, Inc.",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 77
-    },
-    {
-      "account_id": "A072",
-      "company_name": "Harken Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 78
-    },
-    {
-      "account_id": "A071",
-      "company_name": "HELIOS TECHNOLOGIES INC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 79
-    },
-    {
-      "account_id": "A166",
-      "company_name": "HellermannTyton USA",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 80
-    },
-    {
-      "account_id": "A073",
-      "company_name": "Henry Repeating Arms",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 81
-    },
-    {
-      "account_id": "A024",
-      "company_name": "Hershey's",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 82
-    },
-    {
-      "account_id": "A167",
-      "company_name": "Hi-Tech Mold & Engineering",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 83
-    },
-    {
-      "account_id": "A074",
-      "company_name": "Hoffman Industries, LLC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 84
-    },
-    {
-      "account_id": "A025",
-      "company_name": "House Foods America",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 85
-    },
-    {
-      "account_id": "A075",
-      "company_name": "Howmet Aerospace - COI",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 86
-    },
-    {
-      "account_id": "A076",
-      "company_name": "Hydrafoce",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 87
-    },
-    {
-      "account_id": "A026",
-      "company_name": "ICL Specialty Products",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 88
-    },
-    {
-      "account_id": "A120",
-      "company_name": "Icon Protection",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 89
-    },
-    {
-      "account_id": "A168",
-      "company_name": "IMS Gear",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 90
-    },
-    {
-      "account_id": "A027",
-      "company_name": "Interamerican Foods Corp",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 91
-    },
-    {
-      "account_id": "A121",
-      "company_name": "Interflex Acquisition Company LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 92
-    },
-    {
-      "account_id": "A078",
-      "company_name": "International Crankshaft Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 93
-    },
-    {
-      "account_id": "A169",
-      "company_name": "Interstate Foam & Supply, Inc.",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 94
-    },
-    {
-      "account_id": "A170",
-      "company_name": "Iowa Rotocast Plastics, Inc",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 95
-    },
-    {
-      "account_id": "A077",
-      "company_name": "ITT Engineered Valves, LLC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 96
-    },
-    {
-      "account_id": "A079",
-      "company_name": "J.G. Kern Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 97
-    },
-    {
-      "account_id": "A171",
-      "company_name": "Jacuzzi Brands, LLC",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 98
-    },
-    {
-      "account_id": "A122",
-      "company_name": "Jamestown Container Companies",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 99
-    },
-    {
-      "account_id": "A028",
-      "company_name": "JBS",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 100
-    },
-    {
-      "account_id": "A029",
-      "company_name": "John Soules Acquistions, LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 101
-    },
-    {
-      "account_id": "A030",
-      "company_name": "Josephs Bakery",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 102
-    },
-    {
-      "account_id": "A123",
-      "company_name": "Justrite Safety Group",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 103
-    },
-    {
-      "account_id": "A172",
-      "company_name": "Kaysun Corporation",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 104
-    },
-    {
-      "account_id": "A124",
-      "company_name": "Kelly Box & Packaging",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 105
-    },
-    {
-      "account_id": "A125",
-      "company_name": "Kimbery-Clark Ogden",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 106
-    },
-    {
-      "account_id": "A126",
-      "company_name": "Kittrich Corporation",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 107
-    },
-    {
-      "account_id": "A080",
-      "company_name": "Kleeberg Sheet Metal",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 108
-    },
-    {
-      "account_id": "A081",
-      "company_name": "Kobelco Aluminum Automotive Products LLC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 109
-    },
-    {
-      "account_id": "A082",
-      "company_name": "Kratos Defense",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 110
-    },
-    {
-      "account_id": "A173",
-      "company_name": "Kumi manufacturing Alabama LLC",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 111
-    },
-    {
-      "account_id": "A031",
-      "company_name": "Lavazza North America",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 112
-    },
-    {
-      "account_id": "A032",
-      "company_name": "Leprino Foods Lemoore East",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 113
-    },
-    {
-      "account_id": "A200",
-      "company_name": "little tikes",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 114
-    },
-    {
-      "account_id": "A083",
-      "company_name": "LMT Defense",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 115
-    },
-    {
-      "account_id": "A085",
-      "company_name": "Mac Arthur Co.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 116
-    },
-    {
-      "account_id": "A084",
-      "company_name": "MAC VALVES INC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 117
-    },
-    {
-      "account_id": "A175",
-      "company_name": "Mack Molding Company",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 118
-    },
-    {
-      "account_id": "A034",
-      "company_name": "Macrocap Laboraties, LLC.",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 119
-    },
-    {
-      "account_id": "A086",
-      "company_name": "Marino \\\\ WARE",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 120
-    },
-    {
+      "fit": "unclear",
       "account_id": "A087",
       "company_name": "Mason Industries Inc",
       "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 121
+      "rank": 40
     },
     {
-      "account_id": "A033",
-      "company_name": "MBC Companies",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 122
-    },
-    {
-      "account_id": "A176",
-      "company_name": "McClarin Composites",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 123
-    },
-    {
-      "account_id": "A177",
-      "company_name": "Merlin Industries, Inc",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 124
-    },
-    {
+      "fit": "unclear",
       "account_id": "A088",
       "company_name": "Microflex Inc",
       "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 125
+      "rank": 41
     },
     {
-      "account_id": "A128",
-      "company_name": "Minigrip LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 126
-    },
-    {
+      "fit": "not_fit",
       "account_id": "A127",
       "company_name": "MM Packaging Americas",
       "industry": "packaging",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 127
+      "rank": 42
     },
     {
-      "account_id": "A178",
-      "company_name": "Molded Fiber Glass",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 128
-    },
-    {
-      "account_id": "A179",
-      "company_name": "Montville Plastics and Rubber",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 129
-    },
-    {
+      "fit": "not_fit",
       "account_id": "A174",
       "company_name": "MSA Safety",
       "industry": "plastics",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 130
+      "rank": 43
     },
     {
-      "account_id": "A180",
-      "company_name": "Myers Industries - Akro Mils",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 131
-    },
-    {
-      "account_id": "A035",
-      "company_name": "New Dairy Kentucky, LLC.",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 132
-    },
-    {
-      "account_id": "A130",
-      "company_name": "New Receiptco Opco LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 133
-    },
-    {
-      "account_id": "A181",
-      "company_name": "Newell Brands Industries LLC",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 134
-    },
-    {
+      "fit": "unclear",
       "account_id": "A131",
       "company_name": "Nittany Paper Mills",
       "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 135
+      "rank": 44
     },
     {
-      "account_id": "A132",
-      "company_name": "Northgate",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 136
-    },
-    {
-      "account_id": "A036",
-      "company_name": "Novus Foods LLC",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 137
-    },
-    {
-      "account_id": "A129",
-      "company_name": "NPS Holdings",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 138
-    },
-    {
+      "fit": "not_fit",
       "account_id": "A089",
       "company_name": "Nucor (Vulcraft Division)",
       "industry": "metal_fabrication",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 139
+      "rank": 45
     },
     {
-      "account_id": "A100",
-      "company_name": "nVent Enclosure Systems - Chattanooga LLC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 140
-    },
-    {
+      "fit": "not_fit",
       "account_id": "A037",
       "company_name": "Olam West Coast",
       "industry": "food_beverage",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 141
+      "rank": 46
     },
     {
-      "account_id": "A133",
-      "company_name": "Ontex Operations USA, LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 142
-    },
-    {
+      "fit": "fit",
       "account_id": "A135",
       "company_name": "Pacific Southwest Container, LLC",
       "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 143
+      "rank": 47
     },
     {
-      "account_id": "A182",
-      "company_name": "Palram Americas",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 144
-    },
-    {
-      "account_id": "A038",
-      "company_name": "Perfetti Van Melle USA",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 145
-    },
-    {
-      "account_id": "A183",
-      "company_name": "Pioneer Plastics Corporation",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 146
-    },
-    {
-      "account_id": "A184",
-      "company_name": "Placon",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 147
-    },
-    {
-      "account_id": "A134",
-      "company_name": "PLASKOLITE, LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 148
-    },
-    {
-      "account_id": "A185",
-      "company_name": "Plastic Ingenuity",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 149
-    },
-    {
-      "account_id": "A186",
-      "company_name": "Ply Gem Rocky Mount (MW)",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 150
-    },
-    {
+      "fit": "unclear",
       "account_id": "A136",
       "company_name": "Poly-Tainer, Inc.",
       "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 151
+      "rank": 48
     },
     {
-      "account_id": "A137",
-      "company_name": "Pratt (Love Box), LLC",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 152
-    },
-    {
-      "account_id": "A039",
-      "company_name": "Prinvoa USA",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 153
-    },
-    {
+      "fit": "fit",
       "account_id": "A138",
       "company_name": "Progressive Converting",
       "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 154
+      "rank": 49
     },
     {
-      "account_id": "A090",
-      "company_name": "Proto Labs",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 155
-    },
-    {
-      "account_id": "A091",
-      "company_name": "Qualico Steel",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 156
-    },
-    {
-      "account_id": "A040",
-      "company_name": "Quality Harvest Foods Corp.",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 157
-    },
-    {
-      "account_id": "A092",
-      "company_name": "Ranews Companies",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 158
-    },
-    {
-      "account_id": "A139",
-      "company_name": "Ronpak, Inc",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 159
-    },
-    {
+      "fit": "fit",
       "account_id": "A140",
       "company_name": "Royal Paper Box Co.",
       "industry": "packaging",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 160
+      "rank": 50
     },
     {
+      "fit": "not_fit",
       "account_id": "A187",
       "company_name": "Rubbermaid, Inc.",
       "industry": "plastics",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 161
+      "rank": 51
     },
     {
-      "account_id": "A041",
-      "company_name": "Ruiz Foods Product Inc.",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 162
-    },
-    {
+      "fit": "fit",
       "account_id": "A042",
       "company_name": "Sandridge Food Corporation",
       "industry": "food_beverage",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 163
+      "rank": 52
     },
     {
-      "account_id": "A188",
-      "company_name": "Sarstedt, Inc.",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 164
-    },
-    {
-      "account_id": "A142",
-      "company_name": "Sellars Absorbent Materials",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 165
-    },
-    {
-      "account_id": "A043",
-      "company_name": "Shearer's Foods - PHX",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 166
-    },
-    {
-      "account_id": "A044",
-      "company_name": "Sierra Nevada Brewing Company",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 167
-    },
-    {
-      "account_id": "A189",
-      "company_name": "Simonton Windows",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 168
-    },
-    {
-      "account_id": "A045",
-      "company_name": "Southeast Poultry",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 169
-    },
-    {
-      "account_id": "A141",
-      "company_name": "SOUTHEASTERN CONTAINER",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 170
-    },
-    {
-      "account_id": "A190",
-      "company_name": "Southwest Mold, Inc",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 171
-    },
-    {
-      "account_id": "A143",
-      "company_name": "Specialty Quality Packaging",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 172
-    },
-    {
-      "account_id": "A191",
-      "company_name": "Spencer Industries Incorporated",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 173
-    },
-    {
-      "account_id": "A192",
-      "company_name": "Sumitomo Electric Interconnect Products, Inc.",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 174
-    },
-    {
-      "account_id": "A093",
-      "company_name": "Superheat FGH Services, Inc",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 175
-    },
-    {
-      "account_id": "A046",
-      "company_name": "Taylor Farms Pacific, Inc.",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 176
-    },
-    {
+      "fit": "unclear",
       "account_id": "A094",
       "company_name": "Taylor Made  112",
       "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 177
+      "rank": 53
     },
     {
+      "fit": "not_fit",
       "account_id": "A144",
       "company_name": "Tetra Pak Materials LLC",
       "industry": "packaging",
       "score": 0,
-      "status": "no reason to call yet",
+      "status": "not a fit",
       "signals": [],
-      "rank": 178
+      "rank": 54
     },
     {
+      "fit": "unclear",
       "account_id": "A193",
       "company_name": "TH Plastics, Inc.",
       "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 179
+      "rank": 55
     },
     {
-      "account_id": "A194",
-      "company_name": "The HC Companies",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 180
-    },
-    {
+      "fit": "fit",
       "account_id": "A095",
       "company_name": "The Lee Company",
       "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 181
+      "rank": 56
     },
     {
-      "account_id": "A145",
-      "company_name": "Trinity Plastics Inc.",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 182
-    },
-    {
+      "fit": "fit",
       "account_id": "A195",
       "company_name": "Ultra-Poly Corporation",
       "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 183
+      "rank": 57
     },
     {
-      "account_id": "A147",
-      "company_name": "United Envelope",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 184
-    },
-    {
-      "account_id": "A148",
-      "company_name": "Up North Plastics",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 185
-    },
-    {
-      "account_id": "A146",
-      "company_name": "UPM Raflatac Inc",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 186
-    },
-    {
-      "account_id": "A096",
-      "company_name": "USF Fabrication, Inc.",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 187
-    },
-    {
-      "account_id": "A097",
-      "company_name": "Valtir, LLC",
-      "industry": "metal_fabrication",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 188
-    },
-    {
+      "fit": "unclear",
       "account_id": "A098",
       "company_name": "Ventcon Inc.",
       "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 189
+      "rank": 58
     },
     {
-      "account_id": "A149",
-      "company_name": "Viaflex",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 190
-    },
-    {
-      "account_id": "A196",
-      "company_name": "Waddington North America",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 191
-    },
-    {
-      "account_id": "A197",
-      "company_name": "Weathergard Window Company Inc",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 192
-    },
-    {
-      "account_id": "A198",
-      "company_name": "Whirley Industries",
-      "industry": "plastics",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 193
-    },
-    {
+      "fit": "unclear",
       "account_id": "A199",
       "company_name": "Wilsonart LLC - Temple North",
       "industry": "plastics",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 194
+      "rank": 59
     },
     {
-      "account_id": "A047",
-      "company_name": "Wixon",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 195
-    },
-    {
-      "account_id": "A048",
-      "company_name": "Wm. Bolthouse Farms, Inc. dba Generous Brands",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 196
-    },
-    {
-      "account_id": "A150",
-      "company_name": "York Wallcoverings, Inc.",
-      "industry": "packaging",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 197
-    },
-    {
+      "fit": "unclear",
       "account_id": "A099",
       "company_name": "ZEPHYR PRODUCTS, INC",
       "industry": "metal_fabrication",
       "score": 0,
       "status": "no reason to call yet",
       "signals": [],
-      "rank": 198
-    },
-    {
-      "account_id": "A049",
-      "company_name": "Ziegenfelder",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 199
-    },
-    {
-      "account_id": "A050",
-      "company_name": "Zinpro",
-      "industry": "food_beverage",
-      "score": 0,
-      "status": "no reason to call yet",
-      "signals": [],
-      "rank": 200
+      "rank": 60
     }
   ]
 }

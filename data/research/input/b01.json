@@ -1,0 +1,55 @@
+{
+ "batch": "b01",
+ "accounts": [
+  {
+   "account_id": "A175",
+   "company_name": "Mack Molding Company",
+   "industry": "plastics",
+   "employees_reported": 623,
+   "plant_count": 2,
+   "hq_guess_city": "Statesville",
+   "hq_guess_state": "VT",
+   "plant_locations": "Statesville, VT; Inman, SC"
+  },
+  {
+   "account_id": "A034",
+   "company_name": "Macrocap Laboraties, LLC.",
+   "industry": "food_beverage",
+   "employees_reported": 250,
+   "plant_count": 2,
+   "hq_guess_city": "Lake Mary",
+   "hq_guess_state": "FL",
+   "plant_locations": "Lake Mary, FL; Longwood, FL"
+  },
+  {
+   "account_id": "A174",
+   "company_name": "MSA Safety",
+   "industry": "plastics",
+   "employees_reported": 488,
+   "plant_count": 2,
+   "hq_guess_city": "Murrysville",
+   "hq_guess_state": "PA",
+   "plant_locations": "Murrysville, PA; Jacksonville, NC"
+  },
+  {
+   "account_id": "A187",
+   "company_name": "Rubbermaid, Inc.",
+   "industry": "plastics",
+   "employees_reported": 539,
+   "plant_count": 3,
+   "hq_guess_city": "Winfield",
+   "hq_guess_state": "KS",
+   "plant_locations": "Winfield, KS; Fishers, IN; Muncie, IN"
+  },
+  {
+   "account_id": "A023",
+   "company_name": "Gregory Packaging Inc",
+   "industry": "food_beverage",
+   "employees_reported": 222,
+   "plant_count": 5,
+   "hq_guess_city": "Bethlehem",
+   "hq_guess_state": "PA",
+   "plant_locations": "Bethlehem, PA; Phoenix, AZ; Newnan, GA; Verona, VA; Newark, NJ"
+  }
+ ]
+}

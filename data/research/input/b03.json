@@ -1,0 +1,55 @@
+{
+ "batch": "b03",
+ "accounts": [
+  {
+   "account_id": "A056",
+   "company_name": "CEMCO, LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 483,
+   "plant_count": 5,
+   "hq_guess_city": "City Of Industry",
+   "hq_guess_state": "CA",
+   "plant_locations": "City Of Industry, CA; Fort Worth, TX; Pittsburg, CA; Denver, CO; City Of Industry, CA"
+  },
+  {
+   "account_id": "A074",
+   "company_name": "Hoffman Industries, LLC",
+   "industry": "metal_fabrication",
+   "employees_reported": 1491,
+   "plant_count": 1,
+   "hq_guess_city": "Anoka",
+   "hq_guess_state": "MN",
+   "plant_locations": "Anoka, MN"
+  },
+  {
+   "account_id": "A131",
+   "company_name": "Nittany Paper Mills",
+   "industry": "packaging",
+   "employees_reported": 210,
+   "plant_count": 1,
+   "hq_guess_city": "Lewistown",
+   "hq_guess_state": "PA",
+   "plant_locations": "Lewistown, PA"
+  },
+  {
+   "account_id": "A042",
+   "company_name": "Sandridge Food Corporation",
+   "industry": "food_beverage",
+   "employees_reported": 612,
+   "plant_count": 1,
+   "hq_guess_city": "Medina",
+   "hq_guess_state": "OH",
+   "plant_locations": "Medina, OH"
+  },
+  {
+   "account_id": "A015",
+   "company_name": "Farmer's Fridge",
+   "industry": "food_beverage",
+   "employees_reported": 463,
+   "plant_count": 5,
+   "hq_guess_city": "Chicago",
+   "hq_guess_state": "IL",
+   "plant_locations": "Chicago, IL; 2000 West Fulton St., IL; Totowa, NJ; Dallas, TX; Vernon, CA"
+  }
+ ]
+}

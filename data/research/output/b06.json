@@ -1,0 +1,98 @@
+{
+  "batch": "b06",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A163",
+      "company_name": "East Jordan Plastics",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Described as a family business with no parent group named, so it appears to be an independent operating manufacturer; the 472-employee figure is from the input file and was not verified.",
+        "parent_company": null,
+        "source_url": "https://www.greenhousemag.com/article/gm0613-east-jordan-plastics-recycling"
+      },
+      "searches_run": 5,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.lgrmag.com/?p=60916", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A078",
+      "company_name": "International Crankshaft Inc",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "A 2012 article describes it as a subsidiary of Sumitomo Metal Industries, Ltd.; the size of that parent group was not verified, so fit cannot be confirmed.",
+        "parent_company": "Sumitomo Metal Industries, Ltd.",
+        "source_url": "https://aist.org/sumitomo-metals’-ici-subsidiary-celebrates-20th-anniversary-of-production-start-up"
+      },
+      "searches_run": 5,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.newequipment.com/metal-forming/article/21922981/international-crankshaft-expansion-planned", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://100hires.com/j/hadEAhA", "reason": "wrong company"}
+      ]
+    },
+    {
+      "account_id": "A127",
+      "company_name": "MM Packaging Americas",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Operates as a division of the MM Group, whose copyright line names Mayr-Melnhof Karton AG, which had 13,347 employees as of 31 December 2025.",
+        "parent_company": "Mayr-Melnhof Karton AG",
+        "source_url": "https://stockanalysis.com/quote/vie/MMK/employees"
+      },
+      "searches_run": 4,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://plantservices.com/industry-news/news/55131193/packaging-manufacturer-invests-249-million-to-double-production-and-build-new-manufacturing-plant-in-north-carolina", "reason": "wrong company"},
+        {"type": "hiring_maintenance", "source_url": "https://www.careerbuilder.com/job-details/maintenance-engineer-supervisor-clayton-nc--98655a6c-c58e-4b29-9824-e60caa7f9d2b", "reason": "wrong company"}
+      ]
+    },
+    {
+      "account_id": "A199",
+      "company_name": "Wilsonart LLC - Temple North",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "CB Insights lists Clayton, Dubilier & Rice as an investor, but no parent group size or total headcount was found, so fit cannot be confirmed.",
+        "parent_company": "Clayton, Dubilier & Rice (investor)",
+        "source_url": "https://www.cbinsights.com/company/wilsonart"
+      },
+      "searches_run": 4,
+      "pages_opened": 4,
+      "signals": [
+        {
+          "type": "expansion",
+          "source_url": "https://www.tdlr.texas.gov/TABS/Projects/TABS2026009620",
+          "published": "2026-01-08",
+          "sentence": "A NEW 124,800 SF PRE-ENGINEERED METAL BUILDING",
+          "summary": "A Texas state construction registration filed for Wilsonart LLC in Temple, TX, shows a new 124,800 sq ft warehouse and manufacturing building; this is a state filing, not a company announcement.",
+          "role_to_contact": "Plant Manager or facilities lead"
+        }
+      ],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.woodworkingnetwork.com/news/woodworking-industry-news/wilsonart-joint-venture-hanwha-solid-surfaces-125000-sqft-plant", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A004",
+      "company_name": "Anitas Mexican Foods Corp",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Family-owned company with one 145,000 sq ft San Bernardino plant and 275 employees per its own page, with no parent group named.",
+        "parent_company": null,
+        "source_url": "https://www.snackandbakery.com/media/photos/69-anita-s-mexican-foods"
+      },
+      "searches_run": 4,
+      "pages_opened": 5,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://www.careerbuilder.com/job-details/maintenance-manager-san-bernardino-ca--5bca8962-842b-4f25-bbc3-6741e100def6", "reason": "no date on page"},
+        {"type": "hiring_maintenance", "source_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4135339", "reason": "could not open"}
+      ]
+    }
+  ]
+}

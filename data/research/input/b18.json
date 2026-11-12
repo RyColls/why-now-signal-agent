@@ -1,0 +1,55 @@
+{
+ "batch": "b18",
+ "accounts": [
+  {
+   "account_id": "A011",
+   "company_name": "Culver Duck Farms, Inc.",
+   "industry": "food_beverage",
+   "employees_reported": 250,
+   "plant_count": 1,
+   "hq_guess_city": "Middlebury",
+   "hq_guess_state": "IN",
+   "plant_locations": "Middlebury, IN"
+  },
+  {
+   "account_id": "A109",
+   "company_name": "CANPACK",
+   "industry": "packaging",
+   "employees_reported": 884,
+   "plant_count": 2,
+   "hq_guess_city": "Olyphant",
+   "hq_guess_state": "PA",
+   "plant_locations": "Olyphant, PA; Muncie, IN"
+  },
+  {
+   "account_id": "A169",
+   "company_name": "Interstate Foam & Supply, Inc.",
+   "industry": "plastics",
+   "employees_reported": 499,
+   "plant_count": 6,
+   "hq_guess_city": "Conover",
+   "hq_guess_state": "NC",
+   "plant_locations": "Conover, NC; Conover, NC; Conover, NC; Conover, NC; Conover, NC; Conover, NC"
+  },
+  {
+   "account_id": "A186",
+   "company_name": "Ply Gem Rocky Mount (MW)",
+   "industry": "plastics",
+   "employees_reported": 1268,
+   "plant_count": 1,
+   "hq_guess_city": "Rocky Mount",
+   "hq_guess_state": "VA",
+   "plant_locations": "Rocky Mount, VA"
+  },
+  {
+   "account_id": "A006",
+   "company_name": "Buffalo Trace Distillery",
+   "industry": "food_beverage",
+   "employees_reported": 852,
+   "plant_count": 1,
+   "hq_guess_city": "Frankfort",
+   "hq_guess_state": "KY",
+   "plant_locations": "Frankfort, KY"
+  }
+ ]
+}

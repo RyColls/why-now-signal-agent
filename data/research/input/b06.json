@@ -1,0 +1,55 @@
+{
+ "batch": "b06",
+ "accounts": [
+  {
+   "account_id": "A163",
+   "company_name": "East Jordan Plastics",
+   "industry": "plastics",
+   "employees_reported": 472,
+   "plant_count": 4,
+   "hq_guess_city": "Beaverton",
+   "hq_guess_state": "MI",
+   "plant_locations": "Beaverton, MI; South Haven, MI; East Jordan, MI; Lyons, GA"
+  },
+  {
+   "account_id": "A078",
+   "company_name": "International Crankshaft Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 290,
+   "plant_count": 1,
+   "hq_guess_city": "Georgetown",
+   "hq_guess_state": "KY",
+   "plant_locations": "Georgetown, KY"
+  },
+  {
+   "account_id": "A127",
+   "company_name": "MM Packaging Americas",
+   "industry": "packaging",
+   "employees_reported": 300,
+   "plant_count": 1,
+   "hq_guess_city": "Clayton",
+   "hq_guess_state": "NC",
+   "plant_locations": "Clayton, NC"
+  },
+  {
+   "account_id": "A199",
+   "company_name": "Wilsonart LLC - Temple North",
+   "industry": "plastics",
+   "employees_reported": 600,
+   "plant_count": 1,
+   "hq_guess_city": "Temple",
+   "hq_guess_state": "TX",
+   "plant_locations": "Temple, TX"
+  },
+  {
+   "account_id": "A004",
+   "company_name": "Anitas Mexican Foods Corp",
+   "industry": "food_beverage",
+   "employees_reported": 207,
+   "plant_count": 1,
+   "hq_guess_city": "San Bernardino",
+   "hq_guess_state": "CA",
+   "plant_locations": "San Bernardino, CA"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "batch": "b24",
+ "accounts": [
+  {
+   "account_id": "A101",
+   "company_name": "Amcor Flexibles North America - New London",
+   "industry": "packaging",
+   "employees_reported": 437,
+   "plant_count": 1,
+   "hq_guess_city": "New London",
+   "hq_guess_state": "WI",
+   "plant_locations": "New London, WI"
+  },
+  {
+   "account_id": "A117",
+   "company_name": "GOEX Corporation",
+   "industry": "packaging",
+   "employees_reported": 284,
+   "plant_count": 2,
+   "hq_guess_city": "Janesville",
+   "hq_guess_state": "WI",
+   "plant_locations": "Janesville, WI; Cedar City, UT"
+  },
+  {
+   "account_id": "A032",
+   "company_name": "Leprino Foods Lemoore East",
+   "industry": "food_beverage",
+   "employees_reported": 307,
+   "plant_count": 1,
+   "hq_guess_city": "Lemoore",
+   "hq_guess_state": "CA",
+   "plant_locations": "Lemoore, CA"
+  },
+  {
+   "account_id": "A181",
+   "company_name": "Newell Brands Industries LLC",
+   "industry": "plastics",
+   "employees_reported": 1471,
+   "plant_count": 2,
+   "hq_guess_city": "Winchester",
+   "hq_guess_state": "VA",
+   "plant_locations": "Winchester, VA; Mogadore, OH"
+  },
+  {
+   "account_id": "A040",
+   "company_name": "Quality Harvest Foods Corp.",
+   "industry": "food_beverage",
+   "employees_reported": 270,
+   "plant_count": 1,
+   "hq_guess_city": "Portland",
+   "hq_guess_state": "OR",
+   "plant_locations": "Portland, OR"
+  }
+ ]
+}

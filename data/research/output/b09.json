@@ -1,0 +1,83 @@
+{
+  "batch": "b09",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A164",
+      "company_name": "Gilkey Window Company",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The input reports 266 employees, but the one profile opened estimates about 110 employees, and no parent group is named.",
+        "parent_company": null,
+        "source_url": "https://naicslist.com/company-profile/gilkey-window-company-inc-cincinnati-oh-45241"
+      },
+      "searches_run": 5,
+      "pages_opened": 1,
+      "signals": [],
+      "rejected": []
+    },
+    {
+      "account_id": "A138",
+      "company_name": "Progressive Converting",
+      "fit": {
+        "verdict": "fit",
+        "reason": "The profile lists 201-500 employees, Appleton, WI headquarters, and no parent company or owner is stated.",
+        "parent_company": null,
+        "source_url": "https://www.cience.com/company/progressive-converting/6975177772789356188"
+      },
+      "searches_run": 4,
+      "pages_opened": 1,
+      "signals": [],
+      "rejected": []
+    },
+    {
+      "account_id": "A031",
+      "company_name": "Lavazza North America",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Lavazza North America is part of Lavazza Group, which the group's FY2025 results release says employs over 5,800 people worldwide.",
+        "parent_company": "Lavazza Group",
+        "source_url": "https://www.lavazzagroup.com/content/dam/lavazza-corporate/chi_siamo/risultati/PR_LavazzaGroup_FY2025_FinancialResults.pdf"
+      },
+      "searches_run": 5,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.foodbusinessnews.net/articles/18530-lavazza-to-open-its-first-us-roasting-packing-plant", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://prnewswire.com/news-releases/lavazza-to-open-first-roasting-and-packing-plant-in-the-united-states-301281648.html", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.mychesco.com/a/news/business/west-chester-based-lavazza-adds-rewards-to-u-s-growth-strategy/", "reason": "other"}
+      ]
+    },
+    {
+      "account_id": "A104",
+      "company_name": "Arrow Packaging Solutions",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The input reports 443 employees, but the profiles opened give 51-200 or 51-100 employees, and the 2011 expansion article concerns a different entity, Arrow Container LLC.",
+        "parent_company": null,
+        "source_url": "https://www.ensun.io/company/arrow-packaging-solutions-649e1d63465bf2dc331c4ccf"
+      },
+      "searches_run": 4,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.ibj.com/articles/27833-container-maker-arrow-to-expand-add-65-jobs", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.ensun.io/company/arrow-packaging-solutions-649e1d63465bf2dc331c4ccf", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A099",
+      "company_name": "ZEPHYR PRODUCTS, INC",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The input reports 224 employees, but the profile opened estimates about 110 employees, and no parent company is named.",
+        "parent_company": null,
+        "source_url": "https://naicslist.com/company-profile/zephyr-products-inc-leavenworth-ks-66048"
+      },
+      "searches_run": 5,
+      "pages_opened": 1,
+      "signals": [],
+      "rejected": []
+    }
+  ]
+}

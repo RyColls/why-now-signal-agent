@@ -1,0 +1,49 @@
+{
+ "items": [
+  {
+   "id": "S16",
+   "company_name": "Shearer's Foods - PHX",
+   "location_hint": "Phoenix, AZ",
+   "type": "expansion",
+   "source_url": "https://www.potatopro.com/node/173705",
+   "claimed_published": "2026-08-02",
+   "claimed_sentence": "Shearer's Foods has officially opened its newest manufacturing facility in Moraine, Ohio"
+  },
+  {
+   "id": "S17",
+   "company_name": "Shearer's Foods - PHX",
+   "location_hint": "Phoenix, AZ",
+   "type": "expansion",
+   "source_url": "https://www.pulse.bot/manufacturing/news/shearers-foods-launches-potato-chip-line-at-dayton-plant-expanding-106m-facility-319d859d-2737-4fbb-b24b-1f98819fd3c6/",
+   "claimed_published": "2026-04-28",
+   "claimed_sentence": "Shearer's Foods Launches Potato Chip Line at Dayton Plant, Expanding $106M Facility"
+  },
+  {
+   "id": "S18",
+   "company_name": "Cooper Farms",
+   "location_hint": "St. Henry, OH",
+   "type": "hiring_maintenance",
+   "source_url": "https://gfj.cooperfarms.com/jobdetails/celina-oh-maintenance-supervisor-6a4543643791e70e28b5823f",
+   "claimed_published": "2026-07-01",
+   "claimed_sentence": "Monitor and assign work orders and PMs."
+  },
+  {
+   "id": "S19",
+   "company_name": "Cooper Farms",
+   "location_hint": "St. Henry, OH",
+   "type": "hiring_maintenance",
+   "source_url": "https://gfj.cooperfarms.com/jobdetails/van-wert-oh-maintenance-supervisor-6a45439787280d3f6eab62c3",
+   "claimed_published": "2026-07-01",
+   "claimed_sentence": "Monitor and assign work orders and PMs."
+  },
+  {
+   "id": "S20",
+   "company_name": "Cooper Farms",
+   "location_hint": "St. Henry, OH",
+   "type": "expansion",
+   "source_url": "https://www.dailystandard.com/archive/2026-05-21/stories/54861/cooper-farms-plans-processing-plant-in-celina",
+   "claimed_published": "2026-05-21",
+   "claimed_sentence": "The company said in a news release the 28,000-square-foot facility will serve as a value-added further processing plant"
+  }
+ ]
+}

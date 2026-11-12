@@ -1,0 +1,49 @@
+{
+ "items": [
+  {
+   "id": "S11",
+   "company_name": "Danone US, LLC",
+   "location_hint": "West Jordan, UT",
+   "type": "expansion",
+   "source_url": "https://www.dairybusinessmea.com/2026/01/08/danone-north-america-commences-us4m-expansion-at-texas-facility/",
+   "claimed_published": "2026-01-08",
+   "claimed_sentence": "Danone North America has launched a $4 million expansion project at its 22,000-sq.-ft. plant in Fort Worth, Texas."
+  },
+  {
+   "id": "S12",
+   "company_name": "Danone US, LLC",
+   "location_hint": "West Jordan, UT",
+   "type": "hiring_maintenance",
+   "source_url": "https://careers.danone.com/us/en/jobs/maintenance-lead-26044-en-us.html",
+   "claimed_published": "2026-06-10",
+   "claimed_sentence": "This role is responsible for driving manufacturing safety and excellence by ensuring reliable equipment performance"
+  },
+  {
+   "id": "S13",
+   "company_name": "Danone US, LLC",
+   "location_hint": "West Jordan, UT",
+   "type": "pain_in_job_post",
+   "source_url": "https://careers.danone.com/us/en/jobs/digital-manufacturing-leader-24385-en-us.html",
+   "claimed_published": "2026-03-27",
+   "claimed_sentence": "Eliminate manual Excel-based reporting through automation."
+  },
+  {
+   "id": "S14",
+   "company_name": "American Packaging Corp",
+   "location_hint": "Rochester, NY",
+   "type": "hiring_maintenance",
+   "source_url": "https://jobs.y-axis.com/jobs/maintenance-lead-american-packaging-corporation",
+   "claimed_published": "2026-01-15",
+   "claimed_sentence": "The Maintenance Lead assists the Plant Engineer and Maintenance Manager in organizing and motivating maintenance personnel"
+  },
+  {
+   "id": "S15",
+   "company_name": "Advance Mfg. Co., Inc.",
+   "location_hint": "Westfield, MA",
+   "type": "funding_or_pe",
+   "source_url": "https://www.precinmac.com/news/precinmac-lp-announces-the-acquisition-of-massachusetts-based-advance-mfg-co-inc",
+   "claimed_published": "2026-07-07",
+   "claimed_sentence": "today announced the acquisition of Advance Mfg. Co."
+  }
+ ]
+}

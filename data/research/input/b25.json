@@ -1,0 +1,55 @@
+{
+ "batch": "b25",
+ "accounts": [
+  {
+   "account_id": "A039",
+   "company_name": "Prinvoa USA",
+   "industry": "food_beverage",
+   "employees_reported": 253,
+   "plant_count": 1,
+   "hq_guess_city": "Carol Stream",
+   "hq_guess_state": "IL",
+   "plant_locations": "Carol Stream, IL"
+  },
+  {
+   "account_id": "A200",
+   "company_name": "little tikes",
+   "industry": "plastics",
+   "employees_reported": 439,
+   "plant_count": 1,
+   "hq_guess_city": "Hudson",
+   "hq_guess_state": "OH",
+   "plant_locations": "Hudson, OH"
+  },
+  {
+   "account_id": "A188",
+   "company_name": "Sarstedt, Inc.",
+   "industry": "plastics",
+   "employees_reported": 236,
+   "plant_count": 1,
+   "hq_guess_city": "Newton",
+   "hq_guess_state": "NC",
+   "plant_locations": "Newton, NC"
+  },
+  {
+   "account_id": "A060",
+   "company_name": "Deltrol Corporation",
+   "industry": "metal_fabrication",
+   "employees_reported": 225,
+   "plant_count": 2,
+   "hq_guess_city": "Bellwood",
+   "hq_guess_state": "IL",
+   "plant_locations": "Bellwood, IL; Milwaukee, WI"
+  },
+  {
+   "account_id": "A190",
+   "company_name": "Southwest Mold, Inc",
+   "industry": "plastics",
+   "employees_reported": 340,
+   "plant_count": 1,
+   "hq_guess_city": "Tempe",
+   "hq_guess_state": "AZ",
+   "plant_locations": "Tempe, AZ"
+  }
+ ]
+}

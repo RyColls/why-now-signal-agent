@@ -17,30 +17,32 @@ rep can read the rules and argue with them.
 
 ## Status
 
-Work in progress. Stages 1 and 5 are built and tested. No model API calls
-have been made yet, and no account has a confirmed signal yet.
+Proof of concept, run on 2026-11-11 on a sample of 60 of the 200 universe
+accounts. No account has a client, meetings or pipeline attached; none are
+claimed. Numbers, failures and costs are in [docs/results.md](docs/results.md).
+The six briefs are in [data/briefs](data/briefs/briefs-2026-11-11.md).
 
 | Stage | What it does | Status |
 |---|---|---|
 | 1. Account universe | 200 candidate manufacturers from OSHA public data | Done |
-| 2. Fit check | Confirm each candidate on the web (parent company, size) | Not started |
-| 3. Signal detection | Find five buying signals per account, with evidence | Pilot only (6 accounts, by hand) |
-| 4. Verifier | Re-open each source, confirm sentence and date | Not started |
+| 2. Fit check | Confirm each candidate on the web (parent company, size) | Done for 60 accounts, by Haiku research workers |
+| 3. Signal detection | Find five buying signals per account, with evidence | Done for 60 accounts: 20 candidates |
+| 4. Verifier | Re-open each source, confirm sentence and date | Done: separate worker, then a judged final call |
 | 5. Scoring | Weights and time decay in code | Done |
-| 6. Briefs | Top 25 "why now" briefs from verified evidence only | Not started |
-| 7. Board and evals | Ranked board, feedback simulator, six accuracy checks | Not started |
+| 6. Briefs | "Why now" briefs from verified evidence only | 6 briefs (only 6 accounts had a current signal) |
+| 7. Board and evals | Ranked board, feedback simulator, accuracy checks | Not started; three checks need a human |
 
-## Where the API key goes
+## How the research was run
 
-Stages 2, 3, 4 and 6 need a model with web search. Copy `.env.example` to
-`.env` and set `ANTHROPIC_API_KEY`. Nothing in the repo calls the API yet.
-Stages 1 and 5 need no key.
+The research workers were Claude Haiku 5.5 instances with web search and web
+fetch, run inside an interactive session, with prompts in [prompts](prompts).
+A separate set of workers re-opened every source, and the final call on each
+signal is recorded in `data/research/adjudication.json`. To rerun the same
+stages through the API instead, copy `.env.example` to `.env` and set
+`ANTHROPIC_API_KEY`; no code in this repo reads that key yet.
 
-No signal in this repo is invented. Every signal record carries a real source
-URL, its publish date and a supporting sentence, or it does not count. The
-pilot in [data/signals](data/signals) was collected by Claude in an
-interactive session with web search; it found no current signals in six
-accounts and rejected two candidates, which are recorded with the reason.
+No signal is invented. A signal counts only with a source URL, a printed
+publication date and a supporting sentence, and only after it is re-checked.
 
 ## Stage 1: account universe
 

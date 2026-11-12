@@ -1,0 +1,55 @@
+{
+ "batch": "b23",
+ "accounts": [
+  {
+   "account_id": "A066",
+   "company_name": "Frey-Moss Structures Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 273,
+   "plant_count": 1,
+   "hq_guess_city": "Conyers",
+   "hq_guess_state": "GA",
+   "plant_locations": "Conyers, GA"
+  },
+  {
+   "account_id": "A058",
+   "company_name": "Carlton Forge Works",
+   "industry": "metal_fabrication",
+   "employees_reported": 285,
+   "plant_count": 2,
+   "hq_guess_city": "Paramount",
+   "hq_guess_state": "CA",
+   "plant_locations": "Paramount, CA; Paramount, CA"
+  },
+  {
+   "account_id": "A194",
+   "company_name": "The HC Companies",
+   "industry": "plastics",
+   "employees_reported": 324,
+   "plant_count": 1,
+   "hq_guess_city": "Middlefield",
+   "hq_guess_state": "OH",
+   "plant_locations": "Middlefield, OH"
+  },
+  {
+   "account_id": "A029",
+   "company_name": "John Soules Acquistions, LLC",
+   "industry": "food_beverage",
+   "employees_reported": 1989,
+   "plant_count": 3,
+   "hq_guess_city": "Tyler",
+   "hq_guess_state": "TX",
+   "plant_locations": "Tyler, TX; Gainesville, GA; Valley, AL"
+  },
+  {
+   "account_id": "A005",
+   "company_name": "Barkley Seed Inc",
+   "industry": "food_beverage",
+   "employees_reported": 608,
+   "plant_count": 2,
+   "hq_guess_city": "Salinas",
+   "hq_guess_state": "CA",
+   "plant_locations": "Salinas, CA; Yuma, AZ"
+  }
+ ]
+}

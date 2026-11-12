@@ -1,0 +1,55 @@
+{
+ "batch": "b04",
+ "accounts": [
+  {
+   "account_id": "A064",
+   "company_name": "Fortune Brands Home & Security, Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 1063,
+   "plant_count": 2,
+   "hq_guess_city": "New Bern",
+   "hq_guess_state": "NC",
+   "plant_locations": "New Bern, NC; Sanford, NC"
+  },
+  {
+   "account_id": "A017",
+   "company_name": "Franklin Baking Company, LLC",
+   "industry": "food_beverage",
+   "employees_reported": 352,
+   "plant_count": 1,
+   "hq_guess_city": "Goldsboro",
+   "hq_guess_state": "NC",
+   "plant_locations": "Goldsboro, NC"
+  },
+  {
+   "account_id": "A061",
+   "company_name": "Duravent Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 221,
+   "plant_count": 1,
+   "hq_guess_city": "Vacaville",
+   "hq_guess_state": "CA",
+   "plant_locations": "Vacaville, CA"
+  },
+  {
+   "account_id": "A112",
+   "company_name": "Continental O'Sullivan Films",
+   "industry": "packaging",
+   "employees_reported": 285,
+   "plant_count": 1,
+   "hq_guess_city": "Winchester",
+   "hq_guess_state": "VA",
+   "plant_locations": "Winchester, VA"
+  },
+  {
+   "account_id": "A001",
+   "company_name": "AFP advanced food products llc",
+   "industry": "food_beverage",
+   "employees_reported": 484,
+   "plant_count": 3,
+   "hq_guess_city": "New Holland",
+   "hq_guess_state": "PA",
+   "plant_locations": "New Holland, PA; Clear Lake, WI; Visalia, CA"
+  }
+ ]
+}

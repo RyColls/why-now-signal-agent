@@ -1,0 +1,140 @@
+{
+  "batch": "b10",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A012",
+      "company_name": "Danone US, LLC",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "US unit of Danone S.A., a global group with 89,528 employees in 2024, well above 2,000.",
+        "parent_company": "Danone S.A.",
+        "source_url": "https://www.macrotrends.net/stocks/charts/DANOY/danone/number-of-employees"
+      },
+      "searches_run": 6,
+      "pages_opened": 9,
+      "signals": [
+        {
+          "type": "expansion",
+          "source_url": "https://www.dairybusinessmea.com/2026/01/08/danone-north-america-commences-us4m-expansion-at-texas-facility/",
+          "published": "2026-01-08",
+          "sentence": "Danone North America has launched a $4 million expansion project at its 22,000-sq.-ft. plant in Fort Worth, Texas.",
+          "summary": "Danone North America launched a $4 million expansion of its Fort Worth, Texas plant.",
+          "role_to_contact": "Plant Manager, Fort Worth"
+        },
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://careers.danone.com/us/en/jobs/maintenance-lead-26044-en-us.html",
+          "published": "2026-06-10",
+          "sentence": "This role is responsible for driving manufacturing safety and excellence by ensuring reliable equipment performance",
+          "summary": "The Fort Worth, Texas plant posted a Maintenance Lead opening on 2026-06-10.",
+          "role_to_contact": "Maintenance Manager, Fort Worth"
+        },
+        {
+          "type": "pain_in_job_post",
+          "source_url": "https://careers.danone.com/us/en/jobs/digital-manufacturing-leader-24385-en-us.html",
+          "published": "2026-03-27",
+          "sentence": "Eliminate manual Excel-based reporting through automation.",
+          "summary": "A Fort Worth plant digital manufacturing job post says the role should eliminate manual Excel-based reporting.",
+          "role_to_contact": "Digital Manufacturing Leader, Fort Worth"
+        }
+      ],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.foodprocessing.com/business-of-food-beverage/plant-expansion/news/55298062/danone-us-opens-65-million-jacksonville-florida-expansion", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.just-food.com/news/danone-expands-in-us-to-increase-plant-based-capacity", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.keranews.org/business-economy/2026-01-06/yogurt-sales-boom-leads-to-fort-worth-plant-expansion", "reason": "no date on page"},
+        {"type": "new_ops_leader", "source_url": "https://www.bevindustry.com/articles/82580-danone-names-new-u-s-executives", "reason": "stale"},
+        {"type": "pain_in_job_post", "source_url": "https://careers.danone.com/us/en/jobs/maintenance-lead-26044-en-us.html", "reason": "other - Smartsheet listed only as a preferred skill; no spreadsheet-based maintenance pain stated"}
+      ]
+    },
+    {
+      "account_id": "A055",
+      "company_name": "BlueScope Steel",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Part of the BlueScope group, which had 16,500 employees as of June 30, 2024.",
+        "parent_company": "BlueScope Steel Limited",
+        "source_url": "https://stockanalysis.com/quote/otc/BLSFF/employees"
+      },
+      "searches_run": 9,
+      "pages_opened": 6,
+      "signals": [],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.bluescope.com/news/BlueScope-rejects-proposal-from-SGH-and-Steel-Dynamics", "reason": "other - board rejected a takeover proposal dated 07 January 2026; not an acquisition"},
+        {"type": "funding_or_pe", "source_url": "https://www.bluescope.com/news/BlueScope-to-consider-revised-takeover-proposal", "reason": "other - revised proposal (18 February 2026) under consideration; not an acquisition"},
+        {"type": "funding_or_pe", "source_url": "https://www.barchart.com/story/news/266676/sgh-and-steel-dynamics-confirm-best-and-final-a32-35-share-proposal1-to-acquire-bluescope-steel-ltd", "reason": "could not open"},
+        {"type": "hiring_maintenance", "source_url": "https://jobs.smartrecruiters.com/BlueScopeBuildingsNorthAmerica/743999714572424", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://jobs.smartrecruiters.com/BlueScopeBuildingsNorthAmerica/744000009449827", "reason": "other - Memphis, TN site, not St. Joseph; posted 2024-08-08 and expired"}
+      ]
+    },
+    {
+      "account_id": "A098",
+      "company_name": "Ventcon Inc.",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Described as an HVAC sheet metal mechanical contractor rather than a plain manufacturer, and its headcount is reported differently (90+ in one directory, 493 in the input), with no parent group found.",
+        "parent_company": null,
+        "source_url": "https://village.ai/company/ventcon"
+      },
+      "searches_run": 6,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.achrnews.com/articles/163562-ventcon-expands-to-meet-growing-demand-from-american-manufacturing", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A102",
+      "company_name": "American Packaging Corp",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Independently owned family business; its own page gives about 1,200 employees (2022), within range (input says 266), with no parent group found.",
+        "parent_company": null,
+        "source_url": "https://www.americanpackaging.com/news/family-owned-manufacturing-utah"
+      },
+      "searches_run": 6,
+      "pages_opened": 5,
+      "signals": [
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://jobs.y-axis.com/jobs/maintenance-lead-american-packaging-corporation",
+          "published": "2026-01-15",
+          "sentence": "The Maintenance Lead assists the Plant Engineer and Maintenance Manager in organizing and motivating maintenance personnel",
+          "summary": "A Maintenance Lead job at the Story City, Iowa site was posted on 2026-01-15; this site is not one of the input plant locations.",
+          "role_to_contact": "Plant Engineer, Story City"
+        }
+      ],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.packagingstrategies.com/articles/104004-american-packaging-corporation-unveils-new-100m-facility-in-utah", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://www.packagingstrategies.com/articles/105832-american-packaging-corporation-announces-major-pouching-expansion", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/2958024", "reason": "could not open"}
+      ]
+    },
+    {
+      "account_id": "A053",
+      "company_name": "Advance Mfg. Co., Inc.",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The operating company is about 261 employees, but its parent Precinmac LP runs eight North American facilities with no group headcount found.",
+        "parent_company": "Precinmac LP",
+        "source_url": "https://www.precinmac.com/about"
+      },
+      "searches_run": 7,
+      "pages_opened": 4,
+      "signals": [
+        {
+          "type": "funding_or_pe",
+          "source_url": "https://www.precinmac.com/news/precinmac-lp-announces-the-acquisition-of-massachusetts-based-advance-mfg-co-inc",
+          "published": "2026-07-07",
+          "sentence": "today announced the acquisition of Advance Mfg. Co.",
+          "summary": "Precinmac LP, a manufacturing group backed by Centerbridge Partners, announced its acquisition of Advance Mfg. Co.",
+          "role_to_contact": "General Manager, Westfield"
+        }
+      ],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.citybiz.co/?p=870931", "reason": "could not open"},
+        {"type": "expansion", "source_url": "https://www.thefabricator.com/thefabricator/news/machining/advance-mfg-celebrates-50th-anniversary", "reason": "stale"}
+      ]
+    }
+  ]
+}

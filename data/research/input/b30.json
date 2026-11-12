@@ -1,0 +1,55 @@
+{
+ "batch": "b30",
+ "accounts": [
+  {
+   "account_id": "A079",
+   "company_name": "J.G. Kern Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 266,
+   "plant_count": 1,
+   "hq_guess_city": "Sterling Heights",
+   "hq_guess_state": "MI",
+   "plant_locations": "Sterling Heights, MI"
+  },
+  {
+   "account_id": "A170",
+   "company_name": "Iowa Rotocast Plastics, Inc",
+   "industry": "plastics",
+   "employees_reported": 204,
+   "plant_count": 1,
+   "hq_guess_city": "Decorah",
+   "hq_guess_state": "IA",
+   "plant_locations": "Decorah, IA"
+  },
+  {
+   "account_id": "A073",
+   "company_name": "Henry Repeating Arms",
+   "industry": "metal_fabrication",
+   "employees_reported": 688,
+   "plant_count": 3,
+   "hq_guess_city": "Rice Lake",
+   "hq_guess_state": "WI",
+   "plant_locations": "Rice Lake, WI; Ladysmith, WI; Bayonne, NJ"
+  },
+  {
+   "account_id": "A069",
+   "company_name": "Giffin Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 205,
+   "plant_count": 1,
+   "hq_guess_city": "Auburn Hills",
+   "hq_guess_state": "MI",
+   "plant_locations": "Auburn Hills, MI"
+  },
+  {
+   "account_id": "A137",
+   "company_name": "Pratt (Love Box), LLC",
+   "industry": "packaging",
+   "employees_reported": 465,
+   "plant_count": 3,
+   "hq_guess_city": "Park City",
+   "hq_guess_state": "KS",
+   "plant_locations": "Park City, KS; Tulsa, OK; Lincoln, NE"
+  }
+ ]
+}

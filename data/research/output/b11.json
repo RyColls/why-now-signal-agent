@@ -1,0 +1,102 @@
+{
+  "batch": "b11",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A043",
+      "company_name": "Shearer's Foods - PHX",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "Private equity-owned (CD&R, 2023) snack maker with 17 manufacturing facilities, but no group headcount was stated on the pages opened, so its size could not be confirmed.",
+        "parent_company": null,
+        "source_url": "https://www.potatopro.com/companies/shearers-foods-inc/news"
+      },
+      "searches_run": 3,
+      "pages_opened": 5,
+      "signals": [
+        {
+          "type": "expansion",
+          "source_url": "https://www.potatopro.com/node/173705",
+          "published": "2026-08-02",
+          "sentence": "Shearer's Foods has officially opened its newest manufacturing facility in Moraine, Ohio",
+          "summary": "Shearer's Foods opened a new manufacturing facility in Moraine, Ohio, which is company-level and not at the Phoenix plant.",
+          "role_to_contact": "VP Operations"
+        },
+        {
+          "type": "expansion",
+          "source_url": "https://www.pulse.bot/manufacturing/news/shearers-foods-launches-potato-chip-line-at-dayton-plant-expanding-106m-facility-319d859d-2737-4fbb-b24b-1f98819fd3c6/",
+          "published": "2026-04-28",
+          "sentence": "Shearer's Foods Launches Potato Chip Line at Dayton Plant, Expanding $106M Facility",
+          "summary": "Shearer's Foods launched a new potato chip line at its Dayton plant, which is company-level and not at the Phoenix plant.",
+          "role_to_contact": "VP Operations"
+        }
+      ],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://jobs.recruiter.com/jobs/13610315019-maintenance-supervisor-overnight-shift-job-at-shearers-foods-in-phoenix", "reason": "no date on page"},
+        {"type": "funding_or_pe", "source_url": "https://www.potatopro.com/companies/shearers-foods-inc/news", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A155",
+      "company_name": "CSP Innovations North Carolina, Inc.",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Continental Structural Plastics is a Teijin Group company, and Teijin had 15,689 employees as of March 31, 2026.",
+        "parent_company": "Teijin Limited",
+        "source_url": "https://stockanalysis.com/quote/tyo/3401/employees/"
+      },
+      "searches_run": 5,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.expansionsolutionsmagazine.com/continental-structural-plastics-rowan-county/", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://talents.vaia.com/companies/csp/salisbury/maintenance-supervisor-106462506/", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A124",
+      "company_name": "Kelly Box & Packaging",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Independent third-generation family-owned company with five sites in Indianapolis and Fort Wayne; the page does not state headcount, and the input gives 340 employees.",
+        "parent_company": null,
+        "source_url": "https://wishtv.com/?p=1250488"
+      },
+      "searches_run": 4,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://wishtv.com/?p=1250488", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://wishtv.com/?p=1267132", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A195",
+      "company_name": "Ultra-Poly Corporation",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Portland, PA company with no parent group found; a 2023 trade article gives 220 employees and five plants, consistent with the input.",
+        "parent_company": null,
+        "source_url": "https://recyclingtoday.com/article/validated-innovation-in-plastics-recycling-from-ultra-poly-corporation"
+      },
+      "searches_run": 5,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": []
+    },
+    {
+      "account_id": "A151",
+      "company_name": "Beacon Engineered Solutions - MN",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "A third-party directory gives 56 employees, a job site gives 201 to 500, and the input gives 210; no parent is stated for Beacon Engineered Solutions, so group size could not be confirmed.",
+        "parent_company": null,
+        "source_url": "https://bouncewatch.com/company/beacon-engineered-solutions"
+      },
+      "searches_run": 5,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": []
+    }
+  ]
+}

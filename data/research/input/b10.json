@@ -1,0 +1,55 @@
+{
+ "batch": "b10",
+ "accounts": [
+  {
+   "account_id": "A012",
+   "company_name": "Danone US, LLC",
+   "industry": "food_beverage",
+   "employees_reported": 1093,
+   "plant_count": 6,
+   "hq_guess_city": "West Jordan",
+   "hq_guess_state": "UT",
+   "plant_locations": "West Jordan, UT; Fort Worth, TX; Chatsworth, CA; Springfield, OR; Jacksonville, FL; Portland, OR"
+  },
+  {
+   "account_id": "A055",
+   "company_name": "BlueScope Steel",
+   "industry": "metal_fabrication",
+   "employees_reported": 245,
+   "plant_count": 1,
+   "hq_guess_city": "St. Joseph",
+   "hq_guess_state": "MO",
+   "plant_locations": "St. Joseph, MO"
+  },
+  {
+   "account_id": "A098",
+   "company_name": "Ventcon Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 493,
+   "plant_count": 1,
+   "hq_guess_city": "Troy",
+   "hq_guess_state": "MI",
+   "plant_locations": "Troy, MI"
+  },
+  {
+   "account_id": "A102",
+   "company_name": "American Packaging Corp",
+   "industry": "packaging",
+   "employees_reported": 266,
+   "plant_count": 2,
+   "hq_guess_city": "Rochester",
+   "hq_guess_state": "NY",
+   "plant_locations": "Rochester, NY; Cedar City, UT"
+  },
+  {
+   "account_id": "A053",
+   "company_name": "Advance Mfg. Co., Inc.",
+   "industry": "metal_fabrication",
+   "employees_reported": 261,
+   "plant_count": 1,
+   "hq_guess_city": "Westfield",
+   "hq_guess_state": "MA",
+   "plant_locations": "Westfield, MA"
+  }
+ ]
+}

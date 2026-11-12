@@ -1,0 +1,90 @@
+{
+  "batch": "b07",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A136",
+      "company_name": "Poly-Tainer, Inc.",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "The village.ai profile says the company is independently owned, but it lists only 70+ employees versus 382 in the input, so size is unconfirmed.",
+        "parent_company": null,
+        "source_url": "https://village.ai/company/poly-tainer-inc."
+      },
+      "searches_run": 7,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.packworld.com/home/press-release/13344607/polytainer-expands-midwest-facility-adds-sales-manager", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A030",
+      "company_name": "Josephs Bakery",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "A March 2026 release describes a third-generation owner, but none of the pages read states an employee count.",
+        "parent_company": null,
+        "source_url": "https://www.josephsbakery.com/tumaros-next-chapter/"
+      },
+      "searches_run": 5,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://bakingbusiness.com/articles/57635-josephs-bakery-expands-distribution-into-1-200-kroger-stores", "reason": "no date on page"},
+        {"type": "funding_or_pe", "source_url": "https://perishablenews.com/?p=426205", "reason": "other"}
+      ]
+    },
+    {
+      "account_id": "A026",
+      "company_name": "ICL Specialty Products",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "This is a unit of the global ICL Group, which had 13,007 employees at 31 December 2025, far above 2,000.",
+        "parent_company": "ICL Group Ltd",
+        "source_url": "https://stockanalysis.com/stocks/icl/employees"
+      },
+      "searches_run": 5,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://careers.icl-group.com/job/St_-Louis-Maintenance-Supervisor-MO-63111/1368452257/", "reason": "no date on page"},
+        {"type": "new_ops_leader", "source_url": "https://careers.icl-group.com/job/Hammond-Plant-Manager-IN-46320/1229645400", "reason": "no date on page"}
+      ]
+    },
+    {
+      "account_id": "A027",
+      "company_name": "Interamerican Foods Corp",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "A 2018 article ties the Cleburne plant to Interamerican Foods, but no current headcount or parent-group size was confirmed.",
+        "parent_company": null,
+        "source_url": "https://dallasinnovates.com/mexican-pasta-maker-goes-high-tech-at-cleburne-facility/"
+      },
+      "searches_run": 5,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://dallasinnovates.com/mexico-based-la-moderna-unveils-1st-u-s-pasta-plant-headquarters-cleburne/", "reason": "stale"},
+        {"type": "expansion", "source_url": "https://dallasinnovates.com/mexican-pasta-maker-goes-high-tech-at-cleburne-facility/", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A094",
+      "company_name": "Taylor Made  112",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "No Taylor Made company headquartered in Yoder, IN was found; the Taylor Made Group found is based in Gloversville, NY and its 2009 article does not mention Yoder.",
+        "parent_company": null,
+        "source_url": null
+      },
+      "searches_run": 4,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.areadevelopment.com/newsitems/3-1-2026/taylormade-golf-vanderburgh-county-indiana.shtml", "reason": "wrong company"},
+        {"type": "expansion", "source_url": "https://www.tradeandindustrydev.com/region/indiana/news/taylor-made-group-expand-operations-create-50-new-jobs-1558", "reason": "stale"}
+      ]
+    }
+  ]
+}

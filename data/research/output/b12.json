@@ -1,0 +1,114 @@
+{
+  "batch": "b12",
+  "run_date": "2026-11-11",
+  "accounts": [
+    {
+      "account_id": "A193",
+      "company_name": "TH Plastics, Inc.",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "No source found names an owner or parent group, the company website could not be opened, and the employee count is from the input file and not verified.",
+        "parent_company": null,
+        "source_url": null
+      },
+      "searches_run": 7,
+      "pages_opened": 3,
+      "signals": [],
+      "rejected": [
+        {"type": "hiring_maintenance", "source_url": "https://thplastics.applicantstack.com/x/detail/a2d1vgxr4oey", "reason": "no date on page"},
+        {"type": "expansion", "source_url": "https://www.tiffinseneca.org/news/th-plastics-locate-tiffin-spec-building", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A113",
+      "company_name": "Coroplast Tape Corporation",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Its website calls it a subsidiary brand of the Coroplast Group, which employs around 6,800 people worldwide.",
+        "parent_company": "Coroplast Group",
+        "source_url": "https://www.coroplast-group.com/en/facts-and-figures/coroplast-group/"
+      },
+      "searches_run": 5,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.coroplast-group.com/en/newsroom/article/new-production-site-opens-in-schoenebeck/", "reason": "wrong company"},
+        {"type": "expansion", "source_url": "https://www.tradeandindustrydev.com/industry/manufacturing/news/sc-coroplast-tape-opening-12m-150-job-mfg-plant-1s-8393", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A157",
+      "company_name": "Creative Pultrusions",
+      "fit": {
+        "verdict": "not_fit",
+        "reason": "Its website says it was acquired by Hill and Smith Holdings PLC, which reports about 5,000 employees as of 30 June 2026.",
+        "parent_company": "Hill and Smith Holdings PLC",
+        "source_url": "https://www.creativecompositesgroup.com/about-us/creative-composites-group/creative-pultrusions"
+      },
+      "searches_run": 4,
+      "pages_opened": 4,
+      "signals": [],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://www.creativecompositesgroup.com/about-us/creative-composites-group/creative-pultrusions", "reason": "stale"},
+        {"type": "hiring_maintenance", "source_url": "https://recruiting.paylocity.com/recruiting/jobs/details/3859436", "reason": "other"}
+      ]
+    },
+    {
+      "account_id": "A010",
+      "company_name": "Cooper Farms",
+      "fit": {
+        "verdict": "fit",
+        "reason": "Its company history page describes it as a family-owned and privately held company with no parent group named, though the page does not state an employee count.",
+        "parent_company": null,
+        "source_url": "https://cooperfarms.com/company/history"
+      },
+      "searches_run": 4,
+      "pages_opened": 6,
+      "signals": [
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://gfj.cooperfarms.com/jobdetails/celina-oh-maintenance-supervisor-6a4543643791e70e28b5823f",
+          "published": "2026-07-01",
+          "sentence": "Monitor and assign work orders and PMs.",
+          "summary": "Cooper Farms posted a Maintenance Supervisor job listed in Celina, Ohio, on 1 July 2026.",
+          "role_to_contact": "Maintenance Manager"
+        },
+        {
+          "type": "hiring_maintenance",
+          "source_url": "https://gfj.cooperfarms.com/jobdetails/van-wert-oh-maintenance-supervisor-6a45439787280d3f6eab62c3",
+          "published": "2026-07-01",
+          "sentence": "Monitor and assign work orders and PMs.",
+          "summary": "Cooper Farms posted a Maintenance Supervisor job for its Van Wert, Ohio team on 1 July 2026.",
+          "role_to_contact": "Maintenance Manager"
+        },
+        {
+          "type": "expansion",
+          "source_url": "https://www.dailystandard.com/archive/2026-05-21/stories/54861/cooper-farms-plans-processing-plant-in-celina",
+          "published": "2026-05-21",
+          "sentence": "The company said in a news release the 28,000-square-foot facility will serve as a value-added further processing plant",
+          "summary": "Cooper Farms plans a new 28,000-square-foot further processing plant in Celina, Ohio.",
+          "role_to_contact": "VP or Director of Operations"
+        }
+      ],
+      "rejected": [
+        {"type": "expansion", "source_url": "https://www.industrialinfo.com/news/article/cooper-farms-plans-building-and-equipment-additions-at-ohio-turkey-processing-plant--65169", "reason": "stale"}
+      ]
+    },
+    {
+      "account_id": "A088",
+      "company_name": "Microflex Inc",
+      "fit": {
+        "verdict": "unclear",
+        "reason": "No source found names a parent group; the Microflex Inc. page gives founders and relocation history only, and states no employee count.",
+        "parent_company": null,
+        "source_url": "https://en.wikipedia.org/wiki/Microflex_Inc."
+      },
+      "searches_run": 5,
+      "pages_opened": 2,
+      "signals": [],
+      "rejected": [
+        {"type": "funding_or_pe", "source_url": "https://en.wikipedia.org/wiki/Microflex", "reason": "wrong company"}
+      ]
+    }
+  ]
+}

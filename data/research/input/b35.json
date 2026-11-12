@@ -1,0 +1,55 @@
+{
+ "batch": "b35",
+ "accounts": [
+  {
+   "account_id": "A071",
+   "company_name": "HELIOS TECHNOLOGIES INC",
+   "industry": "metal_fabrication",
+   "employees_reported": 575,
+   "plant_count": 1,
+   "hq_guess_city": "Sarasota",
+   "hq_guess_state": "FL",
+   "plant_locations": "Sarasota, FL"
+  },
+  {
+   "account_id": "A068",
+   "company_name": "General Dynamics OTS (Pennsylvania), Inc",
+   "industry": "metal_fabrication",
+   "employees_reported": 255,
+   "plant_count": 1,
+   "hq_guess_city": "Red Lion",
+   "hq_guess_state": "PA",
+   "plant_locations": "Red Lion, PA"
+  },
+  {
+   "account_id": "A146",
+   "company_name": "UPM Raflatac Inc",
+   "industry": "packaging",
+   "employees_reported": 298,
+   "plant_count": 3,
+   "hq_guess_city": "Mills River",
+   "hq_guess_state": "NC",
+   "plant_locations": "Mills River, NC; Dixon, IL; Fletcher, NC"
+  },
+  {
+   "account_id": "A153",
+   "company_name": "Buckhorn Inc",
+   "industry": "plastics",
+   "employees_reported": 215,
+   "plant_count": 1,
+   "hq_guess_city": "Springfield",
+   "hq_guess_state": "MO",
+   "plant_locations": "Springfield, MO"
+  },
+  {
+   "account_id": "A197",
+   "company_name": "Weathergard Window Company Inc",
+   "industry": "plastics",
+   "employees_reported": 226,
+   "plant_count": 1,
+   "hq_guess_city": "Farmington",
+   "hq_guess_state": "MI",
+   "plant_locations": "Farmington, MI"
+  }
+ ]
+}
