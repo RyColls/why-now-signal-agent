@@ -17,8 +17,8 @@ verification, scoring), then each call opens as a brief with its source link.
 Step 7 lets you vote briefs up or down and watch the signal weights and the
 ranking change. Step 8 shows what worked and the failures.
 
-Open [docs/index.html](docs/index.html) in a browser, or use the GitHub Pages
-link once Pages is enabled for this repo. Rebuild it after a new run with
+**Live walk-through: https://rycolls.github.io/why-now-signal-agent/**
+(source: [docs/index.html](docs/index.html)). Rebuild it after a new run with
 `python site/build.py` (reads `data/`, writes `docs/index.html`).
 
 ## Design
